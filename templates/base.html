@@ -7,9 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
     {% load static %}
+    <link rel="stylesheet" href="{% static 'basestyle.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
 </head>
 <body>
-    I am Base Page
+      <!-- Markup for Menu -->
+      <header>
+
+        <button type="button" name="menuButton" id="menuButton" onclick="hideShow()"><img src="menuicon.png" alt="Menu " id="menuIcon"></button>
+
+        <ul class="mainMenu" id="menu">
+          <a href="#"><li class="menuItem" id="profile"><span class="fa fa-user-circle"></span><span class="tooltiptext" id="profile-tooltip">Profile</span></li></a>
+
+          <a href="{% url 'home' %}"><li class="menuItem" id="home"><span class="fa fa-home"></span><span class="tooltiptext" id="home-tooltip">Home</span></li></a>
+
+          <a href="#"><li class="menuItem" id="bell"><span class="fa fa-bell"><span class="tooltiptext" id="bell-tooltip">Notification</span></li></a>
+
+          <a href="#"><li class="menuItem" id="community"><span class="fa fa-users"><span class="tooltiptext" id="users-tooltip">Explore</span></li></a>
+
+          <a href="{% url 'logout' %}"><li class="menuItem" id="logout"><span class="fa fa-sign-out"><span class="tooltiptext" id="sign-out-tooltip">Logout</span></li></a>
+
+        </ul>
+      </header>
     {% block content %}
     {% endblock %}
 </body>

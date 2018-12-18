@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from home import views
 from signup.views import signup
+from logout.views import logout
 from django.conf.urls.static import static
 from . import settings
 
@@ -24,8 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='home'),
     path('accounts/', include('django.contrib.auth.urls'), name='accounts'),
     path('signup/', signup, name='signup'),
-    path('', views.home)
-
+    path('', views.home, name='home'),
+    path('logout/', logout, name='logout'),
 ]
 
 if settings.DEBUG:

@@ -2,7 +2,206 @@
 {% block title %}Home{% endblock %}
 {% block content %}
     {% load static %}
-<link rel="stylesheet" href="{% static 'home/stylehome.css' %}">
-    <h1>It Works</h1>
-    <h2>Its a Home Page...</h2>
+    <link rel="stylesheet" href="{% static 'home/stylehome.css' %}">
+    {% if user.is_authenticated %}
+    <div class="panel">
+      <div class="posts-container">
+        <div class="posts" id="post-1">
+          <div class="post-header">
+            <img src="{% static 'home/images/default-profile.png'%}" class="profile-pic" alt="" />
+            <h3 class="user-name">User Name</h3><span class="level">9966</span>
+            <span class="date">22 August 2015</span>
+          </div>
+          <h2 class="thought-title">This is thought Title</h2>
+          <p class="content" id="1" onclick="showWholeContent(1)"> the act of thinking about or considering something, an idea or opinion, or a set of ideas about a particular subject:
+            Ask me again tomorrow. I'll have to give it some thought.
+            She doesn't give any thought to her appearance.
+            Let me have your thoughts on that report by Friday.
+            Spare a thought for (= think about) all those without shelter on a cold night like this.
+            He's the author of a book on the history of European thought.
+            You sent her a card? That was a kind thought.
+          </p>
+          <div class="post-footer">
+            <button type="button" name="button" class="btn upvote">Upvote</button>
+            <button type="button" name="button" class="btn upvote">Down vote</button>
+            <form action="target" class="comment-form">
+              <input type="text" name="comment" placeholder="Comment">
+              <button type="submit" class="btn comment-submit">
+                <i class="fa fa-arrow-circle-right fa-lg"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="posts" id="post-2">
+          <div class="post-header">
+            <img src="{% static 'home/images/default-profile.png'%}" class="profile-pic" alt="" />
+            <h3 class="user-name">User Name</h3><span class="level">9966</span>
+            <span class="date">22 August 2015</span>
+          </div>
+          <h2 class="thought-title">This is thought Title</h2>
+          <p class="content" id="2" onclick="showWholeContent(2)"> the act of thinking about or considering something, an idea or opinion, or a set of ideas about a particular subject:
+            Ask me again tomorrow. I'll have to give it some thought.
+            She doesn't give any thought to her appearance.
+            Let me have your thoughts on that report by Friday.
+            Spare a thought for (= think about) all those without shelter on a cold night like this.
+            He's the author of a book on the history of European thought.
+            You sent her a card? That was a kind thought.
+          </p>
+          <div class="post-footer">
+            <button type="button" name="button" class="btn upvote">Upvote</button>
+            <button type="button" name="button" class="btn upvote">Down vote</button>
+            <form action="target" class="comment-form">
+              <input type="text" name="comment" placeholder="Comment">
+              <button type="submit" class="btn comment-submit">
+                <i class="fa fa-arrow-circle-right fa-lg"></i>
+              </button>
+            </form>
+          </div>
+          </div>
+          <div class="posts" id="post-3">
+            <div class="post-header">
+              <img src="{% static 'home/images/default-profile.png'%}" class="profile-pic" alt="" />
+              <h3 class="user-name">User Name</h3><span class="level">9966</span>
+              <span class="date">22 August 2015</span>
+            </div>
+            <h2 class="thought-title">This is thought Title</h2>
+            <p class="content" id="3" onclick="showWholeContent(3)"> the act of thinking about or considering something, an idea or opinion, or a set of ideas about a particular subject:
+              Ask me again tomorrow. I'll have to give it some thought.
+              She doesn't give any thought to her appearance.
+              Let me have your thoughts on that report by Friday.
+              Spare a thought for (= think about) all those without shelter on a cold night like this.
+              He's the author of a book on the history of European thought.
+              You sent her a card? That was a kind thought.
+            </p>
+            <div class="post-footer">
+              <button type="button" name="button" class="btn upvote">Upvote</button>
+              <button type="button" name="button" class="btn upvote">Down vote</button>
+              <form action="target" class="comment-form">
+                <input type="text" name="comment" placeholder="Comment">
+                <button type="submit" class="btn comment-submit">
+                  <i class="fa fa-arrow-circle-right fa-lg"></i>
+                </button>
+              </form>
+            </div>
+            </div>
+            <div class="posts" id="post-4">
+              <div class="post-header">
+                <img src="{% static 'home/images/default-profile.png'%}" class="profile-pic" alt="" />
+                <h3 class="user-name">User Name</h3><span class="level">9966</span>
+                <span class="date">22 August 2015</span>
+              </div>
+              <h2 class="thought-title">This is thought Title</h2>
+              <p class="content" id="4" onclick="showWholeContent(4)"> the act of thinking about or considering something, an idea or opinion, or a set of ideas about a particular subject:
+                Ask me again tomorrow. I'll have to give it some thought.
+                She doesn't give any thought to her appearance.
+                Let me have your thoughts on that report by Friday.
+                Spare a thought for (= think about) all those without shelter on a cold night like this.
+                He's the author of a book on the history of European thought.
+                You sent her a card? That was a kind thought.
+              </p>
+              <div class="post-footer">
+                <button type="button" name="button" class="btn upvote">Upvote</button>
+                <button type="button" name="button" class="btn upvote">Down vote</button>
+                <form action="target" class="comment-form">
+                  <input type="text" name="comment" placeholder="Comment">
+                  <button type="submit" class="btn comment-submit">
+                    <i class="fa fa-arrow-circle-right fa-lg"></i>
+                  </button>
+                </form>
+              </div>
+              </div>
+        <div class="posts" id="post-5"></div>
+
+      </div>
+      <div class="following-container">
+        <div class="following-box">
+          <h3 class="box-header">Popular Thinkers</h3>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+        </div>
+        <div class="mathch-box">
+          <h3 class="box-header">Your Followings</h3>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="following">
+              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+              <h3 class="user-name-profile">User Name</h3>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+    {% else %}
+      <h2>You are not logged In. Click <a href="{% url 'login' %}">here</a> to login to Toob</h2>
+    {% endif %}
 {% endblock %}

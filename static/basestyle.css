@@ -1,0 +1,88 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+header{
+  height: auto;
+  background-color: #000000;
+}
+
+#menuButton{
+  display: none;
+}
+
+.mainMenu{
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  justify-content: flex-end;
+}
+
+.menuItem{
+  display: inline-block;
+  width: 10vw;
+  text-align: center;
+  margin: 4px 1vw 4px 1vw;
+  /* padding: 2px 3vw 2px 3vw; */
+  list-style-type: none;
+  font-size: 2.2vw;
+  color: #ffffff;
+  /* position: relative; */
+}
+
+.menuItem:hover{
+  transition-duration: 400ms;
+  background-color: #fff;
+  color: #000;
+  border-radius: 1vw;
+}
+
+.tooltiptext{
+
+  visibility: hidden;
+  color: #fff;
+  background-color: rgb(6, 6, 6);
+  text-align: center;
+  border-radius: 2vw;
+  z-index: 1;
+  padding: 0.6vw 2vw;
+  position: absolute;
+  top: 4vw;
+}
+
+#profile-tooltip{
+  left: 39.9vw;
+}
+
+#home-tooltip{
+  left: 52vw;
+}
+
+#bell-tooltip{
+  left: 61.3vw;
+}
+
+#users-tooltip{
+  left: 75.3vw;
+}
+
+#sign-out-tooltip{
+  left: 87.3vw;
+}
+
+#profile{
+  align-self: flex-start
+}
+
+.menuItem:hover .tooltiptext{
+  visibility: visible;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  width: inherit;
+  height: inherit;
+}

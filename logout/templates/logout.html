@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} Logout {% endblock %}
+{% block content %}
+<style>
+    a{
+        color:blue;
+    }
+</style>
+    <h2 align="center">You are Successfully Logout from Toob.com</h2>
+    <h3 align="center">Click <a href="{% url 'login' %}">here</a> to Login Again</h3>
+{% endblock %}
