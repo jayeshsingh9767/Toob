@@ -3,75 +3,26 @@
 {% block content %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'home/stylehome.css' %}">
+    <script type="text/javascript">
+    function showWholeContent(id){
+      var post = document.getElementById(id);
+      post.style.height= "auto";
+    }
+    </script>
     {% if user.is_authenticated %}
     <div class="panel">
       <div class="posts-container">
-        <div class="posts" id="post-1">
-          <div class="post-header">
-            <img src="{% static 'home/images/default-profile.png'%}" class="profile-pic" alt="" />
-            <h3 class="user-name">User Name</h3><span class="level">9966</span>
-            <span class="date">22 August 2015</span>
-          </div>
-          <h2 class="thought-title">This is thought Title</h2>
-          <p class="content" id="1" onclick="showWholeContent(1)"> the act of thinking about or considering something, an idea or opinion, or a set of ideas about a particular subject:
-            Ask me again tomorrow. I'll have to give it some thought.
-            She doesn't give any thought to her appearance.
-            Let me have your thoughts on that report by Friday.
-            Spare a thought for (= think about) all those without shelter on a cold night like this.
-            He's the author of a book on the history of European thought.
-            You sent her a card? That was a kind thought.
-          </p>
-          <div class="post-footer">
-            <button type="button" name="button" class="btn upvote">Upvote</button>
-            <button type="button" name="button" class="btn upvote">Down vote</button>
-            <form action="target" class="comment-form">
-              <input type="text" name="comment" placeholder="Comment">
-              <button type="submit" class="btn comment-submit">
-                <i class="fa fa-arrow-circle-right fa-lg"></i>
-              </button>
-            </form>
-          </div>
-        </div>
-        <div class="posts" id="post-2">
-          <div class="post-header">
-            <img src="{% static 'home/images/default-profile.png'%}" class="profile-pic" alt="" />
-            <h3 class="user-name">User Name</h3><span class="level">9966</span>
-            <span class="date">22 August 2015</span>
-          </div>
-          <h2 class="thought-title">This is thought Title</h2>
-          <p class="content" id="2" onclick="showWholeContent(2)"> the act of thinking about or considering something, an idea or opinion, or a set of ideas about a particular subject:
-            Ask me again tomorrow. I'll have to give it some thought.
-            She doesn't give any thought to her appearance.
-            Let me have your thoughts on that report by Friday.
-            Spare a thought for (= think about) all those without shelter on a cold night like this.
-            He's the author of a book on the history of European thought.
-            You sent her a card? That was a kind thought.
-          </p>
-          <div class="post-footer">
-            <button type="button" name="button" class="btn upvote">Upvote</button>
-            <button type="button" name="button" class="btn upvote">Down vote</button>
-            <form action="target" class="comment-form">
-              <input type="text" name="comment" placeholder="Comment">
-              <button type="submit" class="btn comment-submit">
-                <i class="fa fa-arrow-circle-right fa-lg"></i>
-              </button>
-            </form>
-          </div>
-          </div>
-          <div class="posts" id="post-3">
+        <!-- ======================================================= -->
+        {% for post in all_posts %}
+          <div class="posts" id="post-{{ post.id }}">
             <div class="post-header">
               <img src="{% static 'home/images/default-profile.png'%}" class="profile-pic" alt="" />
-              <h3 class="user-name">User Name</h3><span class="level">9966</span>
-              <span class="date">22 August 2015</span>
+              <h3 class="user-name">{{ post.user }}</h3><span class="level">{{ post.level }}</span>
+              <span class="date">{{ post.creation_time }}</span>
             </div>
-            <h2 class="thought-title">This is thought Title</h2>
-            <p class="content" id="3" onclick="showWholeContent(3)"> the act of thinking about or considering something, an idea or opinion, or a set of ideas about a particular subject:
-              Ask me again tomorrow. I'll have to give it some thought.
-              She doesn't give any thought to her appearance.
-              Let me have your thoughts on that report by Friday.
-              Spare a thought for (= think about) all those without shelter on a cold night like this.
-              He's the author of a book on the history of European thought.
-              You sent her a card? That was a kind thought.
+            <h2 class="thought-title">{{ post.title }}</h2>
+            <p class="content" id="{{post.id}}" onclick="showWholeContent({{post.id}})">
+              {{ post.content }}
             </p>
             <div class="post-footer">
               <button type="button" name="button" class="btn upvote">Upvote</button>
@@ -83,34 +34,10 @@
                 </button>
               </form>
             </div>
-            </div>
-            <div class="posts" id="post-4">
-              <div class="post-header">
-                <img src="{% static 'home/images/default-profile.png'%}" class="profile-pic" alt="" />
-                <h3 class="user-name">User Name</h3><span class="level">9966</span>
-                <span class="date">22 August 2015</span>
-              </div>
-              <h2 class="thought-title">This is thought Title</h2>
-              <p class="content" id="4" onclick="showWholeContent(4)"> the act of thinking about or considering something, an idea or opinion, or a set of ideas about a particular subject:
-                Ask me again tomorrow. I'll have to give it some thought.
-                She doesn't give any thought to her appearance.
-                Let me have your thoughts on that report by Friday.
-                Spare a thought for (= think about) all those without shelter on a cold night like this.
-                He's the author of a book on the history of European thought.
-                You sent her a card? That was a kind thought.
-              </p>
-              <div class="post-footer">
-                <button type="button" name="button" class="btn upvote">Upvote</button>
-                <button type="button" name="button" class="btn upvote">Down vote</button>
-                <form action="target" class="comment-form">
-                  <input type="text" name="comment" placeholder="Comment">
-                  <button type="submit" class="btn comment-submit">
-                    <i class="fa fa-arrow-circle-right fa-lg"></i>
-                  </button>
-                </form>
-              </div>
-              </div>
-        <div class="posts" id="post-5"></div>
+          </div>
+        {% endfor %}
+        <!-- ============================================================= -->
+
 
       </div>
       <div class="following-container">

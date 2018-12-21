@@ -1,7 +1,11 @@
 from django.shortcuts import render, loader, HttpResponse
-# Create your views here.
+from .models import Posts, Upvote, Down_vote
 
 
 def home(request):
     template = loader.get_template('home.html')
-    return HttpResponse(template.render({}, request))
+    all_posts = Posts.objects.all()
+    context = {
+        'all_posts': all_posts
+    }
+    return HttpResponse(template.render(context, request))

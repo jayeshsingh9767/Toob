@@ -9,6 +9,7 @@ class Profile(models.Model):
     gender = models.CharField(max_length=10, blank=True)
     city = models.CharField(max_length=30, blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
+    level = models.IntegerField(default=1, editable=False)
 
 
 @receiver(post_save, sender=User)

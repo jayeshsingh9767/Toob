@@ -71,6 +71,7 @@
   padding-right: 2vw;
   font-size: 1.4vw;
   height: 8vw;
+  overflow-y: hidden;
 }
 
 .post-footer{
