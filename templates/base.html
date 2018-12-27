@@ -9,6 +9,8 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'basestyle.css'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    {% block extrahead %}
+    {% endblock %}
 </head>
 <body>
       <!-- Markup for Menu -->

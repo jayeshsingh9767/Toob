@@ -11,6 +11,8 @@ class Profile(models.Model):
     date_of_birth = models.DateField(null=True, blank=True)
     level = models.IntegerField(default=1, editable=False)
 
+    def __str__(self):
+        return str(self.user)
 
 @receiver(post_save, sender=User)
 def update_user_profile(sender, instance, created, **kwargs):
