@@ -94,7 +94,7 @@
 
 .btn:hover{
   transition-duration:  400ms;
-  background-color: rgb(96, 218, 31);
+  background-color: rgb(153, 154, 153);
 }
 
 .comment-form{
