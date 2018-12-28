@@ -1,0 +1,54 @@
+<form id="like-form{{ post.id }}">
+  {% csrf_token %}
+  <button type="submit" id="{{ post.id }}btn" name="like" value="{{ post.id }}" class="btn upvote">Like</button>
+  <script type="text/javascript">
+    {% for like in post.likes.all %}
+      {% if like != user %}
+        dislikingPost("{{ post.id }}btn");
+      {% else %}
+        likingPost("{{ post.id }}btn");
+      {% endif %}
+    {% endfor %}
+
+    // function flip(){
+    //   var btn = document.getElementById("#{{ post.id }}btn");
+    //   console.log("Inside Flip {{ post.likes.all }}");
+    //   {% for like in post.likes.all %}
+    //     console.log("Inside");
+    //     {% if like == user %}
+    //       console.log("Changing color to green");
+    //       btn.style.background = "rgb(34, 233, 42)";
+    //
+    //     {% else %}
+    //       console.log("Changing color to grey");
+    //       btn.style.background = "rgb(211, 218, 212)";
+    //     {% endif %}
+    //   {% endfor %}
+    // }
+
+// Adding AJAX for Like button
+    $(document).ready(function(event){
+      $(document).on('click', '#{{ post.id }}btn', function(event){
+        event.preventDefault();
+        // flip();
+        pk = $(this).attr('value');
+        $.ajax({
+          type: 'POST',
+          url: '{% url "like_post" %}',
+          data: {
+            'id': pk,
+            'csrfmiddlewaretoken': '{{ csrf_token }}'
+          },
+
+          success:function(response){
+            $('#like-form{{ post.id }}').html(response['form'])
+            // $('#{{ post.id }}btn').style.color = 'green';
+          }, error: function(er, e){
+            console.log(er.responseText);
+          }
+        });
+      });
+    });
+
+  </script>
+</form>

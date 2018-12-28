@@ -22,6 +22,11 @@
       var liked = document.getElementById(id);
       liked.style.background = "rgb(34, 233, 42)";
     }
+
+    function dislikingPost(id){
+      var liked = document.getElementById(id);
+      //liked.style.background = "rgb(34, 233, 42)";
+    }
     </script>
     {% if user.is_authenticated %}
     <div class="panel">
@@ -39,40 +44,7 @@
               {{ post.content }}
             </p>
             <div class="post-footer">
-              <form id="like-form{{ post.id }}">
-                {% csrf_token %}
-                <button type="submit" id="{{ post.id }}btn" name="like" value="{{ post.id }}" class="btn upvote">Like</button>
-                <script type="text/javascript">
-                  {% for like in post.likes.all %}
-                    {% if like != user %}
-
-                    {% else %}
-                      likingPost("{{ post.id }}btn");
-                    {% endif %}
-                  {% endfor %}
-
-      // Adding AJAX for Like button
-                  $(document).ready(function(event){
-                    $(document).on('click', '#{{ post.id }}btn', function(event){
-                      event.preventDefault();
-
-                      $.ajax({
-                        type: 'POST',
-                        url: '{% url "like_post" %}',
-                        data: {
-                          'id': '{{ post.id }}',
-                          csrfmiddlewaretoken: '{{ csrf_token }}'
-                        },
-
-                        success:function(response){
-                          
-                        }
-                      });
-                    });
-                  });
-
-                </script>
-              </form>
+              {% include 'like_section.html' %}
               <button type="button" name="button" class="btn upvote">Down vote</button>
               <form action="target" class="comment-form">
                 <input type="text" name="comment" placeholder="Comment">
