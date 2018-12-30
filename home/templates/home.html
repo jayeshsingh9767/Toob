@@ -1,31 +1,13 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock %}
-{% block extrahead %}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-{% endblock %}
+
 {% block content %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'home/stylehome.css' %}">
-    <style media="screen">
-
-    /* Extra CSS for Dynamic UseOnly */
-
-
-    </style>
     <script type="text/javascript">
     function showWholeContent(id){
       var post = document.getElementById(id);
       post.style.height= "auto";
-    }
-
-    function likingPost(id){
-      var liked = document.getElementById(id);
-      liked.style.background = "rgb(34, 233, 42)";
-    }
-
-    function dis_likingPost(id){
-      var dis_liked = document.getElementById(id);
-      dis_liked.style.background = "rgb(255, 0, 0)"
     }
 
     </script>
@@ -42,17 +24,56 @@
             </div>
             <h2 class="thought-title">{{ post.title }}</h2>
             <p class="content" id="{{ post.id }}" onclick="showWholeContent({{ post.id }})">
-              {{ post.content }}
+              {{ post.content|slice:":1300" }} <a class="read_more" href="/details/{{ post.id }}"><b>Read More</b></a>
             </p>
             <div class="post-footer">
               {% include 'like_section.html' %}
               {% include 'dis_like_section.html' %}
               <form action="target" class="comment-form">
-                <input type="text" name="comment" placeholder="Comment">
+                <input type="text" id="comment{{ post.id }}" name="comment" placeholder="Comment">
                 <button type="submit" class="btn comment-submit">
                   <i class="fa fa-arrow-circle-right fa-lg"></i>
                 </button>
+                <!-- Spreading Comment input -->
+                <script type="text/javascript">
+                  var like = document.getElementById("like-form{{ post.id }}");
+                  var dis_like = document.getElementById("dis_like-form{{ post.id }}");
+                  $('#comment{{ post.id }}').focus(function()
+                    {
+                      $('#like-form{{ post.id }}').css({
+                        'display' : 'none'
+                      });
+                      $('#dis_like-form{{ post.id }}').css({
+                        'display' : 'none'
+                      });
+                    $(this).animate({
+                        width: '54vw',
+
+                      }, 500, function() {
+                        // Animation complete.
+
+                      });
+                    });
+
+
+                    $('#comment{{ post.id }}').blur(function()
+                    {
+                    $(this).animate({
+                         width: '28vw'
+                       }, 500, function() {
+                         // Animation complete.
+                         $('#like-form{{ post.id }}').css({
+                           'display' : 'inline'
+                         });
+                         $('#dis_like-form{{ post.id }}').css({
+                           'display' : 'inline'
+                         });
+                       });
+                     });
+                  </script>
+
               </form>
+
             </div>
           </div>
         {% endfor %}

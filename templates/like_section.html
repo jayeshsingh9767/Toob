@@ -2,6 +2,16 @@
   {% csrf_token %}
   <button type="submit" id="{{ post.id }}btn" name="like" value="{{ post.id }}" class="btn upvote">Like</button>
   <script type="text/javascript">
+    function likingPost(id){
+      var liked = document.getElementById(id);
+      liked.style.background = "rgb(34, 233, 42)";
+    }
+
+    function dis_likingPost(id){
+      var dis_liked = document.getElementById(id);
+      dis_liked.style.background = "rgb(255, 0, 0)"
+    }
+
     {% for like in post.likes.all %}
       {% if like != user %}
 

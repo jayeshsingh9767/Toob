@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from home import views
+from home import views as views
 from signup.views import signup
 from logout.views import logout
 from django.conf.urls.static import static
 from . import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='home'),
@@ -28,7 +29,11 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('logout/', logout, name='logout'),
     path('like/', views.like_post, name="like_post"),
-    path('dislike/', views.dis_like_post, name="dis_like_post")
+    path('dislike/', views.dis_like_post, name="dis_like_post"),
+    path('details/', include('details.urls')),
+    # url(r'^details/(?P<post_id>[0-9]+)/$', views.details_post,
+    #     name='details_post'),
+
 ]
 
 if settings.DEBUG:
