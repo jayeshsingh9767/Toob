@@ -31,7 +31,8 @@ urlpatterns = [
     path('like/', views.like_post, name="like_post"),
     path('dislike/', views.dis_like_post, name="dis_like_post"),
     path('details/', include('details.urls')),
-    # url(r'^details/(?P<post_id>[0-9]+)/$', views.details_post,
+    path('profile/', include('signup.urls'))
+    # url(r'^details/(?P<post_id>[0-9]+)/$' , views.details_post,
     #     name='details_post'),
 
 ]

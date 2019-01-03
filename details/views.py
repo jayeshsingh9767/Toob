@@ -17,10 +17,13 @@ def details_post(request, post_id):
 
 
 def comment_submit(request, post_id):
+    print('Inside Comment Submit')
     if request.method == 'POST':
         post = Posts.objects.get(id=post_id)
-        content = request.POST.get("comment")
+        content = request.POST.get("content")
+        print('Content is', content)
         Comment.objects.create(comment=content, post=post,
                                user=request.user)
         print(' Comment is ', content)
-        return HttpResponseRedirect(reverse('details_post', args=post_id))
+        return HttpResponseRedirect(reverse('details_post',
+                                    kwargs={'post_id': int(post_id)}))

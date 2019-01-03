@@ -40,7 +40,8 @@
             $('#dis_like-form{{ post.id }}').html(response['dis_like_form']);
             console.log('Request sent to Like_post')
             // $('#{{ post.id }}btn').style.color = 'green';
-          }, error: function(er, e){
+          },
+          error: function(er, e){
             console.log(er.responseText);
           }
         });

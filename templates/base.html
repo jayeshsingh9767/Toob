@@ -19,7 +19,8 @@
       <header>
 
         <ul class="mainMenu" id="menu">
-          <a href="#"><li class="menuItem" id="profile"><span class="fa fa-user-circle"></span><span class="tooltiptext" id="profile-tooltip">Profile</span></li></a>
+
+          <a href="/profile/{{ request.user.profile.id }}"><li class="menuItem" id="profile"><span class="fa fa-user-circle"></span><span class="tooltiptext" id="profile-tooltip">Profile</span></li></a>
 
           <a href="{% url 'home' %}"><li class="menuItem" id="home"><span class="fa fa-home"></span><span class="tooltiptext" id="home-tooltip">Home</span></li></a>
 

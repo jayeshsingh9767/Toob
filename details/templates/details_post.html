@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{% static 'details/details_post_style.css' %}">
 <div class="panel">
   <div class="posts-container">
-    <div class="posts" id="post-1">
+    <div class="posts" id="main_post">
       <div class="post-header">
         <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not Found" />
         <h3 class="user-name">{{ post.user_profile }}</h3><span class="level">{{ post.user_profile.level }}</span>
@@ -17,16 +17,16 @@
       {% if post.image %}
         <center><img class="post-image" src="{{ post.image.url }}" alt="Image not found"></center>
       {% endif %}
-      <p class="content" id="1" onclick="showWholeContent(1)">
+      <p class="content" id="1">
         {{ post.content }}
       </p>
       <div class="post-footer">
         {% include 'like_section.html' %}
         {% include 'dis_like_section.html' %}
-        <form action="/details/comment/{{ post.id }}/" method="POST" class="comment-form">
+        <form class="comment-form">
           {% csrf_token %}
           <input type="text" id="comment" name="comment" placeholder="Comment">
-          <button type="submit" class="btn comment-submit">
+          <button type="submit" id="comment-submit" class="btn comment-submit">
             <i class="fa fa-arrow-circle-right fa-lg"></i>
           </button>
           <script type="text/javascript">
@@ -36,8 +36,6 @@
             {
               $('#{{ post.id }}btn').css({'display': 'none'})
               $('#{{ post.id }}btn2').css({'display': 'none'})
-              // like.style.display = "none";
-              // dis_like.style.display = "none";
             $(this).animate({
                 width: '58vw',
 
@@ -58,31 +56,34 @@
                  $('#{{ post.id }}btn2').css({'display': 'inline'})
                });
              });
+
+            $(document).ready(function(event){
+              $(document).on('click' ,'#comment-submit', function(event){
+                event.preventDefault();
+                event.stopImmediatePropagation();
+                content = $('#comment').val();
+                console.log('content is : ', content);
+                $.ajax({
+                  type: 'POST',
+                  url: '/details/comment/{{ post.id }}/',
+                  data: {
+                    'content': content,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                  },
+
+                  success:function(response){
+                    console.log('Successfully submited');
+                  },
+                  error:function(er){
+                    console.log(er);
+                  }
+                });
+              });
+            });
           </script>
-
         </form>
-
-
       </div>
-      <div class="comments">
-        <h2>Comments</h2>
-        {% for com in comments reversed %}
-        <div class="comment-container">
-          <div class="comment-header">
-            <img src="{% static 'toob/images/default-profile.png' %}" class="comment-profile-pic" alt="Image not Found" />
-            <h3 class="comment-user-name">{{ com.user }}</h3>
-
-
-          </div>
-          <span class="comment-date">22 August 2015</span>
-          <p class="comment-content">
-             {{ com.comment }}
-          </p>
-
-        </div>
-        {% endfor %}
-      </div>
-
+      {% include 'comment_section.html' %}
     </div>
   </div>
 

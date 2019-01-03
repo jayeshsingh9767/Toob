@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'signup/profile_style.css' %}">
+  <script type="text/javascript">
+  function showWholeContent(id){
+    var post = document.getElementById(id);
+    post.style.height= "auto";
+  }
+
+  </script>
+  <div class="user-info">
+    <img class="profile-pic" src="{% static 'toob/images/default-profile.png' %}" alt="Image not Found">
+    <div class="bio"><p>
+      {{ user_profile.bio }}
+    </p></div>
+    <div class="above-bio">
+      <span class="user-name">{{ user_profile.user.username }}</span>
+      {% if user_profile.user.username != request.user.username %}
+        {% include 'follow_section.html' %}
+        </script>
+      {% else %}
+        <a href="#" id="edit_profile">Edit Profile</a><br>
+      {% endif %}
+    </div>
+    <div class="side-details" >
+      <p class="side-data" align="center"><span >{{ user_post|length }}</span> Posts <br></p>
+      <p class="side-data" align="center"><span> {{ following }} </span> Followers</p>
+      <p class="side-data" align="center"><span>{{ user_profile.level }}</span> Level</p>
+    </div>
+  </div>
+  <hr>
+  <div class="user-extra">
+    <div class="user-technical">
+      <div class="data-box">
+        <span class="data fa fa-map-marker">&nbsp;&nbsp;{{ user_profile.city }}</span><br>
+        <span class="data fa fa-history">&nbsp;Joined Toob since {{ user_profile.date_of_joining|date }}</span><br>
+        <span class="data fa fa-thumbs-up">&nbsp;156 Liked Post</span><br>
+      </div>
+
+    </div>
+    <div class="user-posts">
+      {% for post in user_post %}
+      <div class="posts" id="post-1">
+        <div class="post-header">
+          <img src="{% static 'toob/images/default-profile.png' %}" class="post-profile-pic" alt="Image not Found" />
+          <h3 class="post-user-name">{{ post.user_profile }}</h3><span class="level">{{ post.user_profile.level }}</span>
+          <span class="date">{{ post.creation_time }}</span>
+        </div>
+        <h2 class="thought-title">{{ post.title }}</h2>
+        <p class="content" id="1" onclick="showWholeContent(1)">
+          {{ post.content|slice:":1300" }}<a class="read_more" href="/details/{{ post.id }}"><b> Read More</b></a>
+        </p>
+        <div class="post-footer">
+          {% include 'like_section.html' %}
+          {% include 'dis_like_section.html' %}
+          <form action="target" class="comment-form">
+            <input type="text" id="comment" name="comment" placeholder="Comment">
+            <button type="submit" class="btn comment-submit">
+              <i class="fa fa-arrow-circle-right fa-lg"></i>
+            </button>
+            <script type="text/javascript">
+            var like = document.getElementById("btn1");
+            var dis_like = document.getElementById("btn2");
+            $('#comment').focus(function()
+              {
+                $('#like-form{{ post.id }}').css({'display': 'none'})
+                $('#dis_like-form{{ post.id }}').css({'display': 'none'})
+              $(this).animate({
+                  width: '54vw',
+
+                }, 500, function() {
+                  // Animation complete.
+
+                });
+              });
+
+
+              $('#comment').blur(function()
+              {
+              $(this).animate({
+                   width: '28vw'
+                 }, 500, function() {
+                   // Animation complete.
+                   $('#like-form{{ post.id }}').css({'display': 'inline'})
+                   $('#dis_like-form{{ post.id }}').css({'display': 'inline'})
+                 });
+               });
+            </script>
+
+          </form>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
