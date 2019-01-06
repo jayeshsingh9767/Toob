@@ -7,14 +7,7 @@ from home.models import Posts
 from . models import Profile
 from django.http import JsonResponse
 from django.template.loader import render_to_string
-
-
-def get_followers(user_profile):
-    all_user = Profile.objects.all().filter(follows=user_profile.id)
-    following = 0
-    for i in all_user:
-        following = following + 1
-    return following
+from django.contrib.auth.models import User
 
 
 def signup(request):
@@ -43,7 +36,7 @@ def profile(request, user_id):
     logged_in_user_profile = get_object_or_404(Profile,
                                                user=request.user.id)
     user_post = Posts.objects.all().filter(user_profile=user_id)
-    following = get_followers(user_profile)
+    following = Profile.objects.all().filter(follows=user_profile.id)
     context = {
         'logged_in_user_profile': logged_in_user_profile,
         'user_profile': user_profile,
@@ -76,3 +69,44 @@ def follow(request):
         follow_button = render_to_string('follow_section.html',
                                          context, request=request)
         return JsonResponse({'follow_button': follow_button})
+
+
+def edit_profile(request):
+    user_profile = Profile.objects.get(user=request.user)
+    context = {
+        'user_profile': user_profile
+    }
+    return render(request, 'edit_profile.html', context)
+
+
+def edit_submit(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        firstname = request.POST.get('firstname')
+        lastname = request.POST.get('lastname')
+        profile_pic = request.FILES.get('profile_pic')
+        bio = request.POST.get('bio')
+        email = request.POST.get('email-id')
+        city = request.POST.get('city')
+        dob = request.POST.get('dob')
+        gender = request.POST.get('gender')
+        print('User is:', request.user.id)
+        # user_obj = User.objects.get(id=request.user.id)
+        # user_obj.username = username
+        print('Profile img is :', profile_pic)
+        user_profile = Profile.objects.get(user=request.user)
+        if profile_pic is not None:
+            user_profile.profile_pic = profile_pic
+            user_profile.save()
+        User.objects.filter(id=request.user.id).update(
+            username=username, first_name=firstname, last_name=lastname,
+            email=email,
+        )
+        p = Profile.objects.filter(user=request.user.id).update(
+            bio=bio,
+            city=city,
+            date_of_birth=dob,
+            gender=gender
+        )
+        print(" Number of rows modifid is :", p)
+        return HttpResponseRedirect(reverse('profile', args=[user_profile.id]))

@@ -9,8 +9,14 @@
   <div class="posts-container">
     <div class="posts" id="main_post">
       <div class="post-header">
-        <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not Found" />
-        <h3 class="user-name">{{ post.user_profile }}</h3><span class="level">{{ post.user_profile.level }}</span>
+        <a href="/profile/{{ post.user_profile.id }}">
+        {% if post.user_profile.profile_pic %}
+          <img src="{{ post.user_profile.profile_pic.url }}" class="profile-pic" alt="Image not found">
+        {% else %}
+          <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not found">
+        {% endif %}
+      </a>
+        <a href="/profile/{{ post.user_profile.id }}"><h3 class="user-name">{{ post.user_profile }}</h3></a><span class="level">{{ post.user_profile.level }}</span>
         <span class="date">{{ post.creation_time }}</span>
       </div>
       <h2 class="thought-title">{{ post.title }}</h2>

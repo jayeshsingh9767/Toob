@@ -10,7 +10,11 @@
 
   </script>
   <div class="user-info">
-    <img class="profile-pic" src="{% static 'toob/images/default-profile.png' %}" alt="Image not Found">
+    {% if user_profile.profile_pic %}
+      <img src="{{ user_profile.profile_pic.url }}" class="profile-pic" alt="Image not found">
+    {% else %}
+      <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not found">
+    {% endif %}
     <div class="bio"><p>
       {{ user_profile.bio }}
     </p></div>
@@ -20,12 +24,12 @@
         {% include 'follow_section.html' %}
         </script>
       {% else %}
-        <a href="#" id="edit_profile">Edit Profile</a><br>
+        <a href="/profile/edit" id="edit_profile">Edit Profile</a><br>
       {% endif %}
     </div>
     <div class="side-details" >
       <p class="side-data" align="center"><span >{{ user_post|length }}</span> Posts <br></p>
-      <p class="side-data" align="center"><span> {{ following }} </span> Followers</p>
+      <p class="side-data" align="center"><span> {{ following|length }} </span> Followers</p>
       <p class="side-data" align="center"><span>{{ user_profile.level }}</span> Level</p>
     </div>
   </div>
@@ -43,7 +47,11 @@
       {% for post in user_post %}
       <div class="posts" id="post-1">
         <div class="post-header">
-          <img src="{% static 'toob/images/default-profile.png' %}" class="post-profile-pic" alt="Image not Found" />
+          {% if user_profile.profile_pic %}
+            <img src="{{ user_profile.profile_pic.url }}" class="post-profile-pic" alt="Image not found">
+          {% else %}
+            <img src="{% static 'toob/images/default-profile.png' %}" class="post-profile-pic" alt="Image not found">
+          {% endif %}
           <h3 class="post-user-name">{{ post.user_profile }}</h3><span class="level">{{ post.user_profile.level }}</span>
           <span class="date">{{ post.creation_time }}</span>
         </div>

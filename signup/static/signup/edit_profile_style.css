@@ -1,0 +1,128 @@
+.edit-profile-form{
+  margin: 4vw auto 0 auto;
+  width: 60vw;
+  border: groove;
+}
+
+
+.edit-profile-img{
+  margin: 2vw 0 0 5vw;
+  border-radius: 50%;
+  width: 23vw;
+  height: 23vw;
+}
+
+input{
+  font-size: 1.9vw;
+  width: 20vw;
+  height: 3vw;
+  border-radius: 0.7vw;
+  border: none;
+}
+
+
+label{
+  font-size: 1.6vw;
+}
+
+input[name="username"], label[for="username"]{
+  margin-left: 2vw;
+  position: relative;
+  bottom: 19.5vw;
+
+}
+
+label[for="username"]{
+  right: 19.3vw;
+  bottom: 18.35vw;
+}
+
+input[name="username"]{
+  left: 29.35vw;
+}
+
+input[name="firstname"],  label[for="firstname"]{
+  margin-left: 2vw;
+  position: relative;
+  bottom: 17.5vw;
+  left: 29.35vw;
+}
+
+input[name="lastname"], label[for="lastname"]{
+  margin-left: 2vw;
+  position: relative;
+  bottom: 15.5vw;
+  left: 29.35vw;
+}
+
+label[for="bio"]{
+  left: 6.1vw;
+}
+
+textarea[name="bio"], label[for="bio"]{
+  border-radius: 0.7vw;
+  position: relative;
+  bottom: 11.8vw;
+}
+
+textarea[name="bio"]{
+  font-size: 1.2vw;
+  width: 47.5vw;
+  height: 12vw;
+}
+
+input[name="email-id"], label[for="email-id"]{
+  position: relative;
+  bottom: 11.8vw;
+  left: 5.95vw;
+  width: 25vw;
+  margin-bottom: 1.6vw;
+}
+
+input[name="city"], label[for="city"]{
+  position: relative;
+  bottom: 11.8vw;
+  left: 5.95vw;
+  width: 25vw;
+}
+
+input[name="dob"], label[for="dob"]{
+  position: relative;
+  bottom: 10vw;
+  left: 5.95vw;
+  width: 25vw;
+}
+
+label[for="gender"], input[name="gender"]{
+  position: relative;
+  bottom: 9vw;
+  left: 5.95vw;
+}
+
+input[name="gender"]{
+  width: 2vw;
+  height: 2vw;
+  bottom: 8.6vw;
+}
+
+input[name="submit"]{
+  position: relative;
+  bottom: 3.5vw;
+  width: 12vw;
+  border-radius: 5vw;
+  background-color: rgb(19, 175, 0);
+}
+
+input[name="submit"]:hover{
+  background-color: rgb(13, 255, 0);
+}
+
+
+.change_user_img{
+  position: relative;
+  right: 18.8vw;
+  font-size: 1.2vw;
+  border: none;
+  top: 1.8vw;
+  /* background-color: #000; */
+}

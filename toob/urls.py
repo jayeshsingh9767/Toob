@@ -14,12 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
+from django.views.static import serve
+from toob import settings
 from home import views as views
 from signup.views import signup
 from logout.views import logout
 from django.conf.urls.static import static
-from . import settings
 
 
 urlpatterns = [
@@ -31,7 +32,10 @@ urlpatterns = [
     path('like/', views.like_post, name="like_post"),
     path('dislike/', views.dis_like_post, name="dis_like_post"),
     path('details/', include('details.urls')),
-    path('profile/', include('signup.urls'))
+    path('profile/', include('signup.urls')),
+    re_path(r'^media/(?P<path>.*)$', serve, {
+        'document_root': settings.MEDIA_ROOT,
+    }),
     # url(r'^details/(?P<post_id>[0-9]+)/$' , views.details_post,
     #     name='details_post'),
 

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'signup/edit_profile_style.css' %}">
+  <form class="edit-profile-form" action="{% url 'edit_submit' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if user_profile.profile_pic %}
+      <img src="{{ user_profile.profile_pic.url }}" class="edit-profile-img" alt="Image not found">
+    {% else %}
+      <img src="{% static 'toob/images/default-profile.png' %}" class="edit-profile-img" alt="Image not found">
+    {% endif %}
+
+    <input type="file" name="profile_pic" class="change_user_img">
+    <label for="username">User name</label><br>
+    <input type="text" name="username" value="{{ user_profile.user.username }}"><br>
+    <label for="firstname">First name</label><br>
+    <input type="text" name="firstname" value="{{ user_profile.user.first_name }}"><br>
+    <label for="lastname">Last name</label><br>
+    <input type="text" name="lastname" value="{{ user_profile.user.last_name }}"><br>
+    <label for="bio">Edit Bio</label><br>
+    <center><textarea name="bio" cols="90" rows="10">{{ user_profile.bio }}</textarea></center><br>
+    <label for="email-id">Email ID</label><br>
+    <input type="email" name="email-id" value="{{ user_profile.user.email }}"><br>
+    <label for="city">City</label><br>
+    <input type="text" name="city" value="{{ user_profile.city }}"><br>
+    <label for="dob">Date of birth</label><br>
+    <input type="date" name="dob" value="{{ user_profile.date_of_birth|date:'Y' }}-{{ user_profile.date_of_birth|date:'m' }}-{{ user_profile.date_of_birth|date:'d' }}"><br>
+    <label for="gender">Gender : </label>
+    <input type="radio" name="gender" value="male" required><label for="gender">Male</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="female" required><label for="gender">Female</label>
+    <input type="submit" name="submit" value="Save Edits">
+  </form>
+{% endblock %}

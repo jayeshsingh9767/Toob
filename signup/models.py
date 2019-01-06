@@ -12,6 +12,10 @@ class Profile(models.Model):
     date_of_birth = models.DateField(null=True, blank=True)
     level = models.IntegerField(default=1, editable=False)
     bio = models.TextField(max_length=410, default='Edit Bio')
+    profile_pic = models.ImageField(
+        blank=True,
+        help_text="Select Your Profile Image",
+    )
     date_of_joining = models.DateTimeField(editable=False,
                                            default=timezone.now)
     follows = models.ManyToManyField('Profile', null=True)
