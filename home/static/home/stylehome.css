@@ -4,6 +4,41 @@
   height: auto;
 }
 
+.top-bar{
+  margin: 2vw auto 2vw auto;
+  height: auto;
+  background-color: rgb(62, 60, 62);
+  width: 70vw;
+  color: #fff;
+  border-radius: 0.8vw;
+  /* font-family: sans-serif; */
+
+}
+
+.top-bar > h3{
+  margin: 0;
+  position: relative;
+  bottom: 1.5vw;
+  display: inline-block;
+  font-size: 1.9vw;
+}
+
+.write{
+  margin: 1vw;
+  padding: 1.5vw;
+  position: relative;
+  bottom: 1.9vw;
+  background-color: rgb(204, 255, 121);
+  border-radius: 4vw;
+  font-size: 1.5vw;
+  color: #000;
+  left: 11vw;
+}
+
+.write:hover{
+  background-color: rgb(174, 250, 50);
+}
+
 .posts-container{
 
   flex: 3;

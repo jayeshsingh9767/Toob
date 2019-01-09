@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'home/write_thought_style.css' %}">
+<form method="POST" action="{% url 'post_thought' %}">
+  {% csrf_token %}
+  <label for="">{{ form.title.label }}:</label> <br> {{ form.title }} <br><br>
+  <label for="">{{ form.content.label }}:</label> <br> {{ form.content }} <br><br>
+  <label for="">{{ form.type.label }}:</label> {{ form.type }} <br>
+  <label for="">{{ form.image.label }}:</label> {{ form.image }} <br><br>
+  <label for="">{{ form.tags.label }}:</label> {{ form.tags }} <br><br>
+  <input type="submit" name="post" value="Post">
+</form>
+<script type="text/javascript">
+
+</script>
+{% endblock %}

@@ -14,6 +14,15 @@
     {% if user.is_authenticated %}
     <div class="panel">
       <div class="posts-container">
+        <div class="top-bar">
+          {% if logged_user.profile_pic %}
+            <img src="{{ logged_user.profile_pic.url }}" class="profile-pic" alt="Image not found">
+          {% else %}
+            <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not found">
+          {% endif %}
+          <h3>Welcome {{ user.first_name }}, Lets Start Thinking out of Box</h3>
+          <a href="{% url 'write_thought' %}" class="write">Write Thought</a>
+        </div>
         <!-- ======================================================= -->
         {% for post in all_posts %}
           <div class="posts" id="post-{{ post.id }}">

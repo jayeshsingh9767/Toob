@@ -1,18 +1,47 @@
-from django.shortcuts import loader, HttpResponse, get_object_or_404, HttpResponseRedirect
+from django.shortcuts import loader, HttpResponse, get_object_or_404, render, HttpResponseRedirect, reverse
 from .models import Posts
 from django.template.loader import render_to_string
 from django.http import JsonResponse
 from signup.models import Profile
 from django import db
+from .forms import WriteThought
 
 
 def home(request):
     template = loader.get_template('home.html')
     all_posts = Posts.objects.all()
+    logged_user = Profile.objects.get(user=request.user.id)
+    print('Logged user : ', logged_user)
     context = {
         'all_posts': all_posts,
+        'logged_user': logged_user,
     }
     return HttpResponse(template.render(context, request))
+
+
+def write_thought(request):
+    form = WriteThought(initial={'type': '5'})
+    return render(request, 'write_thought.html', {'form': form})
+
+
+def post_thought(request):
+    if request.POST:
+        print("Post is Submiting")
+        user_profile = Profile.objects.get(user=request.user.id)
+        title = request.POST.get("title")
+        content = request.POST.get("content")
+        type = request.POST.get("type")
+        img = request.POST.get("image")
+        tags = request.POST.get("tags")
+        Posts.objects.create(
+            title=title,
+            content=content,
+            type=type,
+            image=img,
+            tags=tags,
+            user_profile=user_profile
+        )
+        return HttpResponseRedirect(reverse('home'))
 
 
 def like_post(request):

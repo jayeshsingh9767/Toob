@@ -1,0 +1,51 @@
+form{
+  width: 45vw;
+  margin: 2vw auto 2vw auto;
+}
+
+form > label{
+  float: left;
+  font-size: 1.6vw;
+}
+
+li > label{
+  font-size: 1.4vw;
+}
+
+input, textarea{
+  width: inherit;
+  border-radius: 0.5vw;
+}
+
+input[type="text"]{
+  height: 2.4vw;
+  font-size: 1.5vw;
+}
+
+input[type="submit"]{
+  width: 12vw;
+  height: 2.4vw;
+  position: relative;
+  left: 16vw;
+  background-color: rgb(69, 198, 53);
+  font-size: 1.8vw;
+}
+
+input[type="submit"]:hover{
+  background-color: rgb(28, 255, 0);
+}
+
+
+#title-box{
+  font-size: 1.9vw;
+  height: auto;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+}
+
+li{
+  display: inline;
+}
