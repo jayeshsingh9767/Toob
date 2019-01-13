@@ -16,8 +16,8 @@ def update_trending_ratio(post, comments, operataion):
           "\n ration : ", ratio
           )
     if operataion == "+":
-        post.trending_ratio += ratio
+        post.trending_ratio = ratio
         post.save()
     if operataion == "-":
-        post.trending_ratio -= ratio
+        post.trending_ratio = ratio - (1/no_of_days_posted)
         post.save()
