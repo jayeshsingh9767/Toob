@@ -35,6 +35,9 @@ input[type="submit"]:hover{
   background-color: rgb(28, 255, 0);
 }
 
+input[type="radio"]{
+  display: none;
+}
 
 #title-box{
   font-size: 1.9vw;
@@ -48,4 +51,11 @@ ul{
 
 li{
   display: inline;
+}
+
+li>label{
+  margin: 0 0.6vw 0 0.6vw;
+  padding: 0.1vw 0.3vw 0.1vw 0.3vw;
+  border-radius: 0.8vw;
+
 }

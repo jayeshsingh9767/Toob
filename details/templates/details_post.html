@@ -29,7 +29,7 @@
       <div class="post-footer">
         {% include 'like_section.html' %}
         {% include 'dis_like_section.html' %}
-        <form class="comment-form">
+        <form class="comment-form" action="{% url 'comment_submit' post.id  %}" method="POST">
           {% csrf_token %}
           <input type="text" id="comment" name="comment" placeholder="Comment">
           <button type="submit" id="comment-submit" class="btn comment-submit">
@@ -63,29 +63,7 @@
                });
              });
 
-            $(document).ready(function(event){
-              $(document).on('click' ,'#comment-submit', function(event){
-                event.preventDefault();
-                event.stopImmediatePropagation();
-                content = $('#comment').val();
-                console.log('content is : ', content);
-                $.ajax({
-                  type: 'POST',
-                  url: '/details/comment/{{ post.id }}/',
-                  data: {
-                    'content': content,
-                    'csrfmiddlewaretoken': '{{ csrf_token }}'
-                  },
 
-                  success:function(response){
-                    console.log('Successfully submited');
-                  },
-                  error:function(er){
-                    console.log(er);
-                  }
-                });
-              });
-            });
           </script>
         </form>
       </div>

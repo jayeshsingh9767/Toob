@@ -2,16 +2,44 @@
 {% block content %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'home/write_thought_style.css' %}">
-<form method="POST" action="{% url 'post_thought' %}">
+<form method="POST" action="{% url 'post_thought' %}" enctype="multipart/form-data">
   {% csrf_token %}
   <label for="">{{ form.title.label }}:</label> <br> {{ form.title }} <br><br>
   <label for="">{{ form.content.label }}:</label> <br> {{ form.content }} <br><br>
   <label for="">{{ form.type.label }}:</label> {{ form.type }} <br>
   <label for="">{{ form.image.label }}:</label> {{ form.image }} <br><br>
-  <label for="">{{ form.tags.label }}:</label> {{ form.tags }} <br><br>
+  <label for="">{{ form.tags.label }}:</label> {{ form.tags }} <br>{{ form.tags.help_text }}<br><br>
   <input type="submit" name="post" value="Post">
 </form>
 <script type="text/javascript">
-
+  $(document).ready(function(){
+    $('input[type=radio][name=type]').change(function(){
+      if (this.value === "1"){
+        $('li > label').css({'background': 'none'})
+        $('#type > li:nth-child(1) > label').css({'background': 'rgb(137, 249, 222)'});
+        console.log("Changed Color");
+      }
+      if (this.value === "2"){
+        $('li > label').css({'background': 'none'})
+        $('#type > li:nth-child(2) > label').css({'background': 'rgb(137, 249, 222)'});
+        console.log("Changed Color");
+      }
+      if (this.value === "3"){
+        $('li > label').css({'background': 'none'})
+        $('#type > li:nth-child(3) > label').css({'background': 'rgb(137, 249, 222)'});
+        console.log("Changed Color");
+      }
+      if (this.value === "4"){
+        $('li > label').css({'background': 'none'})
+        $('#type > li:nth-child(4) > label').css({'background': 'rgb(137, 249, 222)'});
+        console.log("Changed Color");
+      }
+      if (this.value === "5"){
+        $('li > label').css({'background': 'none'})
+        $('#type > li:nth-child(5) > label').css({'background': 'rgb(137, 249, 222)'});
+        console.log("Changed Color");
+      }
+    });
+  });
 </script>
 {% endblock %}

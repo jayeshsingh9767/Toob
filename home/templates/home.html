@@ -12,178 +12,178 @@
 
     </script>
     {% if user.is_authenticated %}
-    <div class="panel">
-      <div class="posts-container">
-        <div class="top-bar">
-          {% if logged_user.profile_pic %}
-            <img src="{{ logged_user.profile_pic.url }}" class="profile-pic" alt="Image not found">
-          {% else %}
-            <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not found">
-          {% endif %}
-          <h3>Welcome {{ user.first_name }}, Lets Start Thinking out of Box</h3>
-          <a href="{% url 'write_thought' %}" class="write">Write Thought</a>
-        </div>
-        <!-- ======================================================= -->
-        {% for post in all_posts %}
-          <div class="posts" id="post-{{ post.id }}">
-            <div class="post-header">
-              <a href="profile/{{ post.user_profile.id }}">
-              {% if post.user_profile.profile_pic %}
-                <img src="{{ post.user_profile.profile_pic.url }}" class="profile-pic" alt="Image not found">
-              {% else %}
-                <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not found">
-              {% endif %}
-            </a>
-              <a href="profile/{{ post.user_profile.id }}"><h3 class="user-name">{{ post.user_profile }}</h3></a><span class="level">{{ post.user_profile.level }}</span>
-              <span class="date">{{ post.creation_time }}</span>
-            </div>
-            <h2 class="thought-title">{{ post.title }}</h2>
-            <p class="content" id="{{ post.id }}" onclick="showWholeContent({{ post.id }})">
-              {{ post.content|slice:":1300" }} <a class="read_more" href="/details/{{ post.id }}"><b>Read More</b></a>
-            </p>
-            <div class="post-footer">
-              {% include 'like_section.html' %}
-              {% include 'dis_like_section.html' %}
-              <form action="target" class="comment-form">
-                <input type="text" id="comment{{ post.id }}" name="comment" placeholder="Comment">
-                <button type="submit" class="btn comment-submit">
-                  <i class="fa fa-arrow-circle-right fa-lg"></i>
-                </button>
-                <!-- Spreading Comment input -->
-                <script type="text/javascript">
-                  var like = document.getElementById("like-form{{ post.id }}");
-                  var dis_like = document.getElementById("dis_like-form{{ post.id }}");
-                  $('#comment{{ post.id }}').focus(function()
-                    {
-                      $('#like-form{{ post.id }}').css({
-                        'display' : 'none'
+      <div class="panel">
+        <div class="posts-container">
+          <div class="top-bar">
+            {% if logged_user.profile_pic %}
+              <img src="{{ logged_user.profile_pic.url }}" class="profile-pic" alt="Image not found">
+            {% else %}
+              <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not found">
+            {% endif %}
+            <h3>Welcome {{ user.first_name }}, Lets Start Thinking out of Box</h3>
+            <a href="{% url 'write_thought' %}" class="write">Write Thought</a>
+          </div>
+          <!-- ======================================================= -->
+          {% for post in all_posts %}
+            <div class="posts" id="post-{{ post.id }}">
+              <div class="post-header">
+                <a href="profile/{{ post.user_profile.id }}">
+                {% if post.user_profile.profile_pic %}
+                  <img src="{{ post.user_profile.profile_pic.url }}" class="profile-pic" alt="Image not found">
+                {% else %}
+                  <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not found">
+                {% endif %}
+              </a>
+                <a href="profile/{{ post.user_profile.id }}"><h3 class="user-name">{{ post.user_profile }}</h3></a><span class="level">{{ post.user_profile.level }}</span>
+                <span class="date">{{ post.creation_time }}</span>
+              </div>
+              <h2 class="thought-title">{{ post.title }}</h2>
+              <p class="content" id="{{ post.id }}" onclick="showWholeContent({{ post.id }})">
+                {{ post.content|slice:":1300" }} <a class="read_more" href="/details/{{ post.id }}"><b>Read More</b></a>
+              </p>
+              <div class="post-footer">
+                {% include 'like_section.html' %}
+                {% include 'dis_like_section.html' %}
+                <form action="target" class="comment-form">
+                  <input type="text" id="comment{{ post.id }}" name="comment" placeholder="Comment">
+                  <button type="submit" class="btn comment-submit">
+                    <i class="fa fa-arrow-circle-right fa-lg"></i>
+                  </button>
+                  <!-- Spreading Comment input -->
+                  <script type="text/javascript">
+                    var like = document.getElementById("like-form{{ post.id }}");
+                    var dis_like = document.getElementById("dis_like-form{{ post.id }}");
+                    $('#comment{{ post.id }}').focus(function()
+                      {
+                        $('#like-form{{ post.id }}').css({
+                          'display' : 'none'
+                        });
+                        $('#dis_like-form{{ post.id }}').css({
+                          'display' : 'none'
+                        });
+                      $(this).animate({
+                          width: '54vw',
+
+                        }, 500, function() {
+                          // Animation complete.
+
+                        });
                       });
-                      $('#dis_like-form{{ post.id }}').css({
-                        'display' : 'none'
-                      });
-                    $(this).animate({
-                        width: '54vw',
-
-                      }, 500, function() {
-                        // Animation complete.
-
-                      });
-                    });
 
 
-                    $('#comment{{ post.id }}').blur(function()
-                    {
-                    $(this).animate({
-                         width: '28vw'
-                       }, 500, function() {
-                         // Animation complete.
-                         $('#like-form{{ post.id }}').css({
-                           'display' : 'inline'
-                         });
-                         $('#dis_like-form{{ post.id }}').css({
-                           'display' : 'inline'
+                      $('#comment{{ post.id }}').blur(function()
+                      {
+                      $(this).animate({
+                           width: '28vw'
+                         }, 500, function() {
+                           // Animation complete.
+                           $('#like-form{{ post.id }}').css({
+                             'display' : 'inline'
+                           });
+                           $('#dis_like-form{{ post.id }}').css({
+                             'display' : 'inline'
+                           });
                          });
                        });
-                     });
-                  </script>
+                    </script>
 
-              </form>
+                </form>
 
+              </div>
             </div>
+          {% endfor %}
+          <!-- ============================================================= -->
+
+
+        </div>
+        <div class="following-container">
+          <div class="following-box">
+            <h3 class="box-header">Popular Thinkers</h3>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
           </div>
-        {% endfor %}
-        <!-- ============================================================= -->
+          <div class="mathch-box">
+            <h3 class="box-header">Your Followings</h3>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="following">
+                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                <h3 class="user-name-profile">User Name</h3>
+              </div>
+            </a>
 
-
-      </div>
-      <div class="following-container">
-        <div class="following-box">
-          <h3 class="box-header">Popular Thinkers</h3>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-        </div>
-        <div class="mathch-box">
-          <h3 class="box-header">Your Followings</h3>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-          <a href="#">
-            <div class="following">
-              <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-              <h3 class="user-name-profile">User Name</h3>
-            </div>
-          </a>
-
+          </div>
         </div>
       </div>
-    </div>
     {% else %}
       <h2>You are not logged In. Click <a href="{% url 'login' %}">here</a> to login to Toob</h2>
     {% endif %}

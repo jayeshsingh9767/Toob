@@ -1,5 +1,10 @@
-from django.shortcuts import render, HttpResponse, get_object_or_404, HttpResponseRedirect, reverse
-from django.contrib.auth.forms import UserCreationForm, authenticate
+from django.shortcuts import (
+    render,
+    get_object_or_404,
+    HttpResponseRedirect,
+    reverse
+)
+from django.contrib.auth.forms import authenticate
 from django.contrib.auth import login
 from django.shortcuts import redirect
 from signup.forms import UserSignUp

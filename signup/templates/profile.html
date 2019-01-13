@@ -40,6 +40,7 @@
         <span class="data fa fa-map-marker">&nbsp;&nbsp;{{ user_profile.city }}</span><br>
         <span class="data fa fa-history">&nbsp;Joined Toob since {{ user_profile.date_of_joining|date }}</span><br>
         <span class="data fa fa-thumbs-up">&nbsp;156 Liked Post</span><br>
+        <span class="data fa fa-eye">&nbsp;Last Seen: {{ user_profile.user.last_login }}</span><br>
       </div>
 
     </div>
@@ -56,7 +57,7 @@
           <span class="date">{{ post.creation_time }}</span>
         </div>
         <h2 class="thought-title">{{ post.title }}</h2>
-        <p class="content" id="1" onclick="showWholeContent(1)">
+        <p class="content" id="{{ post.id }}" onclick="showWholeContent({{ post.id }})">
           {{ post.content|slice:":1300" }}<a class="read_more" href="/details/{{ post.id }}"><b> Read More</b></a>
         </p>
         <div class="post-footer">

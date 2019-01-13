@@ -1,22 +1,33 @@
-from django.shortcuts import loader, HttpResponse, get_object_or_404, render, HttpResponseRedirect, reverse
+from django.shortcuts import (
+    loader,
+    HttpResponse,
+    get_object_or_404,
+    render,
+    HttpResponseRedirect,
+    reverse
+)
 from .models import Posts
+from details.models import Comment
 from django.template.loader import render_to_string
 from django.http import JsonResponse
 from signup.models import Profile
-from django import db
 from .forms import WriteThought
+from home.data_master import update_trending_ratio
 
 
 def home(request):
-    template = loader.get_template('home.html')
-    all_posts = Posts.objects.all()
-    logged_user = Profile.objects.get(user=request.user.id)
-    print('Logged user : ', logged_user)
-    context = {
-        'all_posts': all_posts,
-        'logged_user': logged_user,
-    }
-    return HttpResponse(template.render(context, request))
+    if request.user.is_authenticated:
+        template = loader.get_template('home.html')
+        all_posts = Posts.objects.all()
+        logged_user = Profile.objects.get(user=request.user.id)
+        print('Logged user : ', logged_user)
+        context = {
+            'all_posts': all_posts,
+            'logged_user': logged_user,
+        }
+        return HttpResponse(template.render(context, request))
+    else:
+        return HttpResponseRedirect(reverse("login"))
 
 
 def write_thought(request):
@@ -31,8 +42,9 @@ def post_thought(request):
         title = request.POST.get("title")
         content = request.POST.get("content")
         type = request.POST.get("type")
-        img = request.POST.get("image")
+        img = request.FILES.get("image")
         tags = request.POST.get("tags")
+        print("Image data is : ", img)
         Posts.objects.create(
             title=title,
             content=content,
@@ -49,18 +61,19 @@ def like_post(request):
     print("Insisde Like Post")
     print('ID coming from form is', request.POST.get('id'))
     post = get_object_or_404(Posts, id=request.POST.get('id'))  # for AJAX call
+    comments = Comment.objects.all().filter(post=post)
     context = {
         'all_posts': all_posts,
         'post': post
     }
     if post.likes.filter(id=request.user.id).exists():
+        update_trending_ratio(post, comments, "-")
         post.likes.remove(request.user)                 # Liking The Post
-        db.connection.close()
         print("DisLiking the post")
     else:
         post.likes.add(request.user)
+        update_trending_ratio(post, comments, "+")
         post.dis_likes.remove(request.user)
-        db.connection.close()
         print("Liking the post")
     if request.is_ajax():
         print('Hey its an AJAX calls')    # TEsting AJAX request
@@ -81,12 +94,10 @@ def dis_like_post(request):
     }
     if post.dis_likes.filter(id=request.user.id).exists():
         post.dis_likes.remove(request.user)                 # Liking The Post
-        db.connection.close()
         print("removing dislike ")
     else:
         post.dis_likes.add(request.user)
         post.likes.remove(request.user)
-        db.connection.close()
         print("Adding Dislike")
     if request.is_ajax():
         print('Hey its an AJAX calls')          # TEsting AJAX request

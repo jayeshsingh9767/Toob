@@ -34,4 +34,7 @@ class WriteThought(forms.Form):
         widget=forms.RadioSelect({'attr': 'type', 'id': 'type'}),
         choices=choice
     )
-    tags = forms.CharField(max_length=250)
+    tags = forms.CharField(
+        max_length=250,
+        help_text="Use Space for seperating tags",
+    )
