@@ -20,7 +20,7 @@
             {% else %}
               <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not found">
             {% endif %}
-            <h3>Welcome {{ user.first_name }}, Lets Start Thinking out of Box</h3>
+            <h3 id="TextEffect"></h3>
             <a href="{% url 'write_thought' %}" class="write">Write Thought</a>
           </div>
           <!-- ======================================================= -->
@@ -188,7 +188,24 @@
       <h2>You are not logged In. Click <a href="{% url 'login' %}">here</a> to login to Toob</h2>
     {% endif %}
     <script type="text/javascript">
+      var i = 0;
+      var txt = 'Welcome {{ user.first_name }}, Lets Start Thinking out of Box';
+      var speed = 150;
 
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("TextEffect").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      $(document).ready(function typeWriter(){
+        if (i < txt.length) {
+          document.getElementById("TextEffect").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      });
     </script>
 
 

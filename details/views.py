@@ -17,7 +17,7 @@ def details_post(request, post_id):
     comments = Comment.objects.all().filter(post=post_id)
     if not (post.views.filter(id=request.user.id).exists()):
         post.views.add(request.user)                # User is Viewing the post
-        update_trending_ratio(post, comments, "+")
+        update_trending_ratio(post, comments)
     template = loader.get_template('details_post.html')
     context = {
         'post': post,
@@ -36,7 +36,7 @@ def comment_submit(request, post_id):
         print('Content is', content)
         if post.user_profile != owner:
             if not comments.filter(user=request.user.id).exists():
-                update_trending_ratio(post, comments, "+")
+                update_trending_ratio(post, comments)
         Comment.objects.create(comment=content, post=post,
                                user=request.user)
         print(' Comment is ', content)

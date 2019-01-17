@@ -42,11 +42,13 @@ def profile(request, user_id):
                                                user=request.user.id)
     user_post = Posts.objects.all().filter(user_profile=user_id)
     following = Profile.objects.all().filter(follows=user_profile.id)
+    like_count = Posts.objects.all().filter(user_profile=logged_in_user_profile).values('likes').count()
     context = {
         'logged_in_user_profile': logged_in_user_profile,
         'user_profile': user_profile,
         'user_post': user_post,
-        'following': following
+        'following': following,
+        'like_count': like_count
     }
     return render(request, 'profile.html', context)
 

@@ -18,9 +18,13 @@ from home.data_master import update_trending_ratio
 def home(request):
     if request.user.is_authenticated:
         template = loader.get_template('home.html')
-        all_posts = Posts.objects.all()
         logged_user = Profile.objects.get(user=request.user.id)
-        print('Logged user : ', logged_user)
+        followings = logged_user.follows.all()
+        all_posts = []
+        for foll in followings:
+            all_posts += Posts.objects.all().filter(user_profile=foll.id)
+        # all_posts.reverse()
+        print('Logged user : ', logged_user.id)
         context = {
             'all_posts': all_posts,
             'logged_user': logged_user,
@@ -67,12 +71,12 @@ def like_post(request):
         'post': post
     }
     if post.likes.filter(id=request.user.id).exists():
-        update_trending_ratio(post, comments, "-")
         post.likes.remove(request.user)                 # Liking The Post
+        update_trending_ratio(post, comments)
         print("DisLiking the post")
     else:
         post.likes.add(request.user)
-        update_trending_ratio(post, comments, "+")
+        update_trending_ratio(post, comments)
         post.dis_likes.remove(request.user)
         print("Liking the post")
     if request.is_ajax():
