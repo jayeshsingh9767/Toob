@@ -40,7 +40,7 @@ def profile(request, user_id):
     user_profile = get_object_or_404(Profile, id=user_id)
     logged_in_user_profile = get_object_or_404(Profile,
                                                user=request.user.id)
-    user_post = Posts.objects.all().filter(user_profile=user_id)
+    user_post = Posts.objects.all().filter(user_profile=user_id).order_by("-trending_ratio")
     following = Profile.objects.all().filter(follows=user_profile.id)
     like_count = Posts.objects.all().filter(user_profile=logged_in_user_profile).values('likes').count()
     context = {

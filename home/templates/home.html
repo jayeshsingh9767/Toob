@@ -21,7 +21,7 @@
               <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not found">
             {% endif %}
             <h3 id="TextEffect"></h3>
-            <a href="{% url 'write_thought' %}" class="write">Write Thought</a>
+            <a href="{% url 'write_thought' %}" class="write" id="writebtn">Write Thought</a>
           </div>
           <!-- ======================================================= -->
           {% for post in all_posts %}
@@ -88,9 +88,30 @@
                     </script>
 
                 </form>
-
+                <ul class="icons more-btn" id="more{{ post.id }}">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
               </div>
             </div>
+            <div class="more-dropdown" id="more-drp{{ post.id }}">
+              <a href="#">Report</a>
+              <a href="">Share</a>
+
+            </div>
+
+            <script type="text/javascript">
+
+              $("#more{{ post.id }}").click(function(){
+                $("#more-drp{{ post.id }}").toggle(function(){
+                  $("#more-drp{{ post.id }}").animate({
+                    width: "15vw",
+                    backgroundColor:'#f9f9f9'
+                  },500);
+                });
+              });
+            </script>
           {% endfor %}
           <!-- ============================================================= -->
 
@@ -192,20 +213,18 @@
       var txt = 'Welcome {{ user.first_name }}, Lets Start Thinking out of Box';
       var speed = 150;
 
-      function typeWriter() {
-        if (i < txt.length) {
-          document.getElementById("TextEffect").innerHTML += txt.charAt(i);
-          i++;
-          setTimeout(typeWriter, speed);
-        }
-      }
       $(document).ready(function typeWriter(){
         if (i < txt.length) {
           document.getElementById("TextEffect").innerHTML += txt.charAt(i);
           i++;
           setTimeout(typeWriter, speed);
         }
+        else if (i==txt.length) {
+          document.getElementById("writebtn").style.display = "inline";
+        }
       });
+
+
     </script>
 
 

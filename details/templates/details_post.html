@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-{% block header %}
-
-{% endblock %}
+{% block title %} {{ post.title }} {% endblock %}
 {% block content %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'details/details_post_style.css' %}">
@@ -19,6 +17,9 @@
         <a href="/profile/{{ post.user_profile.id }}"><h3 class="user-name">{{ post.user_profile }}</h3></a><span class="level">{{ post.user_profile.level }}</span>
         <span class="date">{{ post.creation_time }}</span>
       </div>
+      {% for tag in tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
       <h2 class="thought-title">{{ post.title }}</h2>
       {% if post.image %}
         <center><img class="post-image" src="{{ post.image.url }}" alt="Image not found"></center>
@@ -66,6 +67,21 @@
 
           </script>
         </form>
+      </div>
+      <div class="shareLinks" id="sharelink{{ post.id }}">
+
+        <a id="fb" href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
+          Facebook
+        </a>
+        <a id="whatsapp" href="https://wa.me/whatsappphonenumber/?text={{ post.title }}">
+          Whatsapp
+        </a>
+        <a id="linkden" href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ post.title }}&summary={{ share_string }}&source={{ request.build_absolute_uri }}">
+          Linkedin
+        </a>
+        <a id="twitter" href="https://twitter.com/home?status={{ share_string }}%20{{ request.build_absolute_uri }}">
+          Twitter
+        </a>
       </div>
       {% include 'comment_section.html' %}
     </div>

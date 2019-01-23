@@ -20,10 +20,10 @@ def home(request):
         template = loader.get_template('home.html')
         logged_user = Profile.objects.get(user=request.user.id)
         followings = logged_user.follows.all()
-        all_posts = []
-        for foll in followings:
-            all_posts += Posts.objects.all().filter(user_profile=foll.id)
-        # all_posts.reverse()
+        # all_posts = []
+        # for foll in followings:
+        #     all_posts += Posts.objects.all().filter(user_profile=foll.id).order_by('-trending_ratio')
+        all_posts = Posts.objects.filter(user_profile__in=followings).order_by('-trending_ratio')    
         print('Logged user : ', logged_user.id)
         context = {
             'all_posts': all_posts,

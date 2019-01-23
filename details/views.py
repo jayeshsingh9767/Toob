@@ -8,6 +8,7 @@ from django.template import loader
 from .models import Posts, Comment
 from signup.models import Profile
 from home.data_master import update_trending_ratio
+from urllib.parse import quote_plus
 # Create your views here.
 
 
@@ -18,10 +19,13 @@ def details_post(request, post_id):
     if not (post.views.filter(id=request.user.id).exists()):
         post.views.add(request.user)                # User is Viewing the post
         update_trending_ratio(post, comments)
+    share_string = quote_plus(post.title)
     template = loader.get_template('details_post.html')
     context = {
         'post': post,
         'comments': comments,
+        'share_string': share_string,
+        'tags': post.tags.split()
     }
     return HttpResponse(template.render(context, request))
 
