@@ -9,6 +9,7 @@ from .models import Posts, Comment
 from signup.models import Profile
 from home.data_master import update_trending_ratio
 from urllib.parse import quote_plus
+from django.utils import timezone
 # Create your views here.
 
 

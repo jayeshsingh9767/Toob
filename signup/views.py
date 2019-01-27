@@ -35,14 +35,14 @@ def signup(request):
     return render(request, 'signup.html', {'form': form})
 
 
-def profile(request, user_id):
+def profile(request, user_id):   # when profile page is called
     print("Inside Profile page...")
     user_profile = get_object_or_404(Profile, id=user_id)
     logged_in_user_profile = get_object_or_404(Profile,
                                                user=request.user.id)
     user_post = Posts.objects.all().filter(user_profile=user_id).order_by("-trending_ratio")
     following = Profile.objects.all().filter(follows=user_profile.id)
-    like_count = Posts.objects.all().filter(user_profile=logged_in_user_profile).values('likes').count()
+    like_count = Posts.objects.all().filter(user_profile=user_profile).values('likes').count()
     context = {
         'logged_in_user_profile': logged_in_user_profile,
         'user_profile': user_profile,
@@ -53,7 +53,7 @@ def profile(request, user_id):
     return render(request, 'profile.html', context)
 
 
-def follow(request):
+def follow(request):      # calls when any user follows other user
     print("Followings user...")
     if request.POST:
         user_id = request.POST.get('id')
@@ -65,9 +65,11 @@ def follow(request):
         if logged_in_user_profile.follows.filter(id=user_profile.id).exists():
             print("Already followed")
             logged_in_user_profile.follows.remove(user_profile)
+            logged_in_user_profile.level -= 2
         else:
             print("Not folloed")
             logged_in_user_profile.follows.add(user_profile)
+            logged_in_user_profile.level += 2
         context = {
             'user_profile': user_profile,
             'logged_in_user_profile': logged_in_user_profile,

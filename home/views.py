@@ -12,7 +12,7 @@ from django.template.loader import render_to_string
 from django.http import JsonResponse
 from signup.models import Profile
 from .forms import WriteThought
-from home.data_master import update_trending_ratio
+from home.data_master import update_trending_ratio, update_level_by_like, update_level_by_post
 
 
 def home(request):
@@ -20,10 +20,7 @@ def home(request):
         template = loader.get_template('home.html')
         logged_user = Profile.objects.get(user=request.user.id)
         followings = logged_user.follows.all()
-        # all_posts = []
-        # for foll in followings:
-        #     all_posts += Posts.objects.all().filter(user_profile=foll.id).order_by('-trending_ratio')
-        all_posts = Posts.objects.filter(user_profile__in=followings).order_by('-trending_ratio')    
+        all_posts = Posts.objects.filter(user_profile__in=followings).order_by('-trending_ratio')
         print('Logged user : ', logged_user.id)
         context = {
             'all_posts': all_posts,
@@ -57,6 +54,8 @@ def post_thought(request):
             tags=tags,
             user_profile=user_profile
         )
+        all_posts = Posts.objects.all()
+        update_level_by_post(all_posts, user_profile)
         return HttpResponseRedirect(reverse('home'))
 
 
@@ -65,6 +64,7 @@ def like_post(request):
     print("Insisde Like Post")
     print('ID coming from form is', request.POST.get('id'))
     post = get_object_or_404(Posts, id=request.POST.get('id'))  # for AJAX call
+    user_profile = Profile.objects.get(user=request.user)
     comments = Comment.objects.all().filter(post=post)
     context = {
         'all_posts': all_posts,
@@ -77,6 +77,7 @@ def like_post(request):
     else:
         post.likes.add(request.user)
         update_trending_ratio(post, comments)
+        update_level_by_like(all_posts, user_profile)
         post.dis_likes.remove(request.user)
         print("Liking the post")
     if request.is_ajax():

@@ -43,11 +43,12 @@
 
 .tag{
   margin-left: 1vw;
-  padding: 0.1vw;
+  padding: 0.1vw 0.5vw;
   position: relative;
   top: 0.5vw;
   background-color: rgb(237, 236, 108);
   font-size: 1.4vw;
+  border-radius: 0.2vw;
 }
 
 .level{
