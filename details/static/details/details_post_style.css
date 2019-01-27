@@ -43,6 +43,9 @@
 
 .tag{
   margin-left: 1vw;
+  padding: 0.1vw;
+  position: relative;
+  top: 0.5vw;
   background-color: rgb(237, 236, 108);
   font-size: 1.4vw;
 }
