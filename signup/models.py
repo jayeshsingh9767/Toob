@@ -10,7 +10,7 @@ class Profile(models.Model):
     gender = models.CharField(max_length=10, blank=True)
     city = models.CharField(max_length=30, blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
-    level = models.IntegerField(default=1, editable=False)
+    level = models.IntegerField(default=1)
     bio = models.TextField(max_length=410, default='Edit Bio')
     profile_pic = models.ImageField(
         blank=True,

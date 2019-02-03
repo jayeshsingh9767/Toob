@@ -13,6 +13,7 @@ from . models import Profile
 from django.http import JsonResponse
 from django.template.loader import render_to_string
 from django.contrib.auth.models import User
+from django.db.models import Sum, Count
 
 
 def signup(request):
@@ -42,14 +43,20 @@ def profile(request, user_id):   # when profile page is called
                                                user=request.user.id)
     user_post = Posts.objects.all().filter(user_profile=user_id).order_by("-trending_ratio")
     following = Profile.objects.all().filter(follows=user_profile.id)
-    like_count = Posts.objects.all().filter(user_profile=user_profile).values('likes').count()
+    likes = (
+        Posts.objects
+        .filter(user_profile=user_id)  # filtering the post of specific user
+        .annotate(likes_count=Count('likes'))  # counting likes on each post
+        .aggregate(total_likes=Sum('likes_count'))  # Summing likes on each post to give total likes
+    )
     context = {
         'logged_in_user_profile': logged_in_user_profile,
         'user_profile': user_profile,
         'user_post': user_post,
         'following': following,
-        'like_count': like_count
+        'total_likes': likes.get('total_likes')
     }
+
     return render(request, 'profile.html', context)
 
 
