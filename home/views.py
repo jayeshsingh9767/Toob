@@ -20,11 +20,14 @@ def home(request):
         template = loader.get_template('home.html')
         logged_user = Profile.objects.get(user=request.user.id)
         followings = logged_user.follows.all()
+        popular = Profile.objects.order_by('-level')
         all_posts = Posts.objects.filter(user_profile__in=followings).order_by('-trending_ratio')
         print('Logged user : ', logged_user.id)
         context = {
             'all_posts': all_posts,
             'logged_user': logged_user,
+            'followings': followings,
+            'popular': popular,
         }
         return HttpResponse(template.render(context, request))
     else:

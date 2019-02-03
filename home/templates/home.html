@@ -120,88 +120,25 @@
         <div class="following-container">
           <div class="following-box">
             <h3 class="box-header">Popular Thinkers</h3>
-            <a href="#">
+            {% for thinker in popular %}
+            <a href="{% url 'profile' thinker.id %}">
               <div class="following">
                 <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
+                <h3 class="user-name-profile">{{ thinker.user.first_name }}</h3>
               </div>
             </a>
-            <a href="#">
-              <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
-              </div>
-            </a>
-            <a href="#">
-              <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
-              </div>
-            </a>
-            <a href="#">
-              <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
-              </div>
-            </a>
-            <a href="#">
-              <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
-              </div>
-            </a>
-            <a href="#">
-              <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
-              </div>
-            </a>
+            {% endfor %}
           </div>
           <div class="mathch-box">
             <h3 class="box-header">Your Followings</h3>
-            <a href="#">
+            {% for thinker in followings %}
+            <a href="{% url 'profile' thinker.id %}">
               <div class="following">
                 <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
+                <h3 class="user-name-profile">{{thinker.user.first_name}}</h3>
               </div>
             </a>
-            <a href="#">
-              <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
-              </div>
-            </a>
-            <a href="#">
-              <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
-              </div>
-            </a>
-            <a href="#">
-              <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
-              </div>
-            </a>
-            <a href="#">
-              <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
-              </div>
-            </a>
-            <a href="#">
-              <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
-              </div>
-            </a>
-            <a href="#">
-              <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                <h3 class="user-name-profile">User Name</h3>
-              </div>
-            </a>
-
+            {% endfor %}
           </div>
         </div>
       </div>

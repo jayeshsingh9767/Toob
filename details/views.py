@@ -10,6 +10,9 @@ from signup.models import Profile
 from home.data_master import update_trending_ratio
 from urllib.parse import quote_plus
 from django.utils import timezone
+from functools import reduce
+import operator
+from django.db.models import Q
 # Create your views here.
 
 
@@ -21,12 +24,16 @@ def details_post(request, post_id):
         post.views.add(request.user)                # User is Viewing the post
         update_trending_ratio(post, comments)
     share_string = quote_plus(post.title)
+    trending = Posts.objects.exclude(id=post_id).order_by("-trending_ratio")
+    also_like = Posts.objects.exclude(id=post_id).filter(reduce(operator.or_, (Q(tags__contains=x) for x in post.tags.split())))
     template = loader.get_template('details_post.html')
     context = {
         'post': post,
         'comments': comments,
         'share_string': share_string,
-        'tags': post.tags.split()
+        'tags': post.tags.split(),
+        'also_like': also_like,
+        'trending': trending,
     }
     return HttpResponse(template.render(context, request))
 

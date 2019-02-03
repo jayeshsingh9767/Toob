@@ -92,22 +92,16 @@
   <div class="side-bar">
     <div class="also-like">
       <h3>You may also Like</h3>
-      <a class="more-thought" href="#">This is thought Title</a><br>
-      <a class="more-thought" href="#">This is thought Title</a><br>
-      <a class="more-thought" href="#">the act of thinking about or considering something,
-          an idea or opinion, or a set of ideas about a particular subject: </a><br>
-      <a class="more-thought" href="#">This is thought Title</a><br>
-      <a class="more-thought" href="#">This is thought Title</a><br>
+      {% for thought in also_like %}
+        <a class="more-thought" href="{% url 'details_post' thought.id %}">{{ thought.title }}</a><br>
+      {% endfor %}
     </div>
 
     <div class="also-like">
       <h3>Trending thoughts</h3>
-      <a class="more-thought" href="#">This is thought Title</a><br>
-      <a class="more-thought" href="#">This is thought Title</a><br>
-      <a class="more-thought" href="#">the act of thinking about or considering something,
-          an idea or opinion, or a set of ideas about a particular subject: </a><br>
-      <a class="more-thought" href="#">This is thought Title</a><br>
-      <a class="more-thought" href="#">This is thought Title</a><br>
+      {% for thought in trending %}
+        <a class="more-thought" href="{% url 'details_post' thought.id %}">{{ thought.title }}</a><br>
+      {% endfor %}
     </div>
   </div>
 </div>
