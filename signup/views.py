@@ -64,7 +64,9 @@ def follow(request):      # calls when any user follows other user
     print("Followings user...")
     if request.POST:
         user_id = request.POST.get('id')
+        print("user id is :", user_id)
         user_profile = get_object_or_404(Profile, user=user_id)
+        print("check 2")
         logged_in_user_profile = get_object_or_404(Profile,
                                                    user=request.user.id)
         print("This page belongs to ", user_profile)
@@ -81,6 +83,7 @@ def follow(request):      # calls when any user follows other user
             'user_profile': user_profile,
             'logged_in_user_profile': logged_in_user_profile,
         }
+        print("End of Post request")
     if request.is_ajax():
         follow_button = render_to_string('follow_section.html',
                                          context, request=request)

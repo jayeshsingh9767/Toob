@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'explore/explore_style.css' %}">
+  <div class="filter-menu">
+    <a href="#" id='explore'>Explore</a>
+    <a href="#" id='followers'>followers</a>
+    <a href="#" id='followings'>followings</a>
+    <a href="#" id='popular'>Popular</a>
+  </div>
+  <div class="container">
+    {% for user_profile in all_user %}
+      <div class="user-profile">
+
+        {% if user_profile.profile_pic %}
+          <img src="{{ user_profile.profile_pic.url }}" alt="Image">
+        {% else %}
+          <img src="{% static 'home/images/default-profile.png' %}" alt="Image">
+        {% endif %}
+        <span class="name">{{ user_profile.user.first_name }} {{ user_profile.user.last_name }}</span><span class="level">{{ usr.level }}</span>
+        <p class="bio">{{ user_profile.bio }}</p>
+        {% include 'follow_section.html' %}
+      </div>
+    {% endfor %}
+  <!-- =================================================================== -->
+  </div>
+{% endblock %}

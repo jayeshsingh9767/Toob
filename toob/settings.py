@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django_cleanup',
+    'explore.apps.ExploreConfig',
     'home.apps.HomeConfig',
     'signup.apps.SignupConfig',
     'logout.apps.LogoutConfig',
@@ -121,6 +122,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
+
+AUTH_PROFILE_MODULE = 'signup.Profile'
 
 STATIC_URL = '/static/'
 

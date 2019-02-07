@@ -18,7 +18,7 @@ class Profile(models.Model):
     )
     date_of_joining = models.DateTimeField(editable=False,
                                            default=timezone.now)
-    follows = models.ManyToManyField('Profile', null=True)
+    follows = models.ManyToManyField('Profile')
 
     def __str__(self):
         return str(self.user)

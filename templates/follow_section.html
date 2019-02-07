@@ -1,6 +1,7 @@
 <form id="follow-form{{ user_profile.id }}" class="follow-form">
   {% csrf_token %}
   <button type="button" id="follow{{ user_profile.id }}" class="follow-btn" name="button">Follow</button><br>
+  {{ usr.id }}
   <script type="text/javascript">
     {% for user in logged_in_user_profile.follows.all %}
       {% if user != user_profile %}
@@ -13,14 +14,22 @@
 
 
     $(document).ready(function(event){
+      console.log(" Now Id is : ", {{ usr.id }})
       $(document).on('click', '#follow{{ user_profile.id }}', function(event){
+        console.log(" Now Id is : ", {{ usr.id }})
         event.preventDefault();
         event.stopImmediatePropagation();
+        {% if user_profile.user.id %}
+          id = '{{ user_profile.user.id }}';
+        {% elif usr %}
+          id = {{ usr.id }}
+          console.log(" Now Id is : ", id)
+        {% endif %}
         $.ajax({
           type: 'POST',
           url: '/profile/follow/',
           data: {
-            'id': '{{ user_profile.user.id }}',
+            'id': id,
             'csrfmiddlewaretoken': '{{ csrf_token }}'
           },
 

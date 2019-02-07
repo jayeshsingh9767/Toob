@@ -37,10 +37,8 @@ urlpatterns = [
         'document_root': settings.MEDIA_ROOT,
     }),
     path('write_thought', views.write_thought, name="write_thought"),
-    path('post_thought', views.post_thought, name="post_thought")
-    # url(r'^details/(?P<post_id>[0-9]+)/$' , views.details_post,
-    #     name='details_post'),
-
+    path('post_thought', views.post_thought, name="post_thought"),
+    path('explore/', include('explore.urls')),
 ]
 
 if settings.DEBUG:
