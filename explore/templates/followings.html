@@ -3,12 +3,12 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'explore/explore_style.css' %}">
   <div class="filter-menu">
-    <a href="{% url 'explore' %}" id='explore' style="background-color: #000">Explore</a>
+    <a href="{% url 'explore' %}" id='explore'>Explore</a>
     <a href="{% url 'followers' %}" id='followers'>Followers</a>
-    <a href="{% url 'followings' %}" id='followings'>Followings</a>
+    <a href="{% url 'followings' %}" id='followings' style="background-color: #000">Followings</a>
   </div>
   <div class="container">    <!-- Grid Container -->
-    {% for user_profile in all_user %}
+    {% for user_profile in followings %}
       <div class="user-profile">
         <a href="{% url 'profile' user_profile.id %}">
           {% if user_profile.profile_pic %}

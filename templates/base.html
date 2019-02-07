@@ -30,7 +30,7 @@
 
           <a href="#"><li class="menuItem" id="bell"><span class="fa fa-bell"><span class="tooltiptext" id="bell-tooltip">Notification</span></li></a>
 
-          <a href="#"><li class="menuItem" id="community"><span class="fa fa-users"><span class="tooltiptext" id="users-tooltip">Explore</span></li></a>
+          <a href="{% url 'explore' %}"><li class="menuItem" id="community"><span class="fa fa-users"><span class="tooltiptext" id="users-tooltip">Explore</span></li></a>
           {% if user.is_authenticated %}
             <a href="{% url 'logout' %}"><li class="menuItem" id="logout"><span class="fa fa-sign-out"><span class="tooltiptext" id="sign-out-tooltip">Logout</span></li></a>
           {% else %}
