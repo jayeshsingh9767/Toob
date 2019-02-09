@@ -12,6 +12,9 @@
 
     </script>
     {% if user.is_authenticated %}
+    {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
       <div class="panel">
         <div class="posts-container">
           <div class="top-bar">

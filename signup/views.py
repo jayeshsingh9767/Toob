@@ -14,6 +14,7 @@ from django.http import JsonResponse
 from django.template.loader import render_to_string
 from django.contrib.auth.models import User
 from django.db.models import Sum, Count
+from Notification.notify import notify, remove_notify
 
 
 def signup(request):
@@ -60,7 +61,7 @@ def profile(request, user_id):   # when profile page is called
     return render(request, 'profile.html', context)
 
 
-def follow(request):      # calls when any user follows other user
+def follow(request):      # called when any user follows other user
     print("Followings user...")
     if request.POST:
         user_id = request.POST.get('id')
@@ -74,11 +75,11 @@ def follow(request):      # calls when any user follows other user
         if logged_in_user_profile.follows.filter(id=user_profile.id).exists():
             print("Already followed")
             logged_in_user_profile.follows.remove(user_profile)
-            logged_in_user_profile.level -= 2
+            remove_notify(logged_in_user_profile, user_profile, "Started Following You", 30)
         else:
             print("Not folloed")
             logged_in_user_profile.follows.add(user_profile)
-            logged_in_user_profile.level += 2
+            notify(logged_in_user_profile, user_profile, "Started Following You", 30)
         context = {
             'user_profile': user_profile,
             'logged_in_user_profile': logged_in_user_profile,

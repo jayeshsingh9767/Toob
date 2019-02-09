@@ -1,6 +1,7 @@
 from django.utils import timezone
 from django.db.models import Sum, Count
 from home.models import Posts
+from Notification.notify import notify, remove_notify
 
 # Function for Updating Trending ratio
 
@@ -38,31 +39,39 @@ def update_level_by_like(post, status):
         return
     elif status == "increase":
         if likes.get('total_likes') == 1:
-            print("Updating level by 2")
+            print("Increaseing level by 2")
             user_profile.level += 2
+            notify(None, user_profile, "Your Level is Updated By 2", 40)
         elif likes.get('total_likes') == 10:
-            print("Updating level by 5")
+            print("Increaseing level by 5")
             user_profile.level += 5
+            notify(None, user_profile, "Your Level is Updated By 5", 40)
         elif likes.get('total_likes') == 25:
-            print("Updating level by 10")
+            print("Increaseing level by 10")
             user_profile.level += 10
-        else:
-            print("Updating level by 1")
+            notify(None, user_profile, "Your Level is Updated By 10", 40)
+        elif likes.get('total_likes') % 10 == 0:
+            print("Increaseing level by 1")
             user_profile.level += 1
+            notify(None, user_profile, "Your Level is Updated By 1", 40)
         user_profile.save()
     elif status == "decrease":
         if likes.get('total_likes') == 0:
-            print("Updating level by 2")
+            print("Decreaseing level by 2")
             user_profile.level -= 2
+            remove_notify(None, user_profile, "Your Level is Updated By 2", 40)
         elif likes.get('total_likes') == 9:
-            print("Updating level by 5")
+            print("Decreaseing level by 5")
             user_profile.level -= 5
+            remove_notify(None, user_profile, "Your Level is Updated By 5", 40)
         elif likes.get('total_likes') == 24:
-            print("Updating level by 10")
+            print("Decreaseing level by 10")
             user_profile.level -= 10
-        else:
-            print("Updating level by 1")
+            remove_notify(None, user_profile, "Your Level is Updated By 10", 40)
+        elif likes.get('total_likes') % 9 == 0:
+            print("Decreaseing level by 1")
             user_profile.level -= 1
+            remove_notify(None, user_profile, "Your Level is Updated By 1", 40)
         user_profile.save()
 
 
@@ -75,31 +84,32 @@ def update_level_by_post(all_posts, user_profile, status):
         return
     elif status == "increase":
         if post_count == 1:
-            print("Updating level by 1")
+            print("Increaseing level by 1")
             user_profile.level += 1
+            notify(None, user_profile, "Your Level is Updated By 1", 40)
         elif post_count == 5:
-            print("Updating level by 5")
+            print("Increaseing level by 5")
             user_profile.level += 5
+            notify(None, user_profile, "Your Level is Updated By 5", 40)
         elif post_count == 20:
-            print("Updating level by 10")
+            print("Increaseing level by 10")
             user_profile.level += 10
+            notify(None, user_profile, "Your Level is Updated By 10", 40)
         user_profile.save()
     elif status == "decrease":
         if post_count == 0:
-            print("Updating level by 1")
+            print("Decreaseing level by 1")
             user_profile.level -= 1
         elif post_count == 4:
-            print("Updating level by 5")
+            print("Decreaseing level by 5")
             user_profile.level -= 5
         elif post_count == 19:
-            print("Updating level by 10")
+            print("Decreaseing level by 10")
             user_profile.level -= 10
         user_profile.save()
 
 
 def update_level_by_time(user_profile):
     time_with_us = abs(timezone.now().date() - user_profile.date_of_joining.date()).date()
-    if time_with_us > 30:
-        pass
-    elif time_with_us == 30:
+    if time_with_us == 30:
         user_profile.level += 5

@@ -12,7 +12,12 @@ from django.template.loader import render_to_string
 from django.http import JsonResponse
 from signup.models import Profile
 from .forms import WriteThought
-from home.data_master import update_trending_ratio, update_level_by_like, update_level_by_post
+from Notification.notify import notify, remove_notify
+from home.data_master import (
+    update_trending_ratio,
+    update_level_by_like,
+    update_level_by_post
+)
 
 
 def home(request):
@@ -67,7 +72,7 @@ def like_post(request):
     print("Insisde Like Post")
     print('ID coming from form is', request.POST.get('id'))
     post = get_object_or_404(Posts, id=request.POST.get('id'))  # for AJAX call
-    # user_profile = Profile.objects.get(user=request.user)
+    user_profile = Profile.objects.get(user=request.user)
     comments = Comment.objects.all().filter(post=post)
     context = {
         'all_posts': all_posts,
@@ -75,11 +80,13 @@ def like_post(request):
     }
     if post.likes.filter(id=request.user.id).exists():
         post.likes.remove(request.user)                 # Liking The Post
+        remove_notify(user_profile, post.user_profile, "Liked Your Post", 30)
         update_trending_ratio(post, comments)
         update_level_by_like(post, "decrease")
         print("DisLiking the post")
     else:
         post.likes.add(request.user)
+        notify(user_profile, post.user_profile, "Liked Your Post", 30)
         update_trending_ratio(post, comments)
         update_level_by_like(post, "increase")
         post.dis_likes.remove(request.user)
@@ -96,6 +103,7 @@ def dis_like_post(request):
     all_posts = Posts.objects.all()
     print("Insisde Dis Like Post")
     print('ID coming from form is', request.POST.get('id'))
+    user_profile = Profile.objects.get(user=request.user)  # looged in user
     post = get_object_or_404(Posts, id=request.POST.get('id'))  # for AJAX call
     context = {
         'all_posts': all_posts,
@@ -103,11 +111,14 @@ def dis_like_post(request):
     }
     if post.dis_likes.filter(id=request.user.id).exists():
         post.dis_likes.remove(request.user)                 # Liking The Post
+        remove_notify(user_profile, post.user_profile, "Disliked Your Post", 30)
+        update_level_by_like(post, "decrease")
         print("removing dislike ")
     else:
         post.dis_likes.add(request.user)
+        notify(user_profile, post.user_profile, "Disliked Your Post", 30)
         post.likes.remove(request.user)
-        update_level_by_like(post)
+        update_level_by_like(post, "decrease")
         print("Adding Dislike")
     if request.is_ajax():
         print('Hey its an AJAX calls')          # TEsting AJAX request
