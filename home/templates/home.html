@@ -126,7 +126,11 @@
             {% for thinker in popular %}
             <a href="{% url 'profile' thinker.id %}">
               <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                {% if thinker.profile_pic %}
+                  <img src="{{ thinker.profile_pic.url }}" alt="" class="following-profile">
+                {% else %}
+                  <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                {% endif %}
                 <h3 class="user-name-profile">{{ thinker.user.first_name }}</h3>
               </div>
             </a>
@@ -137,7 +141,11 @@
             {% for thinker in followings %}
             <a href="{% url 'profile' thinker.id %}">
               <div class="following">
-                <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                {% if thinker.profile_pic %}
+                  <img src="{{ thinker.profile_pic.url }}" alt="" class="following-profile">
+                {% else %}
+                  <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                {% endif %}
                 <h3 class="user-name-profile">{{thinker.user.first_name}}</h3>
               </div>
             </a>
