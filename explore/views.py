@@ -27,7 +27,7 @@ def followers(request):
 
 def followings(request):
     logged_in_user_profile = Profile.objects.get(user=request.user)
-    followings = Profile.objects.get(id=2).follows.all()
+    followings = Profile.objects.get(id=logged_in_user_profile.id).follows.all()
     context = {
         'logged_in_user_profile': logged_in_user_profile,
         'followings': followings,

@@ -21,6 +21,9 @@
         <p class="bio">{{ user_profile.bio }}</p>
         {% include 'follow_section.html' %}
       </div>
+      {% empty %}
+      <h3 align="center">Your Followers will be Listed Here... <br>
+        Currently You don't have any Followers</h3>
     {% endfor %}
   </div>
 {% endblock %}

@@ -17,6 +17,7 @@ class Notifications(models.Model):
     message = models.CharField(max_length=500, blank=False)
     type = models.CharField(max_length=50, choices=choice_type)
     creation_time = models.DateTimeField(auto_now_add=True, editable=False)
+    redirect_url = models.URLField(max_length=300, blank=True)
     view = models.BooleanField(default=False)
 
     def __str__(self):

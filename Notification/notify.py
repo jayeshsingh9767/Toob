@@ -1,30 +1,34 @@
 from .models import Notifications
 
 
-def notify(sender, receiver, msg, type):
+def notify(sender, receiver, msg, type, url):
     if Notifications.objects.filter(
             sender=sender,
             receiver=receiver,
             message=msg,
-            type=type).exists() != True:
+            type=type,
+            redirect_url=url).exists() != True:
         notify = Notifications.objects.create(
             sender=sender,
             receiver=receiver,
             message=msg,
-            type=type
+            type=type,
+            redirect_url=url
         )
         notify.save()
 
 
-def remove_notify(sender, receiver, msg, type):
+def remove_notify(sender, receiver, msg, type, url):
     if Notifications.objects.filter(
             sender=sender,
             receiver=receiver,
             message=msg,
-            type=type).exists():
+            type=type,
+            redirect_url=url).exists():
             Notifications.objects.filter(
                 sender=sender,
                 receiver=receiver,
                 message=msg,
-                type=type
+                type=type,
+                redirect_url=url
             ).delete()

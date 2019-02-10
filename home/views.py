@@ -80,13 +80,13 @@ def like_post(request):
     }
     if post.likes.filter(id=request.user.id).exists():
         post.likes.remove(request.user)                 # Liking The Post
-        remove_notify(user_profile, post.user_profile, "Liked Your Post", 30)
+        remove_notify(user_profile, post.user_profile, "Liked Your Post", 30, reverse('details_post', args=[post.id]))
         update_trending_ratio(post, comments)
         update_level_by_like(post, "decrease")
         print("DisLiking the post")
     else:
         post.likes.add(request.user)
-        notify(user_profile, post.user_profile, "Liked Your Post", 30)
+        notify(user_profile, post.user_profile, "Liked Your Post", 30, reverse('details_post', args=[post.id]))
         update_trending_ratio(post, comments)
         update_level_by_like(post, "increase")
         post.dis_likes.remove(request.user)
@@ -111,12 +111,12 @@ def dis_like_post(request):
     }
     if post.dis_likes.filter(id=request.user.id).exists():
         post.dis_likes.remove(request.user)                 # Liking The Post
-        remove_notify(user_profile, post.user_profile, "Disliked Your Post", 30)
+        remove_notify(user_profile, post.user_profile, "Disliked Your Post", 30, reverse('details_post', args=[post.id]))
         update_level_by_like(post, "decrease")
         print("removing dislike ")
     else:
         post.dis_likes.add(request.user)
-        notify(user_profile, post.user_profile, "Disliked Your Post", 30)
+        notify(user_profile, post.user_profile, "Disliked Your Post", 30, reverse('details_post', args=[post.id]))
         post.likes.remove(request.user)
         update_level_by_like(post, "decrease")
         print("Adding Dislike")

@@ -75,11 +75,11 @@ def follow(request):      # called when any user follows other user
         if logged_in_user_profile.follows.filter(id=user_profile.id).exists():
             print("Already followed")
             logged_in_user_profile.follows.remove(user_profile)
-            remove_notify(logged_in_user_profile, user_profile, "Started Following You", 30)
+            remove_notify(logged_in_user_profile, user_profile, "Started Following You", 30, reverse('profile', args=[logged_in_user_profile.id]))
         else:
             print("Not folloed")
             logged_in_user_profile.follows.add(user_profile)
-            notify(logged_in_user_profile, user_profile, "Started Following You", 30)
+            notify(logged_in_user_profile, user_profile, "Started Following You", 30, reverse('profile', args=[logged_in_user_profile.id]))
         context = {
             'user_profile': user_profile,
             'logged_in_user_profile': logged_in_user_profile,

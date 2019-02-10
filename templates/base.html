@@ -28,7 +28,7 @@
           {% endif %}
           <a href="{% url 'home' %}"><li class="menuItem" id="home"><span class="fa fa-home"></span><span class="tooltiptext" id="home-tooltip">Home</span></li></a>
 
-          <a href="#"><li class="menuItem except" id="bell"><span class="fa fa-bell"><span class="tooltiptext" id="bell-tooltip">Notification</span></li></a>
+          <a href="#"><li class="menuItem except" id="bell"><span class="fa fa-bell except"><span class="tooltiptext" id="bell-tooltip">Notification</span></li></a>
 
           <a href="{% url 'explore' %}"><li class="menuItem" id="community"><span class="fa fa-users"><span class="tooltiptext" id="users-tooltip">Explore</span></li></a>
           {% if user.is_authenticated %}
@@ -39,9 +39,9 @@
         </ul>
       </header>
       <div class="notifications except" id="notifications">
-        <ul>
+        <ul class="except">
           {% for msg in my_notif reversed %}
-            <li class="msg">{{ msg }}</li>
+            <li class="msg except"><a href="{{ msg.redirect_url }}">{{ msg.sender }} {{ msg.message }}</a></li>
           {% empty %}
             <li>You dont't have any Notifications right Now...
             <span style="font-size: 1.8vw">Your Future Notifications will appeear here</span></li>
