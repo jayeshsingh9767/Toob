@@ -112,3 +112,11 @@ a{
   margin: 0.5vw 0vw 0.5vw 0.5vw;
   text-align: justify;
 }
+
+.msg a:hover{
+  color: rgb(50, 232, 244);
+}
+
+#notifications > ul > li:last-child{
+  font-size: 1.9vw;
+}

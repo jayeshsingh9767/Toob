@@ -11,15 +11,19 @@
     }
 
     </script>
-    {% if user.is_authenticated %}
+
     {% for message in messages %}
       <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
     {% endfor %}
       <div class="panel">
         <div class="posts-container">
           <div class="top-bar">
-            {% if logged_user.profile_pic %}
-              <img src="{{ logged_user.profile_pic.url }}" class="profile-pic" alt="Image not found">
+            {% if user.is_authenticated %}
+              {% if logged_user.profile_pic %}
+                <img src="{{ logged_user.profile_pic.url }}" class="profile-pic" alt="Image not found">
+              {% else %}
+                <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not found">
+              {% endif %}
             {% else %}
               <img src="{% static 'toob/images/default-profile.png' %}" class="profile-pic" alt="Image not found">
             {% endif %}
@@ -136,31 +140,36 @@
             </a>
             {% endfor %}
           </div>
-          <div class="mathch-box">
-            <h3 class="box-header">Your Followings</h3>
-            {% for thinker in followings %}
-            <a href="{% url 'profile' thinker.id %}">
-              <div class="following">
-                {% if thinker.profile_pic %}
-                  <img src="{{ thinker.profile_pic.url }}" alt="" class="following-profile">
-                {% else %}
-                  <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
-                {% endif %}
-                <h3 class="user-name-profile">{{thinker.user.first_name}}</h3>
-              </div>
-            </a>
-            {% empty %}
-              <h3>You dont't have any Followings</h3>
-            {% endfor %}
-          </div>
+          {% if user.is_authenticated %}
+            <div class="mathch-box">
+              <h3 class="box-header">Your Followings</h3>
+              {% for thinker in followings %}
+              <a href="{% url 'profile' thinker.id %}">
+                <div class="following">
+                  {% if thinker.profile_pic %}
+                    <img src="{{ thinker.profile_pic.url }}" alt="" class="following-profile">
+                  {% else %}
+                    <img src="{% static 'home/images/default-profile.png'%}" alt="" class="following-profile">
+                  {% endif %}
+                  <h3 class="user-name-profile">{{thinker.user.first_name}}</h3>
+                </div>
+              </a>
+              {% empty %}
+                <h3>You dont't have any Followings</h3>
+              {% endfor %}
+            </div>
+          {% else %}
+            <div class="mathch-box">
+              <h3 class="box-header">Login to Picmesh</h3>
+              
+            </div>
+          {% endif %}
         </div>
       </div>
-    {% else %}
-      <h2>You are not logged In. Click <a href="{% url 'login' %}">here</a> to login to Toob</h2>
-    {% endif %}
+
     <script type="text/javascript">
       var i = 0;
-      var txt = 'Welcome {{ user.first_name }}, Lets Start Thinking out of Box';
+      var txt = 'Welcome {% if user.is_authenticated %} {{ user.first_name }} {% else %} {% endif %}, Lets Start Thinking out of Box';
       var speed = 150;
 
       $(document).ready(function typeWriter(){
@@ -173,8 +182,6 @@
           document.getElementById("writebtn").style.display = "inline";
         }
       });
-
-
     </script>
 
 

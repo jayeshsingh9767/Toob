@@ -43,15 +43,21 @@
           {% for msg in my_notif reversed %}
             <li class="msg except"><a href="{{ msg.redirect_url }}">{{ msg.sender }} {{ msg.message }}</a></li>
           {% empty %}
-            <li>You dont't have any Notifications right Now...
-            <span style="font-size: 1.8vw">Your Future Notifications will appeear here</span></li>
+              <li>You dont't have any Notifications right Now...
+            {% if user.is_authenticated %}
+              <span style="font-size: 1.8vw">Your Future Notifications will appeear here</span></li>
+            {% else %}
+              <span style="font-size: 1.8vw">Login to get Notifications and Future Updates on TOOB</span></li>
+            {% endif %}
           {% endfor %}
-
+          {% if user.is_authenticated %}
+            <li class="msg except"><a href="">Show all Notifications</a></li>
+          {% endif %}
         </ul>
       </div>
       <script type="text/javascript">
         $("#bell").click(function(){
-          $("#notifications").toggle();
+          $("#notifications").fadeToggle();
         });
         $('html').click(function(e){
           if(!$(e.target).hasClass('except'))
