@@ -51,11 +51,12 @@
               <div class="post-footer">
                 {% include 'like_section.html' %}
                 {% include 'dis_like_section.html' %}
-                <form action="target" class="comment-form">
+                <form action="{% url 'comment_submit' post.id  %}" class="comment-form">
                   <input type="text" id="comment{{ post.id }}" name="comment" placeholder="Comment">
                   <button type="submit" class="btn comment-submit">
                     <i class="fa fa-arrow-circle-right fa-lg"></i>
                   </button>
+
                   <!-- Spreading Comment input -->
                   <script type="text/javascript">
                     var like = document.getElementById("like-form{{ post.id }}");
@@ -161,7 +162,7 @@
           {% else %}
             <div class="mathch-box">
               <h3 class="box-header">Login to Picmesh</h3>
-              
+
             </div>
           {% endif %}
         </div>
