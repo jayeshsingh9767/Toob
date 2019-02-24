@@ -100,6 +100,20 @@ a{
   z-index: 2;
 }
 
+#notif_count{
+  border-radius: 0.2vw;
+  text-align: center;
+  background-color: #ff0000;
+  color: #fff;
+  width: 1.2vw;
+  height: 1.2vw;
+  font-size: 1.2vw;
+  position: relative;
+  right: 5.4vw;
+  top: 1.5vw;
+  line-height: 1vw;
+}
+
 .notifications  ul{
   font-size: 1.30vw;
   color: rgb(255, 255, 255);

@@ -29,7 +29,9 @@
           <a href="{% url 'home' %}"><li class="menuItem" id="home"><span class="fa fa-home"></span><span class="tooltiptext" id="home-tooltip">Home</span></li></a>
 
           <a href="#"><li class="menuItem except" id="bell"><span class="fa fa-bell except"><span class="tooltiptext" id="bell-tooltip">Notification</span></li></a>
-
+          {% if unseen_notif_count > 0 %}
+            <span id="notif_count">{{ unseen_notif_count }}</span>
+          {% endif %}
           <a href="{% url 'explore' %}"><li class="menuItem" id="community"><span class="fa fa-users"><span class="tooltiptext" id="users-tooltip">Explore</span></li></a>
           {% if user.is_authenticated %}
             <a href="{% url 'logout' %}"><li class="menuItem" id="logout"><span class="fa fa-sign-out"><span class="tooltiptext" id="sign-out-tooltip">Logout</span></li></a>
@@ -64,6 +66,21 @@
           {
             $("#notifications").hide();
           }
+        });
+
+        $("#bell").click(function(e){
+          e.preventDefault();
+          $.ajax({
+            url: '{% url "views_notif" %}',
+            type: "POST",
+            data: {'csrfmiddlewaretoken': '{{ csrf_token }}'},
+            success: function(data){
+              $("#notif_count").css({'display':'None'})
+            },
+            error: function(xhr, statusText, err){
+              console.log(" ERROR OCCURED ",xhr);
+            }
+          });
         });
       </script>
     {% block content %}

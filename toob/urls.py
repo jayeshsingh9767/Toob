@@ -21,6 +21,7 @@ from home import views as views
 from signup.views import signup
 from logout.views import logout
 from django.conf.urls.static import static
+from Notification.views import views_notif
 
 
 urlpatterns = [
@@ -39,6 +40,7 @@ urlpatterns = [
     path('write_thought', views.write_thought, name="write_thought"),
     path('post_thought', views.post_thought, name="post_thought"),
     path('explore/', include('explore.urls')),
+    path('views_notify/', views_notif, name="views_notif")
 ]
 
 if settings.DEBUG:

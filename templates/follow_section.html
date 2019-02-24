@@ -1,46 +1,50 @@
 <form id="follow-form{{ user_profile.id }}" class="follow-form">
   {% csrf_token %}
-  <button type="button" id="follow{{ user_profile.id }}" class="follow-btn" name="button">Follow</button><br>
-  {{ usr.id }}
-  <script type="text/javascript">
-    {% for user in logged_in_user_profile.follows.all %}
-      {% if user != user_profile %}
+  {% if user.is_authenticated %}
+    <button type="button" id="follow{{ user_profile.id }}" class="follow-btn" name="button">Follow</button><br>
+    {{ usr.id }}
+    <script type="text/javascript">
+      {% for user in logged_in_user_profile.follows.all %}
+        {% if user != user_profile %}
 
-      {% else %}
-        $('#follow{{ user_profile.id }}').css({'background': 'rgb(64, 200, 0)'})
-        $('#follow{{ user_profile.id }}').text('Following')
-      {% endif %}
-    {% endfor %}
-
-
-    $(document).ready(function(event){
-      console.log(" Now Id is : ", {{ usr.id }})
-      $(document).on('click', '#follow{{ user_profile.id }}', function(event){
-        console.log(" Now Id is : ", {{ usr.id }})
-        event.preventDefault();
-        event.stopImmediatePropagation();
-        {% if user_profile.user.id %}
-          id = '{{ user_profile.user.id }}';
-        {% elif usr %}
-          id = {{ usr.id }}
-          console.log(" Now Id is : ", id)
+        {% else %}
+          $('#follow{{ user_profile.id }}').css({'background': 'rgb(64, 200, 0)'})
+          $('#follow{{ user_profile.id }}').text('Following')
         {% endif %}
-        $.ajax({
-          type: 'POST',
-          url: '/profile/follow/',
-          data: {
-            'id': id,
-            'csrfmiddlewaretoken': '{{ csrf_token }}'
-          },
+      {% endfor %}
 
-          success:function(response){
-            $('#follow-form{{ user_profile.id }}').html(response['follow_button'])
-          },
-          error: function(er, e){
-            console.log(er.responseText);
-          }
+
+      $(document).ready(function(event){
+        console.log(" Now Id is : ", {{ usr.id }})
+        $(document).on('click', '#follow{{ user_profile.id }}', function(event){
+          console.log(" Now Id is : ", {{ usr.id }})
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          {% if user_profile.user.id %}
+            id = '{{ user_profile.user.id }}';
+          {% elif usr %}
+            id = {{ usr.id }}
+            console.log(" Now Id is : ", id)
+          {% endif %}
+          $.ajax({
+            type: 'POST',
+            url: '/profile/follow/',
+            data: {
+              'id': id,
+              'csrfmiddlewaretoken': '{{ csrf_token }}'
+            },
+
+            success:function(response){
+              $('#follow-form{{ user_profile.id }}').html(response['follow_button'])
+            },
+            error: function(er, e){
+              console.log(er.responseText);
+            }
+          });
         });
       });
-    });
-  </script>
+    </script>
+    {% else %}
+    <button type="button" onclick="location.href='{% url 'login' %}';" id="follow{{ user_profile.id }}" class="follow-btn" name="button">Follow</button><br>
+    {% endif %}
 </form>

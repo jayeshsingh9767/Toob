@@ -6,11 +6,11 @@ from signup.models import Profile
 
 class Notifications(models.Model):
     choice_type = (
-        (50, 'Security'),
-        (40, 'Level'),
-        (30, 'Info'),
-        (20, 'Updates'),
-        (10, 'Other')
+        ('50', 'Security'),
+        ('40', 'Level'),
+        ('30', 'Info'),
+        ('20', 'Updates'),
+        ('10', 'Other')
     )
     sender = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="sender")
     receiver = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="receiver")
