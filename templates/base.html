@@ -43,7 +43,11 @@
       <div class="notifications except" id="notifications">
         <ul class="except">
           {% for msg in my_notif reversed %}
-            <li class="msg except"><a href="{{ msg.redirect_url }}">{{ msg.sender }} {{ msg.message }}</a></li>
+            {% if msg.view == False %}
+              <li class="msg except"><a href="{{ msg.redirect_url }}" style="color:rgb(245, 125, 0)">{{ msg.sender }} {{ msg.message }}</a></li>
+            {% else %}
+              <li class="msg except"><a href="{{ msg.redirect_url }}">{{ msg.sender }} {{ msg.message }}</a></li>
+            {% endif %}
           {% empty %}
               <li>You dont't have any Notifications right Now...
             {% if user.is_authenticated %}

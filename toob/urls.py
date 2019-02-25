@@ -40,7 +40,8 @@ urlpatterns = [
     path('write_thought', views.write_thought, name="write_thought"),
     path('post_thought', views.post_thought, name="post_thought"),
     path('explore/', include('explore.urls')),
-    path('views_notify/', views_notif, name="views_notif")
+    path('views_notify/', views_notif, name="views_notif"),
+    path('temp', views.temp, name="temp")
 ]
 
 if settings.DEBUG:

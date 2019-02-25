@@ -5,6 +5,8 @@ from django.shortcuts import (
     HttpResponseRedirect,
     reverse
 )
+import logging
+import os
 from .models import Posts
 from details.models import Comment
 from django.template.loader import render_to_string
@@ -17,6 +19,9 @@ from home.data_master import (
     update_level_by_like,
     update_level_by_post
 )
+
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def home(request):
@@ -144,3 +149,10 @@ def dis_like_post(request):
     else:
         print("user is not logged in")
         return HttpResponseRedirect(reverse('login'))
+
+
+def temp(request):
+    print("that must be logged")
+    log_obj = logging.getLogger(__name__)
+    logging.basicConfig(level=20, filename=os.path.join(BASE_DIR, 'log_file.log'))
+    log_obj.error("It is Test Error For Logging modeule")
