@@ -1,4 +1,3 @@
-from django.shortcuts import reverse, HttpResponseRedirect
 from django.shortcuts import render
 from signup.models import Profile
 

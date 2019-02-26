@@ -4,16 +4,21 @@ from django.shortcuts import (
     reverse,
     HttpResponseRedirect
 )
+import os
+import logging
 from django.template import loader
 from .models import Posts, Comment
 from signup.models import Profile
 from home.data_master import update_trending_ratio
 from urllib.parse import quote_plus
-from django.utils import timezone
 from functools import reduce
 import operator
 from django.db.models import Q
 # Create your views here.
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=20, filename=os.path.join(BASE_DIR, 'log_file.log'))
 
 
 def details_post(request, post_id):
@@ -53,8 +58,9 @@ def comment_submit(request, post_id):
                     update_trending_ratio(post, comments)
             Comment.objects.create(comment=content, post=post,
                                    user=request.user)
-            print(' Comment is ', content)
+            logger.info(str(request.user) + " Commeted on Thought " + str(post.title))
             return HttpResponseRedirect(reverse('details_post',
                                         kwargs={'post_id': int(post_id)}))
     else:
+        logger.critical(" Unauthenticated user tries to access the secured URL")
         return HttpResponseRedirect(reverse('login'))

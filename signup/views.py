@@ -4,6 +4,8 @@ from django.shortcuts import (
     HttpResponseRedirect,
     reverse
 )
+import os
+import logging
 from django.contrib.auth.forms import authenticate
 from django.contrib.auth import login
 from django.shortcuts import redirect
@@ -15,6 +17,10 @@ from django.template.loader import render_to_string
 from django.contrib.auth.models import User
 from django.db.models import Sum, Count
 from Notification.notify import notify, remove_notify
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=20, filename=os.path.join(BASE_DIR, 'log_file.log'))
 
 
 def signup(request):
@@ -30,6 +36,7 @@ def signup(request):
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
+            logger.info(str(form.profile.user_name) + " Creates new accounts on Toob")
             login(request, user)
             return redirect('/')
     else:
@@ -61,6 +68,7 @@ def profile(request, user_id):   # when profile page is called
 
         return render(request, 'profile.html', context)
     else:
+        logger.critical(" Unauthenticated user tries to access the secured URL")
         return HttpResponseRedirect(reverse('login'))
 
 
@@ -77,12 +85,13 @@ def follow(request):      # called when any user follows other user
             print("This page belongs to ", user_profile)
             print("Loged in User is ", logged_in_user_profile)
             if logged_in_user_profile.follows.filter(id=user_profile.id).exists():
-                print("Already followed")
                 logged_in_user_profile.follows.remove(user_profile)
+                logger.info(str(request.user) + " Stopped following " + str(user_profile))
                 remove_notify(logged_in_user_profile, user_profile, "Started Following You", 30, reverse('profile', args=[logged_in_user_profile.id]))
             else:
                 print("Not folloed")
                 logged_in_user_profile.follows.add(user_profile)
+                logger.info(str(request.user) + " Started following " + str(user_profile))
                 notify(logged_in_user_profile, user_profile, "Started Following You", 30, reverse('profile', args=[logged_in_user_profile.id]))
             context = {
                 'user_profile': user_profile,
@@ -94,6 +103,7 @@ def follow(request):      # called when any user follows other user
                                              context, request=request)
             return JsonResponse({'follow_button': follow_button})
     else:
+        logger.critical(" Unauthenticated user tries to access the secured URL")
         return HttpResponseRedirect(reverse('login'))
 
 
@@ -105,6 +115,7 @@ def edit_profile(request):
         }
         return render(request, 'edit_profile.html', context)
     else:
+        logger.critical(" Unauthenticated user tries to access the secured URL")
         return HttpResponseRedirect(reverse('login'))
 
 
@@ -138,7 +149,8 @@ def edit_submit(request):
                 date_of_birth=dob,
                 gender=gender
             )
-            print(" Number of rows modifid is :", p)
+            logger.info(str(request.user) + " Updated his/her " + str(p) + " Profile Data Fields")
             return HttpResponseRedirect(reverse('profile', args=[user_profile.id]))
         else:
+            logger.critical(" Unauthenticated user tries to access the secured URL")
             return HttpResponseRedirect(reverse('login'))

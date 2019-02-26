@@ -22,6 +22,8 @@ from home.data_master import (
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=20, filename=os.path.join(BASE_DIR, 'log_file.log'))
 
 
 def home(request):
@@ -52,13 +54,14 @@ def write_thought(request):
         form = WriteThought(initial={'type': '5'})
         return render(request, 'write_thought.html', {'form': form})
     else:
+        logger.critical(" Unauthenticated user tries to access the secured URL ")
         return HttpResponseRedirect(reverse('login'))
 
 
 def post_thought(request):
     if request.user.is_authenticated:
         if request.POST:
-            print("Post is Submiting")
+            # print("Post is Submiting")
             user_profile = Profile.objects.get(user=request.user.id)
             title = request.POST.get("title")
             content = request.POST.get("content")
@@ -74,10 +77,12 @@ def post_thought(request):
                 tags=tags,
                 user_profile=user_profile
             )
+            logger.info(str(request.user) + " Writes a Thought : " + str(title))
             all_posts = Posts.objects.all()
             update_level_by_post(all_posts, user_profile, 'increase')
             return HttpResponseRedirect(reverse('home'))
         else:
+            logger.critical(" Unauthenticated user tries to access the secured URL ")
             return HttpResponseRedirect(reverse('login'))
 
 
@@ -94,18 +99,20 @@ def like_post(request):
             'post': post
         }
         if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)                 # Liking The Post
+            post.likes.remove(request.user)                # Disliking The Post
+            logger.info(str(request.user) + " Removed like from Thought : " + str(post.title))
             remove_notify(user_profile, post.user_profile, "Liked Your Post", 30, reverse('details_post', args=[post.id]))
             update_trending_ratio(post, comments)
             update_level_by_like(post, "decrease")
-            print("DisLiking the post")
+            # print("DisLiking the post")
         else:
             post.likes.add(request.user)
+            logger.info(str(request.user) + " Liked a Thought : " + str(post.title))
             notify(user_profile, post.user_profile, "Liked Your Post", 30, reverse('details_post', args=[post.id]))
             update_trending_ratio(post, comments)
             update_level_by_like(post, "increase")
             post.dis_likes.remove(request.user)
-            print("Liking the post")
+            # print("Liking the post")
         if request.is_ajax():
             print('Hey its an AJAX calls')    # TEsting AJAX request
             html = render_to_string('like_section.html', context, request=request)
@@ -113,7 +120,7 @@ def like_post(request):
                                      context, request=request)
             return JsonResponse({'like_form': html, 'dis_like_form': html2})
     else:
-        print("user is not logged in")
+        logger.critical(" Unauthenticated user tries to access the secured URL ")
         return HttpResponseRedirect(reverse('login'))
 
 
@@ -129,16 +136,18 @@ def dis_like_post(request):
             'post': post
         }
         if post.dis_likes.filter(id=request.user.id).exists():
-            post.dis_likes.remove(request.user)                 # Liking The Post
+            post.dis_likes.remove(request.user)               # Liking The Post
+            logger.info(str(request.user) + " Removed Dislike from Thought : " + str(post.title))
             remove_notify(user_profile, post.user_profile, "Disliked Your Post", 30, reverse('details_post', args=[post.id]))
             update_level_by_like(post, "decrease")
-            print("removing dislike ")
+            # print("removing dislike ")
         else:
             post.dis_likes.add(request.user)
+            logger.info(str(request.user) + " Disliked a Thought : " + str(post.title))
             notify(user_profile, post.user_profile, "Disliked Your Post", 30, reverse('details_post', args=[post.id]))
             post.likes.remove(request.user)
             update_level_by_like(post, "decrease")
-            print("Adding Dislike")
+            # print("Adding Dislike")
         if request.is_ajax():
             print('Hey its an AJAX calls')          # TEsting AJAX request
             html = render_to_string('dis_like_section.html', context,
@@ -147,12 +156,10 @@ def dis_like_post(request):
                                      request=request)
             return JsonResponse({'dis_like_form': html, 'like_form': html2})
     else:
-        print("user is not logged in")
+        logger.critical(" Unauthenticated user tries to access the secured URL ")
         return HttpResponseRedirect(reverse('login'))
 
 
 def temp(request):
     print("that must be logged")
-    log_obj = logging.getLogger(__name__)
-    logging.basicConfig(level=20, filename=os.path.join(BASE_DIR, 'log_file.log'))
-    log_obj.error("It is Test Error For Logging modeule")
+    logger.error("It is Test Error For Logging modeule")

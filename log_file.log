@@ -82,3 +82,1145 @@ Traceback (most recent call last):
 ValueError: The view home.views.temp didn't return an HttpResponse object. It returned None instead.
 "GET /temp HTTP/1.1" 500 58214
 ERROR:django.server:"GET /temp HTTP/1.1" 500 58214
+DEBUG:django.db.backends:(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2019-02-25 15:34:03.822152' AND "django_session"."session_key" = '46j2zwb03t1k00wh6oe7qau3bc3fsyr8'); args=('2019-02-25 15:34:03.822152', '46j2zwb03t1k00wh6oe7qau3bc3fsyr8')
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 19; args=(19,)
+DEBUG:django.db.backends:(0.000) BEGIN; args=None
+DEBUG:django.db.backends:(0.001) UPDATE "auth_user" SET "last_login" = '2019-02-25 15:34:03.825623' WHERE "auth_user"."id" = 19; args=('2019-02-25 15:34:03.825623', 19)
+DEBUG:django.db.backends:(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = '46j2zwb03t1k00wh6oe7qau3bc3fsyr8'; args=('46j2zwb03t1k00wh6oe7qau3bc3fsyr8',)
+DEBUG:django.db.backends:(0.000) BEGIN; args=None
+DEBUG:django.db.backends:(0.017) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('46j2zwb03t1k00wh6oe7qau3bc3fsyr8'); args=('46j2zwb03t1k00wh6oe7qau3bc3fsyr8',)
+DEBUG:django.template:Exception while resolving variable 'unseen_notif_count' in template 'logout.html'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'unseen_notif_count'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'unseen_notif_count'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'unseen_notif_count'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [unseen_notif_count] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x06FE8930>>, 'request': <WSGIRequest: GET '/logout/'>, 'user': <django.contrib.auth.models.AnonymousUser object at 0x070105F0>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x070145B0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x07010410>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}]
+DEBUG:django.template:Exception while resolving variable 'my_notif' in template 'logout.html'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'my_notif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'my_notif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'my_notif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [my_notif] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x06FE8930>>, 'request': <WSGIRequest: GET '/logout/'>, 'user': <django.contrib.auth.models.AnonymousUser object at 0x070105F0>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x070145B0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x07010410>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {}]
+"GET /logout/ HTTP/1.1" 200 3081
+INFO:django.server:"GET /logout/ HTTP/1.1" 200 3081
+"GET /static/basestyle.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 304 0
+"GET /accounts/login/ HTTP/1.1" 200 4760
+INFO:django.server:"GET /accounts/login/ HTTP/1.1" 200 4760
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': "accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': "accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': "accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': "accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>
+Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'accounts/login/js/main.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'accounts/login/js/main.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'accounts/login/js/main.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'accounts/login/js/main.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': "accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': "accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': "accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': "accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>
+Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'accounts/login/js/main.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'accounts/login/js/main.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'accounts/login/js/main.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/' [name='password_change']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_change/done/' [name='password_change_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/' [name='password_reset']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'password_reset/done/' [name='password_reset_done']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/<uidb64>/<token>/' [name='password_reset_confirm']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\abx\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django-2.1b1-py3.6.egg\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>, <URLPattern 'reset/done/' [name='password_reset_complete']>], [<URLPattern 'signup/' [name='signup']>], [<URLPattern '' [name='home']>], [<URLPattern 'logout/' [name='logout']>], [<URLPattern 'like/' [name='like_post']>], [<URLPattern 'dislike/' [name='dis_like_post']>], [<URLResolver <module 'details.urls' from 'D:\\College Project\\toob\\details\\urls.py'> (None:None) 'details/'>], [<URLResolver <module 'signup.urls' from 'D:\\College Project\\toob\\signup\\urls.py'> (None:None) 'profile/'>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern 'write_thought' [name='write_thought']>], [<URLPattern 'post_thought' [name='post_thought']>], [<URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>], [<URLPattern 'views_notify/' [name='views_notif']>], [<URLPattern 'temp' [name='temp']>], [<URLPattern '^static\/(?P<path>.*)$'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'accounts/login/js/main.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'explore.urls' from 'D:\\College Project\\toob\\explore\\urls.py'> (None:None) 'explore/'>
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+DEBUG:django.db.backends:(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'James'; args=('James',)
+DEBUG:django.db.backends:(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'vz89u04mpb8jtpnfnd66vz3cixz7qqqu'  LIMIT 1; args=('vz89u04mpb8jtpnfnd66vz3cixz7qqqu',)
+DEBUG:django.db.backends:(0.000) BEGIN; args=None
+DEBUG:django.db.backends:(0.001) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'vz89u04mpb8jtpnfnd66vz3cixz7qqqu', 'NTk0ZTlhYmM1MmQ0YTNjZDgzMjZhZmIyNDFmZDcyOTNkYWZiZTFiMDp7fQ==', '2019-03-11 15:37:15.112147'; args=('vz89u04mpb8jtpnfnd66vz3cixz7qqqu', 'NTk0ZTlhYmM1MmQ0YTNjZDgzMjZhZmIyNDFmZDcyOTNkYWZiZTFiMDp7fQ==', '2019-03-11 15:37:15.112147')
+DEBUG:django.db.backends:(0.000) BEGIN; args=None
+DEBUG:django.db.backends:(0.001) UPDATE "auth_user" SET "last_login" = '2019-02-25 15:37:15.169834' WHERE "auth_user"."id" = 19; args=('2019-02-25 15:37:15.169834', 19)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."user_id" = 19; args=(19,)
+DEBUG:django.db.backends:(0.000) BEGIN; args=None
+DEBUG:django.db.backends:(0.013) UPDATE "signup_profile" SET "user_id" = 19, "gender" = 'male', "city" = 'New York', "date_of_birth" = '1995-04-12', "level" = 1, "bio" = 'this is james ...', "profile_pic" = '1005.jpg', "date_of_joining" = '2019-01-01 15:26:37.972376' WHERE "signup_profile"."id" = 6; args=(19, 'male', 'New York', '1995-04-12', 1, 'this is james ...', '1005.jpg', '2019-01-01 15:26:37.972376', 6)
+DEBUG:django.db.backends:(0.000) BEGIN; args=None
+DEBUG:django.db.backends:(0.022) UPDATE "django_session" SET "session_data" = 'YzM2ODYyNTcwY2FlZWYxMTcwZWU4NmNlZjBjYjlmMDkxYTYyZDA0Njp7Il9hdXRoX3VzZXJfaWQiOiIxOSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiOWE1NzMzNzEzZmFiMGY1MTFlNDgxYjc1NzEwZDE2Y2FhZGQ1MzI5NCJ9', "expire_date" = '2019-03-11 15:37:15.407167' WHERE "django_session"."session_key" = 'vz89u04mpb8jtpnfnd66vz3cixz7qqqu'; args=('YzM2ODYyNTcwY2FlZWYxMTcwZWU4NmNlZjBjYjlmMDkxYTYyZDA0Njp7Il9hdXRoX3VzZXJfaWQiOiIxOSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiOWE1NzMzNzEzZmFiMGY1MTFlNDgxYjc1NzEwZDE2Y2FhZGQ1MzI5NCJ9', '2019-03-11 15:37:15.407167', 'vz89u04mpb8jtpnfnd66vz3cixz7qqqu')
+"POST /accounts/login/ HTTP/1.1" 302 0
+INFO:django.server:"POST /accounts/login/ HTTP/1.1" 302 0
+DEBUG:django.db.backends:(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2019-02-25 15:37:15.563547' AND "django_session"."session_key" = 'vz89u04mpb8jtpnfnd66vz3cixz7qqqu'); args=('2019-02-25 15:37:15.563547', 'vz89u04mpb8jtpnfnd66vz3cixz7qqqu')
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 19; args=(19,)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."user_id" = 19; args=(19,)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."user_id" = 19; args=(19,)
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS "__count" FROM "Notification_notifications" WHERE ("Notification_notifications"."receiver_id" = 6 AND "Notification_notifications"."view" = 0); args=(6, False)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."user_id" = 19; args=(19,)
+DEBUG:django.db.backends:(0.000) SELECT "Notification_notifications"."id", "Notification_notifications"."sender_id", "Notification_notifications"."receiver_id", "Notification_notifications"."message", "Notification_notifications"."type", "Notification_notifications"."creation_time", "Notification_notifications"."redirect_url", "Notification_notifications"."view" FROM "Notification_notifications" WHERE "Notification_notifications"."receiver_id" = 6  LIMIT 12; args=(6,)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."id" = 5; args=(5,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 18; args=(18,)
+DEBUG:django.db.backends:(0.000) SELECT "home_posts"."id", "home_posts"."title", "home_posts"."content", "home_posts"."creation_time", "home_posts"."image", "home_posts"."last_modified", "home_posts"."user_profile_id", "home_posts"."trending_ratio", "home_posts"."type", "home_posts"."tags" FROM "home_posts" WHERE "home_posts"."user_profile_id" IN (SELECT U0."id" FROM "signup_profile" U0 INNER JOIN "signup_profile_follows" U1 ON (U0."id" = U1."to_profile_id") WHERE U1."from_profile_id" = 6) ORDER BY "home_posts"."trending_ratio" DESC; args=(6,)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."id" = 2; args=(2,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 15; args=(15,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_likes" ON ("auth_user"."id" = "home_posts_likes"."user_id") WHERE "home_posts_likes"."posts_id" = 1; args=(1,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_dis_likes" ON ("auth_user"."id" = "home_posts_dis_likes"."user_id") WHERE "home_posts_dis_likes"."posts_id" = 1; args=(1,)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."id" = 2; args=(2,)
+DEBUG:django.db.backends:(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 15; args=(15,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_likes" ON ("auth_user"."id" = "home_posts_likes"."user_id") WHERE "home_posts_likes"."posts_id" = 13; args=(13,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_dis_likes" ON ("auth_user"."id" = "home_posts_dis_likes"."user_id") WHERE "home_posts_dis_likes"."posts_id" = 13; args=(13,)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."id" = 4; args=(4,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 17; args=(17,)
+DEBUG:django.db.backends:(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_likes" ON ("auth_user"."id" = "home_posts_likes"."user_id") WHERE "home_posts_likes"."posts_id" = 2; args=(2,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_dis_likes" ON ("auth_user"."id" = "home_posts_dis_likes"."user_id") WHERE "home_posts_dis_likes"."posts_id" = 2; args=(2,)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."id" = 2; args=(2,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 15; args=(15,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_likes" ON ("auth_user"."id" = "home_posts_likes"."user_id") WHERE "home_posts_likes"."posts_id" = 17; args=(17,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_dis_likes" ON ("auth_user"."id" = "home_posts_dis_likes"."user_id") WHERE "home_posts_dis_likes"."posts_id" = 17; args=(17,)
+DEBUG:django.db.backends:(0.001) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."id" = 2; args=(2,)
+DEBUG:django.db.backends:(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 15; args=(15,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_likes" ON ("auth_user"."id" = "home_posts_likes"."user_id") WHERE "home_posts_likes"."posts_id" = 18; args=(18,)
+DEBUG:django.db.backends:(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_dis_likes" ON ("auth_user"."id" = "home_posts_dis_likes"."user_id") WHERE "home_posts_dis_likes"."posts_id" = 18; args=(18,)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."id" = 5; args=(5,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 18; args=(18,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_likes" ON ("auth_user"."id" = "home_posts_likes"."user_id") WHERE "home_posts_likes"."posts_id" = 3; args=(3,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_dis_likes" ON ("auth_user"."id" = "home_posts_dis_likes"."user_id") WHERE "home_posts_dis_likes"."posts_id" = 3; args=(3,)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."id" = 2; args=(2,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 15; args=(15,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_likes" ON ("auth_user"."id" = "home_posts_likes"."user_id") WHERE "home_posts_likes"."posts_id" = 14; args=(14,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_dis_likes" ON ("auth_user"."id" = "home_posts_dis_likes"."user_id") WHERE "home_posts_dis_likes"."posts_id" = 14; args=(14,)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" WHERE "signup_profile"."id" = 4; args=(4,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 17; args=(17,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_likes" ON ("auth_user"."id" = "home_posts_likes"."user_id") WHERE "home_posts_likes"."posts_id" = 6; args=(6,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" INNER JOIN "home_posts_dis_likes" ON ("auth_user"."id" = "home_posts_dis_likes"."user_id") WHERE "home_posts_dis_likes"."posts_id" = 6; args=(6,)
+DEBUG:django.db.backends:(0.000) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" ORDER BY "signup_profile"."level" DESC; args=()
+DEBUG:django.db.backends:(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 17; args=(17,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 22; args=(22,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 15; args=(15,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 21; args=(21,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 18; args=(18,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 19; args=(19,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 20; args=(20,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 23; args=(23,)
+DEBUG:django.db.backends:(0.001) SELECT "signup_profile"."id", "signup_profile"."user_id", "signup_profile"."gender", "signup_profile"."city", "signup_profile"."date_of_birth", "signup_profile"."level", "signup_profile"."bio", "signup_profile"."profile_pic", "signup_profile"."date_of_joining" FROM "signup_profile" INNER JOIN "signup_profile_follows" ON ("signup_profile"."id" = "signup_profile_follows"."to_profile_id") WHERE "signup_profile_follows"."from_profile_id" = 6; args=(6,)
+DEBUG:django.db.backends:(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 15; args=(15,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 17; args=(17,)
+DEBUG:django.db.backends:(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 18; args=(18,)
+"GET / HTTP/1.1" 200 62182
+INFO:django.server:"GET / HTTP/1.1" 200 62182
+"GET /logout/ HTTP/1.1" 200 3081
+"GET /accounts/login/ HTTP/1.1" 200 4760
+Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 62182
+"GET / HTTP/1.1" 200 62182
+INFO:django.server:"GET / HTTP/1.1" 200 62182
+"GET / HTTP/1.1" 500 59
+ERROR:django.server:"GET / HTTP/1.1" 500 59
+"GET / HTTP/1.1" 200 62182
+INFO:django.server:"GET / HTTP/1.1" 200 62182
+"GET /static/basestyle.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3912
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 3912
+"GET /logout/ HTTP/1.1" 200 3081
+INFO:django.server:"GET /logout/ HTTP/1.1" 200 3081
+"GET /accounts/login/ HTTP/1.1" 200 4760
+INFO:django.server:"GET /accounts/login/ HTTP/1.1" 200 4760
+Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+"POST /accounts/login/ HTTP/1.1" 302 0
+INFO:django.server:"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 62182
+INFO:django.server:"GET / HTTP/1.1" 200 62182
+"GET /logout/ HTTP/1.1" 200 3081
+INFO:django.server:"GET /logout/ HTTP/1.1" 200 3081
+"GET /accounts/login/ HTTP/1.1" 200 4760
+INFO:django.server:"GET /accounts/login/ HTTP/1.1" 200 4760
+Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+"POST /accounts/login/ HTTP/1.1" 302 0
+INFO:django.server:"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 62182
+INFO:django.server:"GET / HTTP/1.1" 200 62182
+"GET /logout/ HTTP/1.1" 200 3081
+INFO:django.server:"GET /logout/ HTTP/1.1" 200 3081
+"GET /accounts/login/ HTTP/1.1" 200 4760
+INFO:django.server:"GET /accounts/login/ HTTP/1.1" 200 4760
+Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+"POST /accounts/login/ HTTP/1.1" 302 0
+INFO:django.server:"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 62182
+INFO:django.server:"GET / HTTP/1.1" 200 62182
+"GET /logout/ HTTP/1.1" 200 3081
+INFO:django.server:"GET /logout/ HTTP/1.1" 200 3081
+"GET /accounts/login/ HTTP/1.1" 200 4760
+INFO:django.server:"GET /accounts/login/ HTTP/1.1" 200 4760
+Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+CRITICAL:logout.views:AnonymousUser is Logging out from the Site
+"GET /logout/ HTTP/1.1" 200 3081
+INFO:django.server:"GET /logout/ HTTP/1.1" 200 3081
+"GET / HTTP/1.1" 200 101504
+INFO:django.server:"GET / HTTP/1.1" 200 101504
+"GET /accounts/login/ HTTP/1.1" 200 4760
+INFO:django.server:"GET /accounts/login/ HTTP/1.1" 200 4760
+Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+"POST /accounts/login/ HTTP/1.1" 302 0
+INFO:django.server:"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 62182
+INFO:django.server:"GET / HTTP/1.1" 200 62182
+CRITICAL:logout.views:James is Logging out from the Site
+"GET /logout/ HTTP/1.1" 200 3081
+INFO:django.server:"GET /logout/ HTTP/1.1" 200 3081
+"GET /accounts/login/ HTTP/1.1" 200 4760
+INFO:django.server:"GET /accounts/login/ HTTP/1.1" 200 4760
+Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+"POST /accounts/login/ HTTP/1.1" 302 0
+INFO:django.server:"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 62182
+INFO:django.server:"GET / HTTP/1.1" 200 62182
+"POST /dislike/ HTTP/1.1" 200 2921
+INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2921
+"GET / HTTP/1.1" 200 62187
+INFO:django.server:"GET / HTTP/1.1" 200 62187
+Internal Server Error: /like/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 110, in like_post
+    logger.info(request.user + " Liked a Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+ERROR:django.request:Internal Server Error: /like/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 110, in like_post
+    logger.info(request.user + " Liked a Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+"POST /like/ HTTP/1.1" 500 16137
+ERROR:django.server:"POST /like/ HTTP/1.1" 500 16137
+Internal Server Error: /like/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 103, in like_post
+    logger.info(request.user + " Removed like from Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+ERROR:django.request:Internal Server Error: /like/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 103, in like_post
+    logger.info(request.user + " Removed like from Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+"POST /like/ HTTP/1.1" 500 16148
+ERROR:django.server:"POST /like/ HTTP/1.1" 500 16148
+"GET / HTTP/1.1" 200 62187
+INFO:django.server:"GET / HTTP/1.1" 200 62187
+Internal Server Error: /like/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 110, in like_post
+    logger.info(request.user + " Liked a Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+ERROR:django.request:Internal Server Error: /like/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 110, in like_post
+    logger.info(request.user + " Liked a Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+"POST /like/ HTTP/1.1" 500 16138
+ERROR:django.server:"POST /like/ HTTP/1.1" 500 16138
+Internal Server Error: /like/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 103, in like_post
+    logger.info(request.user + " Removed like from Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+ERROR:django.request:Internal Server Error: /like/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 103, in like_post
+    logger.info(request.user + " Removed like from Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+"POST /like/ HTTP/1.1" 500 16148
+ERROR:django.server:"POST /like/ HTTP/1.1" 500 16148
+Internal Server Error: /dislike/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 140, in dis_like_post
+    logger.info(request.user + " Removed Dislike from Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+ERROR:django.request:Internal Server Error: /dislike/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 140, in dis_like_post
+    logger.info(request.user + " Removed Dislike from Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+"POST /dislike/ HTTP/1.1" 500 16167
+ERROR:django.server:"POST /dislike/ HTTP/1.1" 500 16167
+Internal Server Error: /like/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 110, in like_post
+    logger.info(request.user + " Liked a Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+ERROR:django.request:Internal Server Error: /like/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 110, in like_post
+    logger.info(request.user + " Liked a Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+"POST /like/ HTTP/1.1" 500 16138
+ERROR:django.server:"POST /like/ HTTP/1.1" 500 16138
+Internal Server Error: /like/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 103, in like_post
+    logger.info(request.user + " Removed like from Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+ERROR:django.request:Internal Server Error: /like/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 103, in like_post
+    logger.info(request.user + " Removed like from Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+"POST /like/ HTTP/1.1" 500 16148
+ERROR:django.server:"POST /like/ HTTP/1.1" 500 16148
+"GET / HTTP/1.1" 200 62135
+INFO:django.server:"GET / HTTP/1.1" 200 62135
+Internal Server Error: /dislike/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 146, in dis_like_post
+    logger.info(request.user + " Disliked a Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+ERROR:django.request:Internal Server Error: /dislike/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 146, in dis_like_post
+    logger.info(request.user + " Disliked a Thought : " + post.title)
+TypeError: unsupported operand type(s) for +: 'SimpleLazyObject' and 'str'
+"POST /dislike/ HTTP/1.1" 500 16158
+ERROR:django.server:"POST /dislike/ HTTP/1.1" 500 16158
+"GET / HTTP/1.1" 200 62188
+INFO:django.server:"GET / HTTP/1.1" 200 62188
+INFO:home.views:James Liked a Thought : Post1 : Issac Newton
+"POST /like/ HTTP/1.1" 200 2916
+INFO:django.server:"POST /like/ HTTP/1.1" 200 2916
+INFO:home.views:James Disliked a Thought : Post1 : Issac Newton
+"POST /dislike/ HTTP/1.1" 200 2921
+INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2921
+INFO:home.views:James Removed Dislike from Thought : Data about Man
+"POST /dislike/ HTTP/1.1" 200 2955
+INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2955
+INFO:home.views:James Removed like from Thought : Data about Man
+"POST /like/ HTTP/1.1" 200 2901
+INFO:django.server:"POST /like/ HTTP/1.1" 200 2901
+INFO:home.views:James Liked a Thought : Data about Man
+"POST /like/ HTTP/1.1" 200 2955
+INFO:django.server:"POST /like/ HTTP/1.1" 200 2955
+INFO:home.views:James Disliked a Thought : Data about Man
+"POST /dislike/ HTTP/1.1" 200 2960
+INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2960
+INFO:home.views:James Liked a Thought : Data about Man
+"POST /like/ HTTP/1.1" 200 2955
+INFO:django.server:"POST /like/ HTTP/1.1" 200 2955
+INFO:home.views:James Removed like from Thought : Data about Man
+"POST /like/ HTTP/1.1" 200 2901
+INFO:django.server:"POST /like/ HTTP/1.1" 200 2901
+INFO:home.views:James Liked a Thought : Data about Man
+"POST /like/ HTTP/1.1" 200 2955
+INFO:django.server:"POST /like/ HTTP/1.1" 200 2955
+"GET / HTTP/1.1" 200 62187
+INFO:django.server:"GET / HTTP/1.1" 200 62187
+INFO:home.views:James Liked a Thought : Post1 : Issac Newton
+"POST /like/ HTTP/1.1" 200 2916
+INFO:django.server:"POST /like/ HTTP/1.1" 200 2916
+{levelname} {asctime} {module} {process:d} {thread:d} {message}
+INFO:django.server:"GET / HTTP/1.1" 200 62182
+INFO:home.views:James Disliked a Thought : Post1 : Issac Newton
+{levelname} {asctime} {module} {process:d} {thread:d} {message}
+INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2921
+INFO:home.views:James Disliked a Thought : Data about Man
+INFO 2019-02-26 08:07:58,951 basehttp 6904 1932 "POST /dislike/ HTTP/1.1" 200 2960
+INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2960
+INFO:home.views:James Liked a Thought : Data about Man
+INFO 2019-02-26 08:10:50,339 basehttp 4028 6204 "POST /like/ HTTP/1.1" 200 2955
+INFO:django.server:"POST /like/ HTTP/1.1" 200 2955
