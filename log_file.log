@@ -1224,3 +1224,189 @@ INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2960
 INFO:home.views:James Liked a Thought : Data about Man
 INFO 2019-02-26 08:10:50,339 basehttp 4028 6204 "POST /like/ HTTP/1.1" 200 2955
 INFO:django.server:"POST /like/ HTTP/1.1" 200 2955
+INFO 2019-02-26 18:53:24,027 basehttp 9040 8384 "GET / HTTP/1.1" 200 62187
+INFO:django.server:"GET / HTTP/1.1" 200 62187
+INFO 2019-02-26 18:53:24,183 basehttp 9040 8656 "GET /static/basestyle.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 304 0
+INFO 2019-02-26 18:53:24,296 basehttp 9040 1200 "GET /media/1010.jpg HTTP/1.1" 304 0
+INFO:django.server:"GET /media/1010.jpg HTTP/1.1" 304 0
+WARNING 2019-02-26 18:53:24,550 log 9040 2884 Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING 2019-02-26 18:53:24,551 basehttp 9040 2884 "GET /favicon.ico HTTP/1.1" 404 3912
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 3912
+CRITICAL:logout.views:James is Logging out from the Site
+CRITICAL:logout.views:AnonymousUser is Logging out from the Site
+INFO 2019-02-26 18:53:50,066 basehttp 9040 4364 "GET /logout/ HTTP/1.1" 200 3081
+INFO:django.server:"GET /logout/ HTTP/1.1" 200 3081
+INFO 2019-02-26 18:53:50,069 basehttp 9040 7716 "GET /logout/ HTTP/1.1" 200 3081
+INFO:django.server:"GET /logout/ HTTP/1.1" 200 3081
+ERROR 2019-02-26 18:53:50,201 basehttp 9040 4364 "GET /logout/ HTTP/1.1" 500 59
+ERROR:django.server:"GET /logout/ HTTP/1.1" 500 59
+INFO 2019-02-26 18:53:52,519 basehttp 9040 1212 "GET /accounts/login/ HTTP/1.1" 200 4760
+INFO:django.server:"GET /accounts/login/ HTTP/1.1" 200 4760
+WARNING 2019-02-26 18:53:52,566 log 9040 1068 Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING 2019-02-26 18:53:52,566 basehttp 9040 1068 "GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING 2019-02-26 18:53:52,638 log 9040 9128 Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+WARNING 2019-02-26 18:53:52,638 basehttp 9040 9128 "GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING 2019-02-26 18:53:52,754 log 9040 6088 Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING 2019-02-26 18:53:52,755 basehttp 9040 6088 "GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5596
+WARNING 2019-02-26 18:53:52,773 log 9040 1580 Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+WARNING 2019-02-26 18:53:52,774 basehttp 9040 1580 "GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5420
+INFO 2019-02-26 18:55:31,535 basehttp 9040 7320 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO:django.server:"POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2019-02-26 18:55:31,647 basehttp 9040 6744 "GET / HTTP/1.1" 200 51054
+INFO:django.server:"GET / HTTP/1.1" 200 51054
+INFO 2019-02-26 18:55:46,697 basehttp 9040 2600 "POST /views_notify/ HTTP/1.1" 200 14
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 14
+INFO 2019-02-26 18:55:55,517 basehttp 9040 540 "GET /details/17/ HTTP/1.1" 200 12161
+INFO:django.server:"GET /details/17/ HTTP/1.1" 200 12161
+ERROR 2019-02-26 18:56:01,074 log 9040 3776 Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR:django.request:Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR 2019-02-26 18:56:01,075 basehttp 9040 3776 "POST /views_notify/ HTTP/1.1" 500 16242
+ERROR:django.server:"POST /views_notify/ HTTP/1.1" 500 16242
+ERROR 2019-02-26 18:56:04,901 log 9040 9848 Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR:django.request:Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR 2019-02-26 18:56:04,902 basehttp 9040 9848 "POST /views_notify/ HTTP/1.1" 500 16242
+ERROR:django.server:"POST /views_notify/ HTTP/1.1" 500 16242
+ERROR 2019-02-26 18:56:05,640 log 9040 9372 Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR:django.request:Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR 2019-02-26 18:56:05,641 basehttp 9040 9372 "POST /views_notify/ HTTP/1.1" 500 16242
+ERROR:django.server:"POST /views_notify/ HTTP/1.1" 500 16242
+INFO 2019-02-26 18:56:06,963 basehttp 9040 2580 "GET / HTTP/1.1" 200 50999
+INFO:django.server:"GET / HTTP/1.1" 200 50999
+ERROR 2019-02-26 18:56:08,492 log 9040 7996 Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR:django.request:Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR 2019-02-26 18:56:08,492 basehttp 9040 7996 "POST /views_notify/ HTTP/1.1" 500 16242
+ERROR:django.server:"POST /views_notify/ HTTP/1.1" 500 16242
+ERROR 2019-02-26 18:56:09,088 log 9040 4264 Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR:django.request:Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR 2019-02-26 18:56:09,088 basehttp 9040 4264 "POST /views_notify/ HTTP/1.1" 500 16242
+ERROR:django.server:"POST /views_notify/ HTTP/1.1" 500 16242
+INFO 2019-02-26 18:56:24,489 basehttp 9040 3960 "GET /admin/ HTTP/1.1" 200 8919
+INFO:django.server:"GET /admin/ HTTP/1.1" 200 8919
+INFO 2019-02-26 18:56:24,569 basehttp 9040 9692 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2019-02-26 18:56:24,570 basehttp 9040 1624 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2019-02-26 18:56:24,570 basehttp 9040 9928 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2019-02-26 18:56:24,615 basehttp 9040 9440 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2019-02-26 18:56:24,690 basehttp 9040 9300 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO:django.server:"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2019-02-26 18:56:24,690 basehttp 9040 9280 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO:django.server:"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2019-02-26 18:56:24,690 basehttp 9040 9308 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO:django.server:"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2019-02-26 18:56:24,709 basehttp 9040 8432 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO:django.server:"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2019-02-26 18:56:24,709 basehttp 9040 9276 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO:django.server:"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
