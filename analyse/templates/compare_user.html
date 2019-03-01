@@ -1,0 +1,57 @@
+{% extends 'analyse_base.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+  <center><h2>Comparison of Users : {{ firstUser }} And {{ secondUser }}</h2></center>
+  <canvas id="chart"></canvas>
+  <script type="text/javascript">
+    function ajaxCallback(obj1, obj2){
+      var plot = document.getElementById('chart').getContext("2d");
+      user1 = {
+        label: "{{ firstUser.user.first_name }} {{ firstUser.user.last_name }}",
+        data: obj1["parameters"],
+        backgroundColor: ["rgba(182, 11, 226,0.2)"]
+      }
+      user2 = {
+        label: "{{ secondUser.user.first_name }} {{ secondUser.user.last_name }}",
+        data: obj2["parameters"],
+        backgroundColor: ["rgba(60, 235, 8, 0.2)"]
+      }
+      var chart = new Chart(plot, {
+        type: "radar",
+        data: {
+          labels: ["Level", "Followers", "Likes", "Followings", "Posts"],
+          datasets: [user1, user2]
+        },
+        options: {
+          scale: {
+            // Display the scale
+            display: true
+          }
+        }
+      });
+    }
+
+    api1 = "{% url 'get_user' firstUser.id %}";
+    api2 = "{% url 'get_user' secondUser.id %}";
+
+    $.ajax({
+      method: "GET",
+      url: api1,
+      success: function(response1){
+        $.ajax({
+          method: "GET",
+          url: api2,
+          success: function(response2){
+            ajaxCallback(response1, response2);
+          },
+          error: function(error){
+            console.log("Error in Second Ajax Call : ", error);
+          }
+        });
+      },
+      error: function(error){
+        console.log("Error in first Ajax Call : ", error);
+      }
+    });
+  </script>
+{% endblock %}

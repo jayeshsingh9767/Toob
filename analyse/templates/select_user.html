@@ -1,0 +1,64 @@
+{% extends 'analyse_base.html' %}
+{% block title %}Select User{% endblock %}
+{% block extrahead %}
+  <style media="screen">
+    li{
+      font-size: 2.5vw;
+      margin-top: 0.3vw;
+      margin-bottom: 0.3vw;
+    }
+    a{
+      text-decoration: none;
+    }
+    li:hover{
+      color: rgb(0, 41, 255);
+    }
+    .user{
+      font-size: 2vw;
+    }
+    .drop_down{
+      height: 2vw;
+      width: auto;
+      position: relative;
+      bottom: 0.3vw;
+    }
+    input[type="submit"]{
+      height: 2vw;
+      width: 8vw;
+      font-size: 1.5vw;
+      background-color: rgb(88, 210, 17);
+    }
+    input[type="submit"]:hover{
+      background-color: rgb(61, 164, 0);
+    }
+
+  </style>
+{% endblock %}
+{% block content %}
+<h2><center>Select user for Analysing</center></h2>
+  <ol>
+    {% for profile in user_list %}
+    <a href="{% url 'analyse_user' profile.id %}">
+      <li>{{ profile.user.first_name }}</li>
+    </a>
+    {% endfor %}
+  </ol>
+<h2><center>Select users for Comparison</center></h2>
+<form class="user" action="{% url 'compare_user' %}" method="post" align="center">
+  {% csrf_token %}
+  <label for="firstUser">Select First User</label>
+  <select class="drop_down" name="firstUser">
+    {% for profile in user_list %}
+      <option value="{{ profile.id }}">{{ profile.user.first_name }}</option>
+    {% endfor %}
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <label for="secondUser">Select First User</label>
+  <select class="drop_down" name="secondUser">
+    {% for profile in user_list %}
+      <option value="{{ profile.id }}">{{ profile.user.first_name }}</option>
+    {% endfor %}
+  </select><br><br>
+  <input type="submit" name="submit" value="Analyse">
+</form>
+{% endblock %}

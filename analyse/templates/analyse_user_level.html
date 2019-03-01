@@ -1,0 +1,80 @@
+{% extends 'analyse_base.html' %}
+{% block title %}User Analysis{% endblock %}
+{% block content %}
+<h2><center>User Analysis</center></h2>
+<canvas id="chart"></canvas>
+<script type="text/javascript">
+
+  function ajaxCallback(obj){
+    var plot = document.getElementById('chart').getContext("2d");
+    var user_level = {
+      label: "Level",
+      data: obj["user_level"],
+      backgroundColor: ["green", "green", "green", "green", "green", "green", "green", "green", "green", "green"],
+    }
+    var followers = {
+      label: "Followers",
+      data: obj["followers"],
+      backgroundColor: [
+        "rgb(242, 125, 208)",
+        "rgb(242, 125, 208)",
+        "rgb(242, 125, 208)",
+        "rgb(242, 125, 208)",
+        "rgb(242, 125, 208)",
+        "rgb(242, 125, 208)",
+        "rgb(242, 125, 208)",
+        "rgb(242, 125, 208)",
+        "rgb(242, 125, 208)",
+        "rgb(242, 125, 208)"
+      ],
+    };
+    var followings = {
+      label: "Followings",
+      data: obj["followings"],
+      backgroundColor: [
+        "rgb(228, 250, 47)",
+        "rgb(228, 250, 47)",
+        "rgb(228, 250, 47)",
+        "rgb(228, 250, 47)",
+        "rgb(228, 250, 47)",
+        "rgb(228, 250, 47)",
+        "rgb(228, 250, 47)",
+        "rgb(228, 250, 47)",
+        "rgb(228, 250, 47)",
+        "rgb(228, 250, 47)"
+      ],
+    };
+    var bar = {
+      labels: obj["user_labels"],
+      datasets: [user_level, followers, followings],
+    };
+    var user_chart = new Chart(plot, {
+      type: "horizontalBar",
+      data: bar,
+      options: {
+        scales: {
+            xAxes: [{
+                gridLines: {
+                    offsetGridLines: true
+                }
+            }]
+        }
+      }
+    });
+  }
+
+
+  api = "{% url 'get_popular_user' %}"
+  $.ajax({
+    method: "GET",
+    url: api,
+    success: function(response){
+      ajaxCallback(response);
+    },
+    error: function(error){
+      console.log("Error Occured", error);
+    }
+  });
+
+</script>
+{% endblock %}

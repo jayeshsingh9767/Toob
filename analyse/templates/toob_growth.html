@@ -1,0 +1,50 @@
+{% extends 'analyse_base.html' %}
+{% block title %}Toob Growth{% endblock %}
+{% block content %}
+
+
+  <h2><center>Toob Growth Analysis</center></h2>
+  <canvas id="chart"></canvas>
+  <script type="text/javascript">
+    var api = "{% url 'get_user_api' %}";
+    let datacp = [];
+    // Chart.defaults.global.defaultColor = "rgb(208, 80, 208)";
+    function ajaxCallback(obj){
+      var plot = document.getElementById('chart').getContext("2d");
+      var grow_chart = new Chart(plot, {
+        type: "line",
+        data:{
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          datasets: [{
+            label: 'No. of User',
+            data: obj["data_set"],
+            backgroundColores: ["red", "blue", "green"],
+            borderColor: ["rgb(6, 237, 6)"],
+            borderWidth: 1,
+            fill: false
+          }]
+        },
+        options: {
+          scales: {
+            yAxes:[{
+              ticks: {
+                beignAtZero: true
+              }
+            }]
+          }
+        }
+      });
+    }
+    $.ajax({
+      method: "GET",
+      url: api,
+      success: function(response){
+        ajaxCallback(response)
+      },
+      error: function(error){
+        console.log("Error is :");
+        console.log(error);
+      }
+    });
+  </script>
+{% endblock %}

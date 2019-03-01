@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'logout.apps.LogoutConfig',
     'details.apps.DetailsConfig',
     'django.contrib.admin',
+    'analyse.apps.AnalyseConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

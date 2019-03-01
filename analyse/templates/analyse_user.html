@@ -1,0 +1,13 @@
+{% extends 'analyse_base.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+  <h2><center>Report of Analysis of {{ user }}</center></h2>
+  <canvas id="chart"></canvas>
+  <script type="text/javascript">
+    var api = "{% url 'get_user_api' %}"
+    $.ajax({
+      method: "GET",
+      url:
+    })
+  </script>
+{% endblock %}

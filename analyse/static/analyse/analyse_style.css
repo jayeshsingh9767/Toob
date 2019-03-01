@@ -1,0 +1,18 @@
+.grid_box{
+  display: grid;
+  margin: 4vw 0 0 9vw;
+  grid-gap: 5vw;
+  grid-template-columns: 24vw 24vw 24vw;
+}
+
+.analyse_box{
+  width: 24vw;
+  height: 7vw;
+  background-color: #417690;
+  border-radius: 1vw;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding-top: 4vw;
+  font-size: 1.6vw;
+}

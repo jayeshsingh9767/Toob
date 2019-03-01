@@ -1,0 +1,46 @@
+{% extends 'admin/base.html' %}
+{% block title %}Toob Analysis{% endblock %}
+{% load i18n %}
+
+{% block branding %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'analyse/analyse_style.css' %}">
+  <h1 id="site-name"><a href="{% url 'admin:index' %}">Toob Analysis</a></h1>
+{% endblock %}
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+    <a href="">Analyse Following Data from Toob </a>
+    </div>
+    <div class="grid_box">
+      <a href="{% url 'analyse_toob_growth' %}">
+        <div id="analyse_level" class="analyse_box">
+          Toob Growth
+        </div>
+      </a>
+      <a href="{% url 'analyse_user_level' %}">
+        <div id="analyse_level" class="analyse_box">
+          Top Users
+        </div>
+      </a>
+      <a href="{% url 'select_user' %}">
+        <div id="analyse_level" class="analyse_box">
+          Analyse User
+        </div>
+      </a>
+      <a href="{% url 'analyse_post' %}">
+        <div id="analyse_level" class="analyse_box">
+          Analyse Post
+        </div>
+      </a>
+      <a href="{% url 'analyse_tags' %}">
+        <div id="analyse_level" class="analyse_box">
+          Trending Tags
+        </div>
+      </a>
+      <a href="{% url 'analyse_user_level' %}">
+        <div id="analyse_level" class="analyse_box">
+          Analyse Data
+        </div>
+      </a>
+  </div>
+{% endblock %}
