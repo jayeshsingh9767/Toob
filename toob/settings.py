@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django_cleanup',
+    'report.apps.ReportConfig',
     'explore.apps.ExploreConfig',
     'Notification.apps.NotificationConfig',
     'home.apps.HomeConfig',

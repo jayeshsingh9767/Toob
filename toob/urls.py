@@ -42,7 +42,8 @@ urlpatterns = [
     path('explore/', include('explore.urls')),
     path('views_notify/', views_notif, name="views_notif"),
     path('temp', views.temp, name="temp"),
-    path('admin/analyse/', include('analyse.urls'))
+    path('admin/analyse/', include('analyse.urls')),
+    path('report/', include('report.urls'))
 ]
 
 if settings.DEBUG:

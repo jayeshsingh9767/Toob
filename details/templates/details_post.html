@@ -67,7 +67,85 @@
 
           </script>
         </form>
+        <ul class="icons more-btn" id="more{{ post.id }}">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
+      <div class="more-dropdown" id="more-drp{{ post.id }}">
+        <a>Report</a>
+
+      </div>
+      <div class="report-box" id="report-box">
+        <form action="{% url 'report_post' post.id %}" class="report-form except" method="POST">
+          {% csrf_token %}
+          <h4 class="except">What is inappropriate about the Thought?</h4>
+          <label class="except" for="ac">Adult Content</label><input type="radio" class="except" id="ac" name="reason" value="1"><br>
+          <label class="except" for="ma">Misleading Advetisement</label><input type="radio" class="except" id="ma" name="reason" value="2"><br>
+          <label class="except" for="abc">Abusives Content</label><input type="radio" class="except" id="abc" name="reason" value="3"><br>
+          <label class="except" for="dt">Duplicate Thought</label><input type="radio" class="except" id="dt" name="reason" value="4"><br>
+          <label class="except" for="o">Other</label><input type="radio" name="reason" class="except" id="o" value="5"><br>
+          <label class="except" for="other" id="other_label">Specify Reason</label><input type="text" class="except" name="other" id="other"><br><br>
+          <center><input type="submit" class="except" name="report" id="report-btn" value="Report"></center>
+        </form>
+      </div>
+      <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('input[type=radio][name=reason]').change(function(){
+          if (this.value === "1"){
+            $("form > label").css({'background': 'none'});
+            $('label[for="ac"]').css({'background': 'rgb(137, 249, 222)'});
+            $('#other_label').css({'display': 'none'});
+            $('#other').css({'display': 'none'});
+          }
+          else if (this.value === "2") {
+            $("form > label").css({'background': 'none'});
+            $('label[for="ma"]').css({'background': 'rgb(137, 249, 222)'});
+            $('#other_label').css({'display': 'none'});
+            $('#other').css({'display': 'none'});
+          }
+          else if (this.value === "3") {
+            $("form > label").css({'background': 'none'});
+            $('label[for="abc"]').css({'background': 'rgb(137, 249, 222)'});
+            $('#other_label').css({'display': 'none'});
+            $('#other').css({'display': 'none'});
+          }
+          else if (this.value === "4") {
+            $("form > label").css({'background': 'none'});
+            $('label[for="dt"]').css({'background': 'rgb(137, 249, 222)'});
+            $('#other_label').css({'display': 'none'});
+            $('#other').css({'display': 'none'});
+          }
+          else if (this.value === "5") {
+            $("form > label").css({'background': 'none'});
+            $('label[for="o"]').css({'background': 'rgb(137, 249, 222)'});
+            $('#other_label').css({'display': 'inline'});
+            $('#other').css({'display': 'inline'});
+          }
+        });
+
+        $("#more-drp{{ post.id }}").click(function(){
+          $("#more-drp{{ post.id }}").css({'display': 'none'});
+          $('#report-box').css({'display': 'block'});
+        });
+
+        $('#report-box').click(function(event){
+          if(!$(event.target).hasClass('except')){
+            $('#report-box').css({'display': 'none'});
+        }
+        })
+      });
+
+        $("#more{{ post.id }}").click(function(){
+          $("#more-drp{{ post.id }}").toggle(function(){
+            $("#more-drp{{ post.id }}")
+          });
+        });
+
+
+      </script>
       <div class="shareLinks" id="sharelink{{ post.id }}">
 
         <a id="fb" href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
@@ -105,5 +183,6 @@
     </div>
   </div>
 </div>
+
 
 {% endblock %}
