@@ -58,7 +58,7 @@ def comment_submit(request, post_id):
                     update_trending_ratio(post, comments)
             Comment.objects.create(comment=content, post=post,
                                    user=request.user)
-            logger.info(str(request.user) + " Commeted on Thought " + str(post.title))
+            logger.info(str(request.user) + " Commented on Thought " + str(post.title))
             return HttpResponseRedirect(reverse('details_post',
                                         kwargs={'post_id': int(post_id)}))
     else:

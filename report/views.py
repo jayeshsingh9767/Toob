@@ -21,5 +21,6 @@ def report_post(request, post_id):
                 other = request.POST.get('other')
             re = Report(post=post, user=logged_user, reporting_reason=reason, other_reason=other)
             re.save()
-            logger.info(str(logged_user) + " Reported The Thought ", str(post))
+            print("Its There")
+            logger.info(str(logged_user.user.username) + " Reported The Thought " + str(post.title))
         return HttpResponseRedirect(reverse('details_post', kwargs={'post_id': post_id}))

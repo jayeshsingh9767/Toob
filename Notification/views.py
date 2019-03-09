@@ -12,6 +12,7 @@ def views_notif(request):
             user_prfile = Profile.objects.get(user=request.user)
             my_notif = Notifications.objects.filter(receiver=user_prfile, view=False).update(view=True)
             print("Updated Notifications are", my_notif)
+            data = {}
             if my_notif:
                 data = {"true": True}
             return JsonResponse(data)

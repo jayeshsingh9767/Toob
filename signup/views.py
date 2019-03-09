@@ -36,7 +36,7 @@ def signup(request):
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
-            logger.info(str(form.profile.user_name) + " Creates new accounts on Toob")
+            logger.info(str(username) + " Creates new accounts on Toob")
             login(request, user)
             return redirect('/')
     else:

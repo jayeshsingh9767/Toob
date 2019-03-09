@@ -12083,3 +12083,506 @@ INFO 2019-03-04 17:55:05,221 basehttp 968 7476 "GET /admin/report/report/10/chan
 INFO:django.server:"GET /admin/report/report/10/change/ HTTP/1.1" 200 8478
 INFO 2019-03-04 17:55:05,236 basehttp 968 1596 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
 INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-04 22:09:51,153 basehttp 10584 5452 "GET / HTTP/1.1" 200 50994
+INFO:django.server:"GET / HTTP/1.1" 200 50994
+WARNING 2019-03-04 22:09:51,510 log 10584 10464 Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING 2019-03-04 22:09:51,510 basehttp 10584 10464 "GET /favicon.ico HTTP/1.1" 404 4133
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 4133
+ERROR 2019-03-04 22:09:56,537 log 10584 1384 Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR:django.request:Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR 2019-03-04 22:09:56,538 basehttp 10584 1384 "POST /views_notify/ HTTP/1.1" 500 16359
+ERROR:django.server:"POST /views_notify/ HTTP/1.1" 500 16359
+ERROR 2019-03-04 22:09:57,440 log 10584 4620 Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR:django.request:Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR 2019-03-04 22:09:57,440 basehttp 10584 4620 "POST /views_notify/ HTTP/1.1" 500 16359
+ERROR:django.server:"POST /views_notify/ HTTP/1.1" 500 16359
+ERROR 2019-03-04 22:09:58,111 log 10584 11044 Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR:django.request:Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR 2019-03-04 22:09:58,112 basehttp 10584 11044 "POST /views_notify/ HTTP/1.1" 500 16359
+ERROR:django.server:"POST /views_notify/ HTTP/1.1" 500 16359
+ERROR 2019-03-04 22:09:58,832 log 10584 3156 Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR:django.request:Internal Server Error: /views_notify/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\Notification\views.py", line 17, in views_notif
+    return JsonResponse(data)
+UnboundLocalError: local variable 'data' referenced before assignment
+ERROR 2019-03-04 22:09:58,832 basehttp 10584 3156 "POST /views_notify/ HTTP/1.1" 500 16359
+ERROR:django.server:"POST /views_notify/ HTTP/1.1" 500 16359
+INFO:home.views:jay Disliked a Thought : This is first female member of Toob
+INFO 2019-03-04 22:17:13,819 basehttp 4040 5168 "POST /dislike/ HTTP/1.1" 200 2864
+INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2864
+INFO 2019-03-04 22:18:43,191 basehttp 10380 10260 "GET / HTTP/1.1" 200 50999
+INFO:django.server:"GET / HTTP/1.1" 200 50999
+INFO:home.views:jay Disliked a Thought : Post 3
+INFO 2019-03-04 22:18:45,316 basehttp 10380 6744 "POST /dislike/ HTTP/1.1" 200 2873
+INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2873
+INFO:home.views:jay Disliked a Thought : My First Post
+INFO 2019-03-04 22:19:51,997 basehttp 5200 10080 "POST /dislike/ HTTP/1.1" 200 2864
+INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2864
+INFO:home.views:jay Disliked a Thought : Post 6
+INFO 2019-03-04 22:23:32,341 basehttp 5200 6356 "POST /dislike/ HTTP/1.1" 200 2825
+INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2825
+INFO 2019-03-04 22:23:53,224 basehttp 5200 10228 "GET /details/3/ HTTP/1.1" 200 21743
+INFO:django.server:"GET /details/3/ HTTP/1.1" 200 21743
+INFO 2019-03-04 22:23:53,238 basehttp 5200 8324 "GET /static/details/details_post_style.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/details/details_post_style.css HTTP/1.1" 304 0
+INFO:details.views:jay Commeted on Thought Post 3
+INFO 2019-03-04 22:24:45,433 basehttp 5200 7464 "POST /details/comment/3/ HTTP/1.1" 302 0
+INFO:django.server:"POST /details/comment/3/ HTTP/1.1" 302 0
+INFO 2019-03-04 22:24:45,506 basehttp 5200 11168 "GET /details/3/ HTTP/1.1" 200 22096
+INFO:django.server:"GET /details/3/ HTTP/1.1" 200 22096
+INFO 2019-03-04 22:25:28,885 basehttp 5200 9968 "POST /report/3/ HTTP/1.1" 302 0
+INFO:django.server:"POST /report/3/ HTTP/1.1" 302 0
+INFO 2019-03-04 22:25:28,943 basehttp 5200 8396 "GET /details/3/ HTTP/1.1" 200 22096
+INFO:django.server:"GET /details/3/ HTTP/1.1" 200 22096
+INFO 2019-03-04 22:26:57,575 basehttp 5200 6296 "GET / HTTP/1.1" 200 51014
+INFO:django.server:"GET / HTTP/1.1" 200 51014
+INFO 2019-03-04 22:27:04,432 basehttp 5200 11140 "GET /admin/ HTTP/1.1" 200 9531
+INFO:django.server:"GET /admin/ HTTP/1.1" 200 9531
+INFO 2019-03-04 22:27:08,784 basehttp 5200 4764 "GET /admin/report/report/ HTTP/1.1" 200 5395
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 5395
+INFO 2019-03-04 22:27:08,809 basehttp 5200 4176 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-04 22:27:14,660 basehttp 5200 11052 "GET /admin/report/report/ HTTP/1.1" 200 5395
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 5395
+INFO 2019-03-04 22:27:14,681 basehttp 5200 7768 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-04 22:27:55,975 basehttp 5200 6060 "GET / HTTP/1.1" 200 60680
+INFO:django.server:"GET / HTTP/1.1" 200 60680
+INFO 2019-03-04 22:27:56,053 basehttp 5200 8704 "GET /static/home/stylehome.css HTTP/1.1" 200 4553
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 200 4553
+INFO 2019-03-04 22:27:56,053 basehttp 5200 9936 "GET /static/basestyle.css HTTP/1.1" 200 2096
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 200 2096
+INFO 2019-03-04 22:27:56,053 basehttp 5200 8800 "GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 200 31000
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 200 31000
+INFO 2019-03-04 22:27:56,053 basehttp 5200 8776 "GET /static/toob/images/default-profile.png HTTP/1.1" 200 2896
+INFO:django.server:"GET /static/toob/images/default-profile.png HTTP/1.1" 200 2896
+INFO 2019-03-04 22:27:56,069 basehttp 5200 10120 "GET /media/IMG-20180626-WA0008.jpg HTTP/1.1" 200 159608
+INFO:django.server:"GET /media/IMG-20180626-WA0008.jpg HTTP/1.1" 200 159608
+INFO 2019-03-04 22:27:56,084 basehttp 5200 10820 "GET /static/home/images/default-profile.png HTTP/1.1" 200 2896
+INFO:django.server:"GET /static/home/images/default-profile.png HTTP/1.1" 200 2896
+INFO 2019-03-04 22:27:56,131 basehttp 5200 10756 "GET /media/1005.jpg HTTP/1.1" 200 237320
+INFO:django.server:"GET /media/1005.jpg HTTP/1.1" 200 237320
+INFO 2019-03-04 22:27:56,163 basehttp 5200 5188 "GET /media/1010.jpg HTTP/1.1" 200 251143
+INFO:django.server:"GET /media/1010.jpg HTTP/1.1" 200 251143
+INFO 2019-03-04 22:27:56,179 basehttp 5200 7980 "GET /static/toob/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+WARNING 2019-03-04 22:27:56,242 log 5200 7288 Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING 2019-03-04 22:27:56,242 basehttp 5200 7288 "GET /favicon.ico HTTP/1.1" 404 4133
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 4133
+ERROR 2019-03-04 22:27:56,242 basehttp 5200 7288 "GET /favicon.ico HTTP/1.1" 500 59
+ERROR:django.server:"GET /favicon.ico HTTP/1.1" 500 59
+INFO 2019-03-04 22:28:00,157 basehttp 5200 1148 "GET /details/14/ HTTP/1.1" 200 15461
+INFO:django.server:"GET /details/14/ HTTP/1.1" 200 15461
+INFO 2019-03-04 22:28:00,190 basehttp 5200 1936 "GET /static/details/details_post_style.css HTTP/1.1" 200 5254
+INFO:django.server:"GET /static/details/details_post_style.css HTTP/1.1" 200 5254
+INFO 2019-03-04 22:28:00,247 basehttp 5200 6296 "GET /media/github.jpg HTTP/1.1" 200 44575
+INFO:django.server:"GET /media/github.jpg HTTP/1.1" 200 44575
+INFO 2019-03-04 22:28:15,532 basehttp 5200 2724 "POST /report/14/ HTTP/1.1" 302 0
+INFO:django.server:"POST /report/14/ HTTP/1.1" 302 0
+INFO 2019-03-04 22:28:15,563 basehttp 5200 4708 "GET /details/14/ HTTP/1.1" 200 15461
+INFO:django.server:"GET /details/14/ HTTP/1.1" 200 15461
+INFO 2019-03-04 22:31:20,248 basehttp 7692 9684 "GET /details/6/ HTTP/1.1" 200 18753
+INFO:django.server:"GET /details/6/ HTTP/1.1" 200 18753
+ERROR 2019-03-04 22:31:25,535 log 7692 10872 Internal Server Error: /report/6/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\report\views.py", line 24, in report_post
+    logger.info(str(logged_user.user_name) + " Reported The Thought ", str(post.title))
+AttributeError: 'Profile' object has no attribute 'user_name'
+ERROR:django.request:Internal Server Error: /report/6/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\report\views.py", line 24, in report_post
+    logger.info(str(logged_user.user_name) + " Reported The Thought ", str(post.title))
+AttributeError: 'Profile' object has no attribute 'user_name'
+ERROR 2019-03-04 22:31:25,535 basehttp 7692 10872 "POST /report/6/ HTTP/1.1" 500 68638
+ERROR:django.server:"POST /report/6/ HTTP/1.1" 500 68638
+INFO 2019-03-04 22:31:42,269 basehttp 11024 1280 "POST /report/6/ HTTP/1.1" 302 0
+INFO:django.server:"POST /report/6/ HTTP/1.1" 302 0
+INFO 2019-03-04 22:31:42,362 basehttp 11024 3224 "GET /details/6/ HTTP/1.1" 200 18753
+INFO:django.server:"GET /details/6/ HTTP/1.1" 200 18753
+INFO 2019-03-04 22:31:42,378 basehttp 11024 9388 "GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 304 0
+INFO:django.server:"GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 304 0
+INFO 2019-03-04 22:31:42,378 basehttp 11024 6092 "GET /static/basestyle.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 304 0
+INFO 2019-03-04 22:31:42,378 basehttp 11024 1148 "GET /static/details/details_post_style.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/details/details_post_style.css HTTP/1.1" 304 0
+INFO 2019-03-04 22:31:42,378 basehttp 11024 5108 "GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2019-03-04 22:31:42,394 basehttp 11024 10508 "GET /static/toob/images/default-profile.png HTTP/1.1" 304 0
+INFO:django.server:"GET /static/toob/images/default-profile.png HTTP/1.1" 304 0
+INFO 2019-03-04 22:31:45,285 basehttp 11024 8716 "GET /details/6/ HTTP/1.1" 200 18753
+INFO:django.server:"GET /details/6/ HTTP/1.1" 200 18753
+INFO 2019-03-04 22:31:45,301 basehttp 11024 5760 "GET /static/details/details_post_style.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/details/details_post_style.css HTTP/1.1" 304 0
+INFO 2019-03-04 22:31:45,301 basehttp 11024 6052 "GET /static/basestyle.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 304 0
+INFO 2019-03-04 22:31:45,301 basehttp 11024 6064 "GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2019-03-04 22:31:45,301 basehttp 11024 7224 "GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 304 0
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 304 0
+INFO 2019-03-04 22:31:45,316 basehttp 11024 9156 "GET /static/toob/images/default-profile.png HTTP/1.1" 304 0
+INFO:django.server:"GET /static/toob/images/default-profile.png HTTP/1.1" 304 0
+INFO 2019-03-04 22:33:37,789 basehttp 11024 3456 "GET /admin/report/report/ HTTP/1.1" 200 5894
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 5894
+INFO 2019-03-04 22:33:37,810 basehttp 11024 3712 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-04 22:36:56,006 basehttp 10440 8764 "GET / HTTP/1.1" 200 60680
+INFO:django.server:"GET / HTTP/1.1" 200 60680
+INFO 2019-03-04 22:36:57,856 basehttp 10440 2736 "GET /details/28 HTTP/1.1" 301 0
+INFO:django.server:"GET /details/28 HTTP/1.1" 301 0
+INFO:home.data_master:Updated Trending ratio of Why Sky is Blue? to Maximum value
+INFO 2019-03-04 22:36:58,244 basehttp 10440 1840 "GET /details/28/ HTTP/1.1" 200 14192
+INFO:django.server:"GET /details/28/ HTTP/1.1" 200 14192
+ERROR 2019-03-04 22:37:05,223 log 10440 4644 Internal Server Error: /report/28/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\report\views.py", line 25, in report_post
+    logger.info(str(logged_user.user.user_name) + " Reported The Thought ", str(post.title))
+AttributeError: 'User' object has no attribute 'user_name'
+ERROR:django.request:Internal Server Error: /report/28/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\report\views.py", line 25, in report_post
+    logger.info(str(logged_user.user.user_name) + " Reported The Thought ", str(post.title))
+AttributeError: 'User' object has no attribute 'user_name'
+ERROR 2019-03-04 22:37:05,225 basehttp 10440 4644 "POST /report/28/ HTTP/1.1" 500 68636
+ERROR:django.server:"POST /report/28/ HTTP/1.1" 500 68636
+INFO 2019-03-04 22:37:52,032 basehttp 8652 10820 "GET /admin/ HTTP/1.1" 200 9531
+INFO:django.server:"GET /admin/ HTTP/1.1" 200 9531
+INFO 2019-03-04 22:37:54,256 basehttp 8652 6268 "GET /admin/auth/user/ HTTP/1.1" 200 9636
+INFO:django.server:"GET /admin/auth/user/ HTTP/1.1" 200 9636
+INFO 2019-03-04 22:37:54,272 basehttp 8652 10976 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-04 22:37:57,787 basehttp 8652 2496 "GET /admin/auth/user/19/change/ HTTP/1.1" 200 16196
+INFO:django.server:"GET /admin/auth/user/19/change/ HTTP/1.1" 200 16196
+INFO 2019-03-04 22:37:57,806 basehttp 8652 6952 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-04 22:38:19,592 basehttp 8648 7328 "POST /report/28/ HTTP/1.1" 302 0
+INFO:django.server:"POST /report/28/ HTTP/1.1" 302 0
+INFO 2019-03-04 22:38:19,693 basehttp 8648 10952 "GET /details/28/ HTTP/1.1" 200 14192
+INFO:django.server:"GET /details/28/ HTTP/1.1" 200 14192
+INFO 2019-03-04 22:38:19,708 basehttp 8648 8376 "GET /static/basestyle.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 304 0
+INFO 2019-03-04 22:38:19,708 basehttp 8648 840 "GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 304 0
+INFO:django.server:"GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 304 0
+INFO 2019-03-04 22:38:19,708 basehttp 8648 2984 "GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2019-03-04 22:38:19,708 basehttp 8648 8220 "GET /static/details/details_post_style.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/details/details_post_style.css HTTP/1.1" 304 0
+INFO 2019-03-04 22:38:19,724 basehttp 8648 5320 "GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 304 0
+INFO:django.server:"GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 304 0
+INFO 2019-03-04 22:38:35,842 basehttp 8648 9052 "GET / HTTP/1.1" 200 60680
+INFO:django.server:"GET / HTTP/1.1" 200 60680
+INFO 2019-03-04 22:38:41,542 basehttp 8648 3584 "GET /details/14/ HTTP/1.1" 200 15461
+INFO:django.server:"GET /details/14/ HTTP/1.1" 200 15461
+INFO 2019-03-04 22:38:45,583 basehttp 8648 7464 "GET /details/17/ HTTP/1.1" 200 14620
+INFO:django.server:"GET /details/17/ HTTP/1.1" 200 14620
+INFO 2019-03-04 22:39:05,579 basehttp 8648 1432 "POST /report/17/ HTTP/1.1" 302 0
+INFO:django.server:"POST /report/17/ HTTP/1.1" 302 0
+INFO 2019-03-04 22:39:05,614 basehttp 8648 2252 "GET /details/17/ HTTP/1.1" 200 14620
+INFO:django.server:"GET /details/17/ HTTP/1.1" 200 14620
+INFO 2019-03-04 22:39:38,069 basehttp 2560 8668 "GET / HTTP/1.1" 200 60680
+INFO:django.server:"GET / HTTP/1.1" 200 60680
+INFO 2019-03-04 22:39:38,085 basehttp 2560 5452 "GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 304 0
+INFO:django.server:"GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 304 0
+INFO 2019-03-04 22:39:38,085 basehttp 2560 5108 "GET /static/basestyle.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 304 0
+INFO 2019-03-04 22:39:38,085 basehttp 2560 7116 "GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2019-03-04 22:39:38,085 basehttp 2560 11140 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO 2019-03-04 22:39:38,101 basehttp 2560 3440 "GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 304 0
+INFO:django.server:"GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 304 0
+INFO 2019-03-04 22:39:38,101 basehttp 2560 7628 "GET /static/toob/images/default-profile.png HTTP/1.1" 304 0
+INFO:django.server:"GET /static/toob/images/default-profile.png HTTP/1.1" 304 0
+INFO 2019-03-04 22:39:38,116 basehttp 2560 8084 "GET /static/home/images/default-profile.png HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/images/default-profile.png HTTP/1.1" 304 0
+INFO 2019-03-04 22:39:38,116 basehttp 2560 168 "GET /media/1010.jpg HTTP/1.1" 304 0
+INFO:django.server:"GET /media/1010.jpg HTTP/1.1" 304 0
+INFO 2019-03-04 22:39:38,116 basehttp 2560 6956 "GET /media/1005.jpg HTTP/1.1" 304 0
+INFO:django.server:"GET /media/1005.jpg HTTP/1.1" 304 0
+INFO 2019-03-04 22:39:38,116 basehttp 2560 296 "GET /media/IMG-20180626-WA0008.jpg HTTP/1.1" 304 0
+INFO:django.server:"GET /media/IMG-20180626-WA0008.jpg HTTP/1.1" 304 0
+CRITICAL:logout.views:roshan is Logging out from the Site
+INFO 2019-03-04 22:39:43,035 basehttp 2560 5760 "GET /logout/ HTTP/1.1" 200 3081
+INFO:django.server:"GET /logout/ HTTP/1.1" 200 3081
+INFO 2019-03-04 22:39:44,259 basehttp 2560 5912 "GET /accounts/login/ HTTP/1.1" 200 4760
+INFO:django.server:"GET /accounts/login/ HTTP/1.1" 200 4760
+WARNING 2019-03-04 22:39:44,290 log 2560 10924 Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING 2019-03-04 22:39:44,290 log 2560 4940 Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+WARNING 2019-03-04 22:39:44,290 basehttp 2560 4940 "GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+WARNING 2019-03-04 22:39:44,290 basehttp 2560 10924 "GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5817
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5817
+INFO 2019-03-04 22:39:44,312 basehttp 2560 3448 "GET /static/toob/css/main.css HTTP/1.1" 200 9402
+INFO:django.server:"GET /static/toob/css/main.css HTTP/1.1" 200 9402
+INFO 2019-03-04 22:39:44,359 basehttp 2560 8720 "GET /static/toob/css/util.css HTTP/1.1" 200 86795
+INFO:django.server:"GET /static/toob/css/util.css HTTP/1.1" 200 86795
+INFO 2019-03-04 22:39:44,375 basehttp 2560 8608 "GET /static/toob/images/img-01.png HTTP/1.1" 200 8599
+INFO:django.server:"GET /static/toob/images/img-01.png HTTP/1.1" 200 8599
+INFO 2019-03-04 22:39:44,437 basehttp 2560 4372 "GET /static/toob/fonts/poppins/Poppins-Bold.ttf HTTP/1.1" 200 141260
+INFO:django.server:"GET /static/toob/fonts/poppins/Poppins-Bold.ttf HTTP/1.1" 200 141260
+INFO 2019-03-04 22:39:44,456 basehttp 2560 8248 "GET /static/toob/fonts/poppins/Poppins-Regular.ttf HTTP/1.1" 200 145312
+INFO:django.server:"GET /static/toob/fonts/poppins/Poppins-Regular.ttf HTTP/1.1" 200 145312
+INFO 2019-03-04 22:39:44,472 basehttp 2560 4104 "GET /static/toob/fonts/poppins/Poppins-Medium.ttf HTTP/1.1" 200 143516
+INFO:django.server:"GET /static/toob/fonts/poppins/Poppins-Medium.ttf HTTP/1.1" 200 143516
+WARNING 2019-03-04 22:39:44,584 log 2560 3712 Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING 2019-03-04 22:39:44,584 basehttp 2560 3712 "GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5817
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5817
+WARNING 2019-03-04 22:39:44,620 log 2560 7084 Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+WARNING 2019-03-04 22:39:44,620 basehttp 2560 7084 "GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+INFO 2019-03-04 22:39:51,308 basehttp 2560 3304 "POST /accounts/login/ HTTP/1.1" 200 5057
+INFO:django.server:"POST /accounts/login/ HTTP/1.1" 200 5057
+WARNING 2019-03-04 22:39:51,339 log 2560 3224 Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING 2019-03-04 22:39:51,339 basehttp 2560 3224 "GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5817
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5817
+INFO 2019-03-04 22:39:51,339 basehttp 2560 2788 "GET /static/toob/images/img-01.png HTTP/1.1" 304 0
+INFO:django.server:"GET /static/toob/images/img-01.png HTTP/1.1" 304 0
+WARNING 2019-03-04 22:39:51,339 log 2560 6092 Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+WARNING 2019-03-04 22:39:51,339 basehttp 2560 6092 "GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+INFO 2019-03-04 22:40:03,392 basehttp 2560 11020 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO:django.server:"POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2019-03-04 22:40:03,491 basehttp 2560 6852 "GET / HTTP/1.1" 200 68244
+INFO:django.server:"GET / HTTP/1.1" 200 68244
+INFO 2019-03-04 22:40:12,439 basehttp 2560 5284 "GET /details/1 HTTP/1.1" 301 0
+INFO:django.server:"GET /details/1 HTTP/1.1" 301 0
+INFO 2019-03-04 22:40:12,564 basehttp 2560 2008 "GET /details/1/ HTTP/1.1" 200 36195
+INFO:django.server:"GET /details/1/ HTTP/1.1" 200 36195
+INFO:report.views:Jack Reported The Thought Post1 : Issac Newton
+INFO 2019-03-04 22:40:36,727 basehttp 2560 8568 "POST /report/1/ HTTP/1.1" 302 0
+INFO:django.server:"POST /report/1/ HTTP/1.1" 302 0
+INFO 2019-03-04 22:40:36,812 basehttp 2560 4764 "GET /details/1/ HTTP/1.1" 200 36195
+INFO:django.server:"GET /details/1/ HTTP/1.1" 200 36195
+INFO 2019-03-09 20:35:01,559 basehttp 9632 9748 "GET / HTTP/1.1" 200 51014
+INFO:django.server:"GET / HTTP/1.1" 200 51014
+INFO 2019-03-09 20:35:01,890 basehttp 9632 9744 "GET /static/basestyle.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 304 0
+INFO 2019-03-09 20:35:01,891 basehttp 9632 9912 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO 2019-03-09 20:35:01,892 basehttp 9632 9916 "GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 304 0
+INFO:django.server:"GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 304 0
+INFO 2019-03-09 20:35:01,969 basehttp 9632 9920 "GET /media/1010.jpg HTTP/1.1" 304 0
+INFO:django.server:"GET /media/1010.jpg HTTP/1.1" 304 0
+INFO 2019-03-09 20:35:01,988 basehttp 9632 9924 "GET /media/1005.jpg HTTP/1.1" 304 0
+INFO:django.server:"GET /media/1005.jpg HTTP/1.1" 304 0
+WARNING 2019-03-09 20:35:02,318 log 9632 9928 Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING 2019-03-09 20:35:02,319 basehttp 9632 9928 "GET /favicon.ico HTTP/1.1" 404 4133
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 4133
+CRITICAL:logout.views:jay is Logging out from the Site
+INFO 2019-03-09 20:35:04,306 basehttp 9632 9936 "GET /logout/ HTTP/1.1" 200 3081
+INFO:django.server:"GET /logout/ HTTP/1.1" 200 3081
+INFO 2019-03-09 20:35:06,329 basehttp 9632 9932 "GET /accounts/login/ HTTP/1.1" 200 4760
+INFO:django.server:"GET /accounts/login/ HTTP/1.1" 200 4760
+WARNING 2019-03-09 20:35:06,381 log 9632 10204 Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING 2019-03-09 20:35:06,381 basehttp 9632 10204 "GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5817
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5817
+WARNING 2019-03-09 20:35:06,492 log 9632 10208 Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+WARNING 2019-03-09 20:35:06,493 basehttp 9632 10208 "GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+WARNING 2019-03-09 20:35:06,538 log 9632 10212 Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING 2019-03-09 20:35:06,538 basehttp 9632 10212 "GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5817
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5817
+WARNING 2019-03-09 20:35:06,576 log 9632 10216 Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+WARNING 2019-03-09 20:35:06,576 basehttp 9632 10216 "GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+INFO 2019-03-09 20:35:08,906 basehttp 9632 10224 "GET /signup/ HTTP/1.1" 200 6026
+INFO:django.server:"GET /signup/ HTTP/1.1" 200 6026
+ERROR 2019-03-09 20:36:07,969 log 9632 9644 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\signup\views.py", line 39, in signup
+    logger.info(str(form.profile.user_name) + " Creates new accounts on Toob")
+AttributeError: 'UserSignUp' object has no attribute 'profile'
+ERROR:django.request:Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\signup\views.py", line 39, in signup
+    logger.info(str(form.profile.user_name) + " Creates new accounts on Toob")
+AttributeError: 'UserSignUp' object has no attribute 'profile'
+ERROR 2019-03-09 20:36:07,971 basehttp 9632 9644 "POST /signup/ HTTP/1.1" 500 70126
+ERROR:django.server:"POST /signup/ HTTP/1.1" 500 70126
+INFO 2019-03-09 20:39:44,858 basehttp 2616 9840 "POST /signup/ HTTP/1.1" 200 6232
+INFO:django.server:"POST /signup/ HTTP/1.1" 200 6232
+ERROR 2019-03-09 20:41:01,484 log 2616 10224 Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\signup\views.py", line 39, in signup
+    logger.info(str(form.profile.username) + " Creates new accounts on Toob")
+AttributeError: 'UserSignUp' object has no attribute 'profile'
+ERROR:django.request:Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\signup\views.py", line 39, in signup
+    logger.info(str(form.profile.username) + " Creates new accounts on Toob")
+AttributeError: 'UserSignUp' object has no attribute 'profile'
+ERROR 2019-03-09 20:41:01,485 basehttp 2616 10224 "POST /signup/ HTTP/1.1" 500 70131
+ERROR:django.server:"POST /signup/ HTTP/1.1" 500 70131
+INFO 2019-03-09 20:41:49,203 basehttp 7128 2864 "POST /signup/ HTTP/1.1" 200 6237
+INFO:django.server:"POST /signup/ HTTP/1.1" 200 6237
+INFO:signup.views:manish Creates new accounts on Toob
+INFO 2019-03-09 20:42:35,398 basehttp 7128 7104 "POST /signup/ HTTP/1.1" 302 0
+INFO:django.server:"POST /signup/ HTTP/1.1" 302 0
+INFO 2019-03-09 20:42:35,426 basehttp 7128 8684 "GET / HTTP/1.1" 200 8152
+INFO:django.server:"GET / HTTP/1.1" 200 8152
+INFO 2019-03-09 20:42:51,170 basehttp 7128 7720 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+CRITICAL:logout.views:manish is Logging out from the Site
+INFO 2019-03-09 20:43:34,645 basehttp 9204 8632 "GET /logout/ HTTP/1.1" 200 3081
+INFO:django.server:"GET /logout/ HTTP/1.1" 200 3081
+INFO 2019-03-09 20:43:36,124 basehttp 9204 7864 "GET /accounts/login/ HTTP/1.1" 200 4760
+INFO:django.server:"GET /accounts/login/ HTTP/1.1" 200 4760
+WARNING 2019-03-09 20:43:36,157 log 9204 6856 Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING:django.request:Not Found: /accounts/login/{% static 'toob/vendor/bootstrap/js/bootstrap.min.js' }%
+WARNING 2019-03-09 20:43:36,158 basehttp 9204 6856 "GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5817
+WARNING:django.server:"GET /accounts/login/%7B%%20static%20'toob/vendor/bootstrap/js/bootstrap.min.js'%20%7D% HTTP/1.1" 404 5817
+WARNING 2019-03-09 20:43:36,162 log 9204 7128 Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+WARNING 2019-03-09 20:43:36,163 basehttp 9204 7128 "GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+WARNING 2019-03-09 20:43:36,199 log 9204 6156 Not Found: /accounts/login/js/main.js
+WARNING:django.request:Not Found: /accounts/login/js/main.js
+WARNING 2019-03-09 20:43:36,199 basehttp 9204 6156 "GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+WARNING:django.server:"GET /accounts/login/js/main.js HTTP/1.1" 404 5641
+INFO 2019-03-09 20:43:43,920 basehttp 9204 10060 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO:django.server:"POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2019-03-09 20:43:44,078 basehttp 9204 9300 "GET / HTTP/1.1" 200 51977
+INFO:django.server:"GET / HTTP/1.1" 200 51977
+INFO:home.views:jay Liked a Thought : My First Post
+INFO 2019-03-09 20:44:16,431 basehttp 9204 9228 "POST /like/ HTTP/1.1" 200 2859
+INFO:django.server:"POST /like/ HTTP/1.1" 200 2859
+INFO:home.views:jay Disliked a Thought : My First Post
+INFO 2019-03-09 20:48:32,233 basehttp 5452 10200 "POST /dislike/ HTTP/1.1" 200 2864
+INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2864
