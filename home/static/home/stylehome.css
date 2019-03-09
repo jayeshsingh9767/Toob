@@ -218,6 +218,55 @@ input[name="comment"]{
   background-color: #f1f1f1
 }
 
+.report-box{
+  display: none;
+  position: fixed;
+  top: 0vw;
+  left: 0vw;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(196, 190, 196, 0.8);
+  z-index: 2;
+
+}
+
+
+.report-form{
+  width: 23vw;
+  height: auto;
+  background-color:rgb(255, 255, 255);
+  padding: 0.5vw 1vw 2.2vw 1vw;
+  position: fixed;
+  top: 30vh;
+  left: 40vw;
+}
+
+.report-form > h4{
+  font-size: 1.3vw;
+}
+
+#other_label, #other{
+  display: none;
+}
+
+
+.report-form > label{
+  padding: 0.1vw 1vw;
+  margin-bottom: 1vw;
+  font-size: 1.3vw;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+#report-btn{
+  font-size: 1.3vw;
+  width: 5.5vw;
+  height: 2vw;
+}
+
+
 .shareLinks{
   display: none;
 }

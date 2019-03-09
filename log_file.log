@@ -12586,3 +12586,866 @@ INFO:django.server:"POST /like/ HTTP/1.1" 200 2859
 INFO:home.views:jay Disliked a Thought : My First Post
 INFO 2019-03-09 20:48:32,233 basehttp 5452 10200 "POST /dislike/ HTTP/1.1" 200 2864
 INFO:django.server:"POST /dislike/ HTTP/1.1" 200 2864
+ERROR 2019-03-09 20:51:28,143 log 9976 9180 Internal Server Error: /details/comment/15/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 137, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view details.views.comment_submit didn't return an HttpResponse object. It returned None instead.
+ERROR:django.request:Internal Server Error: /details/comment/15/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 137, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view details.views.comment_submit didn't return an HttpResponse object. It returned None instead.
+ERROR 2019-03-09 20:51:28,144 basehttp 9976 9180 "GET /details/comment/15/?comment=Its+Amazing HTTP/1.1" 500 59246
+ERROR:django.server:"GET /details/comment/15/?comment=Its+Amazing HTTP/1.1" 500 59246
+INFO 2019-03-09 20:53:09,013 basehttp 9976 1036 "GET /details/15/ HTTP/1.1" 200 15541
+INFO:django.server:"GET /details/15/ HTTP/1.1" 200 15541
+INFO 2019-03-09 20:53:09,031 basehttp 9976 8636 "GET /static/details/details_post_style.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/details/details_post_style.css HTTP/1.1" 304 0
+ERROR 2019-03-09 20:53:14,883 log 9976 9580 Internal Server Error: /details/comment/15/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 137, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view details.views.comment_submit didn't return an HttpResponse object. It returned None instead.
+ERROR:django.request:Internal Server Error: /details/comment/15/
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 137, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view details.views.comment_submit didn't return an HttpResponse object. It returned None instead.
+ERROR 2019-03-09 20:53:14,884 basehttp 9976 9580 "GET /details/comment/15/?comment=Its+Amazing HTTP/1.1" 500 59246
+ERROR:django.server:"GET /details/comment/15/?comment=Its+Amazing HTTP/1.1" 500 59246
+INFO 2019-03-09 20:54:28,908 basehttp 9976 8700 "GET / HTTP/1.1" 200 52061
+INFO:django.server:"GET / HTTP/1.1" 200 52061
+WARNING 2019-03-09 20:54:38,152 log 9976 3608 Forbidden (CSRF token missing or incorrect.): /details/comment/15/
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /details/comment/15/
+WARNING 2019-03-09 20:54:38,152 basehttp 9976 3608 "POST /details/comment/15/ HTTP/1.1" 403 2513
+WARNING:django.server:"POST /details/comment/15/ HTTP/1.1" 403 2513
+WARNING 2019-03-09 20:55:00,044 log 9976 8200 Forbidden (CSRF token missing or incorrect.): /details/comment/15/
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /details/comment/15/
+WARNING 2019-03-09 20:55:00,045 basehttp 9976 8200 "POST /details/comment/15/ HTTP/1.1" 403 2513
+WARNING:django.server:"POST /details/comment/15/ HTTP/1.1" 403 2513
+INFO 2019-03-09 20:55:06,103 basehttp 9976 7436 "GET / HTTP/1.1" 200 52901
+INFO:django.server:"GET / HTTP/1.1" 200 52901
+INFO:home.data_master:Updated Trending ratio of My First Post to 0.07692307692307693
+INFO:details.views:jay Commented on Thought My First Post
+INFO 2019-03-09 20:55:08,533 basehttp 9976 10216 "POST /details/comment/15/ HTTP/1.1" 302 0
+INFO:django.server:"POST /details/comment/15/ HTTP/1.1" 302 0
+INFO 2019-03-09 20:55:08,591 basehttp 9976 10020 "GET /details/15/ HTTP/1.1" 200 15902
+INFO:django.server:"GET /details/15/ HTTP/1.1" 200 15902
+INFO:details.views:jay Commented on Thought Post 6
+INFO 2019-03-09 20:55:44,646 basehttp 9976 3296 "POST /details/comment/6/ HTTP/1.1" 302 0
+INFO:django.server:"POST /details/comment/6/ HTTP/1.1" 302 0
+INFO 2019-03-09 20:55:44,718 basehttp 9976 3256 "GET /details/6/ HTTP/1.1" 200 20451
+INFO:django.server:"GET /details/6/ HTTP/1.1" 200 20451
+INFO 2019-03-09 20:56:12,927 basehttp 9976 7136 "GET / HTTP/1.1" 200 52901
+INFO:django.server:"GET / HTTP/1.1" 200 52901
+INFO 2019-03-09 21:04:09,047 basehttp 9976 8848 "GET / HTTP/1.1" 200 62273
+INFO:django.server:"GET / HTTP/1.1" 200 62273
+INFO 2019-03-09 21:06:50,855 basehttp 9976 8112 "GET / HTTP/1.1" 200 62273
+INFO:django.server:"GET / HTTP/1.1" 200 62273
+INFO 2019-03-09 21:06:51,580 basehttp 9976 8020 "GET / HTTP/1.1" 200 62273
+INFO:django.server:"GET / HTTP/1.1" 200 62273
+INFO 2019-03-09 21:06:51,820 basehttp 9976 2844 "GET / HTTP/1.1" 200 62273
+INFO:django.server:"GET / HTTP/1.1" 200 62273
+INFO 2019-03-09 21:06:52,741 basehttp 9976 3312 "GET / HTTP/1.1" 200 62273
+INFO:django.server:"GET / HTTP/1.1" 200 62273
+INFO 2019-03-09 21:06:52,761 basehttp 9976 8128 "GET /static/home/stylehome.css HTTP/1.1" 200 5207
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 200 5207
+INFO 2019-03-09 21:06:52,766 basehttp 9976 1244 "GET /static/basestyle.css HTTP/1.1" 200 2096
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 200 2096
+INFO 2019-03-09 21:06:52,769 basehttp 9976 3964 "GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 200 31000
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 200 31000
+INFO 2019-03-09 21:06:52,808 basehttp 9976 2856 "GET /media/IMG-20180626-WA0008.jpg HTTP/1.1" 200 159608
+INFO:django.server:"GET /media/IMG-20180626-WA0008.jpg HTTP/1.1" 200 159608
+INFO 2019-03-09 21:06:52,809 basehttp 9976 6076 "GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 200 722108
+INFO:django.server:"GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 200 722108
+INFO 2019-03-09 21:06:52,816 basehttp 9976 9580 "GET /static/toob/images/default-profile.png HTTP/1.1" 200 2896
+INFO:django.server:"GET /static/toob/images/default-profile.png HTTP/1.1" 200 2896
+INFO 2019-03-09 21:06:52,841 basehttp 9976 1516 "GET /static/home/images/default-profile.png HTTP/1.1" 200 2896
+INFO:django.server:"GET /static/home/images/default-profile.png HTTP/1.1" 200 2896
+INFO 2019-03-09 21:06:52,843 basehttp 9976 8528 "GET /media/1010.jpg HTTP/1.1" 200 251143
+INFO:django.server:"GET /media/1010.jpg HTTP/1.1" 200 251143
+INFO 2019-03-09 21:06:52,852 basehttp 9976 4272 "GET /media/1005.jpg HTTP/1.1" 200 237320
+INFO:django.server:"GET /media/1005.jpg HTTP/1.1" 200 237320
+INFO 2019-03-09 21:06:52,852 basehttp 9976 5724 "GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 200 86659
+INFO:django.server:"GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 200 86659
+INFO 2019-03-09 21:06:52,903 basehttp 9976 1224 "GET /static/toob/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+WARNING 2019-03-09 21:06:52,948 log 9976 9228 Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING 2019-03-09 21:06:52,949 basehttp 9976 9228 "GET /favicon.ico HTTP/1.1" 404 4133
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 4133
+INFO 2019-03-09 21:10:17,469 basehttp 9976 932 "GET / HTTP/1.1" 200 73043
+INFO:django.server:"GET / HTTP/1.1" 200 73043
+INFO 2019-03-09 21:10:17,485 basehttp 9976 7504 "GET /static/home/stylehome.css HTTP/1.1" 200 5207
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 200 5207
+INFO 2019-03-09 21:11:18,993 basehttp 9976 104 "GET / HTTP/1.1" 200 74267
+INFO:django.server:"GET / HTTP/1.1" 200 74267
+INFO 2019-03-09 21:11:19,008 basehttp 9976 1672 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO 2019-03-09 21:11:23,889 basehttp 9976 9664 "GET / HTTP/1.1" 200 74267
+INFO:django.server:"GET / HTTP/1.1" 200 74267
+INFO 2019-03-09 21:11:26,054 basehttp 9976 2008 "GET / HTTP/1.1" 200 74267
+INFO:django.server:"GET / HTTP/1.1" 200 74267
+INFO 2019-03-09 21:11:32,666 basehttp 9976 3056 "GET / HTTP/1.1" 200 74267
+INFO:django.server:"GET / HTTP/1.1" 200 74267
+INFO 2019-03-09 21:13:46,351 basehttp 9976 1728 "GET / HTTP/1.1" 200 74383
+INFO:django.server:"GET / HTTP/1.1" 200 74383
+INFO 2019-03-09 21:13:46,366 basehttp 9976 6440 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO 2019-03-09 21:14:03,863 basehttp 9976 6940 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:14:04,061 basehttp 9976 3736 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:14:05,185 basehttp 9976 6180 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:14:05,203 basehttp 9976 5444 "GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 200 86659
+INFO:django.server:"GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 200 86659
+INFO 2019-03-09 21:14:05,207 basehttp 9976 3232 "GET /static/basestyle.css HTTP/1.1" 200 2096
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 200 2096
+INFO 2019-03-09 21:14:05,209 basehttp 9976 3172 "GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 200 31000
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 200 31000
+INFO 2019-03-09 21:14:05,216 basehttp 9976 5236 "GET /static/home/stylehome.css HTTP/1.1" 200 5207
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 200 5207
+INFO 2019-03-09 21:14:05,221 basehttp 9976 3808 "GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 200 722108
+INFO:django.server:"GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 200 722108
+INFO 2019-03-09 21:14:05,226 basehttp 9976 7840 "GET /static/toob/images/default-profile.png HTTP/1.1" 200 2896
+INFO:django.server:"GET /static/toob/images/default-profile.png HTTP/1.1" 200 2896
+INFO 2019-03-09 21:14:05,230 basehttp 9976 4360 "GET /static/home/images/default-profile.png HTTP/1.1" 200 2896
+INFO:django.server:"GET /static/home/images/default-profile.png HTTP/1.1" 200 2896
+INFO 2019-03-09 21:14:05,232 basehttp 9976 9504 "GET /media/IMG-20180626-WA0008.jpg HTTP/1.1" 200 159608
+INFO:django.server:"GET /media/IMG-20180626-WA0008.jpg HTTP/1.1" 200 159608
+INFO 2019-03-09 21:14:05,233 basehttp 9976 9688 "GET /media/1010.jpg HTTP/1.1" 200 251143
+INFO:django.server:"GET /media/1010.jpg HTTP/1.1" 200 251143
+INFO 2019-03-09 21:14:05,234 basehttp 9976 7152 "GET /media/1005.jpg HTTP/1.1" 200 237320
+INFO:django.server:"GET /media/1005.jpg HTTP/1.1" 200 237320
+INFO 2019-03-09 21:14:05,254 basehttp 9976 2284 "GET /static/toob/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+WARNING 2019-03-09 21:14:05,362 log 9976 9952 Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING 2019-03-09 21:14:05,363 basehttp 9976 9952 "GET /favicon.ico HTTP/1.1" 404 4133
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 4133
+INFO 2019-03-09 21:15:09,282 basehttp 9976 8152 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:15:09,298 basehttp 9976 8768 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO 2019-03-09 21:15:09,503 basehttp 9976 9044 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:15:39,050 basehttp 9976 3444 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:15:39,640 basehttp 9976 9636 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:15:39,655 basehttp 9976 3960 "GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 200 86659
+INFO:django.server:"GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 200 86659
+INFO 2019-03-09 21:15:39,661 basehttp 9976 9872 "GET /static/basestyle.css HTTP/1.1" 200 2096
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 200 2096
+INFO 2019-03-09 21:15:39,662 basehttp 9976 1664 "GET /static/home/stylehome.css HTTP/1.1" 200 5220
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 200 5220
+INFO 2019-03-09 21:15:39,662 basehttp 9976 6536 "GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 200 31000
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 200 31000
+INFO 2019-03-09 21:15:39,675 basehttp 9976 4012 "GET /static/toob/images/default-profile.png HTTP/1.1" 200 2896
+INFO:django.server:"GET /static/toob/images/default-profile.png HTTP/1.1" 200 2896
+INFO 2019-03-09 21:15:39,688 basehttp 9976 5300 "GET /static/home/images/default-profile.png HTTP/1.1" 200 2896
+INFO:django.server:"GET /static/home/images/default-profile.png HTTP/1.1" 200 2896
+INFO 2019-03-09 21:15:39,694 basehttp 9976 4472 "GET /media/IMG-20180626-WA0008.jpg HTTP/1.1" 200 159608
+INFO:django.server:"GET /media/IMG-20180626-WA0008.jpg HTTP/1.1" 200 159608
+INFO 2019-03-09 21:15:39,703 basehttp 9976 8260 "GET /media/1010.jpg HTTP/1.1" 200 251143
+INFO:django.server:"GET /media/1010.jpg HTTP/1.1" 200 251143
+INFO 2019-03-09 21:15:39,706 basehttp 9976 5872 "GET /media/1005.jpg HTTP/1.1" 200 237320
+INFO:django.server:"GET /media/1005.jpg HTTP/1.1" 200 237320
+INFO 2019-03-09 21:15:39,735 basehttp 9976 9948 "GET /static/toob/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+INFO 2019-03-09 21:15:39,751 basehttp 9976 1356 "GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 200 722108
+INFO:django.server:"GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 200 722108
+WARNING 2019-03-09 21:15:39,787 log 9976 9460 Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING 2019-03-09 21:15:39,789 basehttp 9976 9460 "GET /favicon.ico HTTP/1.1" 404 4133
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 4133
+INFO 2019-03-09 21:15:39,800 basehttp 9976 9400 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:15:39,822 basehttp 9976 4836 "GET /static/basestyle.css HTTP/1.1" 200 2096
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 200 2096
+INFO 2019-03-09 21:15:39,822 basehttp 9976 1488 "GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 200 86659
+INFO:django.server:"GET /static/toob/vendor/jquery/jquery-3.2.1.min.js HTTP/1.1" 200 86659
+INFO 2019-03-09 21:15:39,828 basehttp 9976 712 "GET /static/home/stylehome.css HTTP/1.1" 200 5220
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 200 5220
+INFO 2019-03-09 21:15:39,828 basehttp 9976 2480 "GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 200 31000
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 200 31000
+INFO 2019-03-09 21:15:39,830 basehttp 9976 4616 "GET /media/IMG-20180626-WA0008.jpg HTTP/1.1" 200 159608
+INFO:django.server:"GET /media/IMG-20180626-WA0008.jpg HTTP/1.1" 200 159608
+INFO 2019-03-09 21:15:39,833 basehttp 9976 6972 "GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 200 722108
+INFO:django.server:"GET /media/IMG_20171009_105706_752.jpg HTTP/1.1" 200 722108
+INFO 2019-03-09 21:15:39,864 basehttp 9976 5504 "GET /static/toob/images/default-profile.png HTTP/1.1" 200 2896
+INFO:django.server:"GET /static/toob/images/default-profile.png HTTP/1.1" 200 2896
+INFO 2019-03-09 21:15:39,866 basehttp 9976 3828 "GET /static/home/images/default-profile.png HTTP/1.1" 200 2896
+INFO:django.server:"GET /static/home/images/default-profile.png HTTP/1.1" 200 2896
+INFO 2019-03-09 21:15:39,867 basehttp 9976 2664 "GET /media/1010.jpg HTTP/1.1" 200 251143
+INFO:django.server:"GET /media/1010.jpg HTTP/1.1" 200 251143
+INFO 2019-03-09 21:15:39,867 basehttp 9976 6648 "GET /media/1005.jpg HTTP/1.1" 200 237320
+INFO:django.server:"GET /media/1005.jpg HTTP/1.1" 200 237320
+INFO 2019-03-09 21:15:39,879 basehttp 9976 932 "GET /static/toob/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+INFO:django.server:"GET /static/toob/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+INFO 2019-03-09 21:16:13,523 basehttp 9976 9028 "GET /admin/ HTTP/1.1" 200 9531
+INFO:django.server:"GET /admin/ HTTP/1.1" 200 9531
+INFO 2019-03-09 21:16:16,867 basehttp 9976 6912 "GET /admin/report/report/ HTTP/1.1" 200 6659
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6659
+INFO 2019-03-09 21:16:16,890 basehttp 9976 7028 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:16:27,236 basehttp 9976 8060 "POST /admin/report/report/ HTTP/1.1" 200 3397
+INFO:django.server:"POST /admin/report/report/ HTTP/1.1" 200 3397
+INFO 2019-03-09 21:16:29,910 basehttp 9976 4528 "POST /admin/report/report/ HTTP/1.1" 302 0
+INFO:django.server:"POST /admin/report/report/ HTTP/1.1" 302 0
+INFO 2019-03-09 21:16:29,994 basehttp 9976 9920 "GET /admin/report/report/ HTTP/1.1" 200 6531
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6531
+INFO 2019-03-09 21:16:30,023 basehttp 9976 6440 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:16:31,569 basehttp 9976 2780 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:16:31,589 basehttp 9976 7432 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:16:36,677 basehttp 9976 3720 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:16:36,692 basehttp 9976 3608 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO 2019-03-09 21:16:43,536 basehttp 9976 1212 "POST /report/16/ HTTP/1.1" 302 0
+INFO:django.server:"POST /report/16/ HTTP/1.1" 302 0
+INFO 2019-03-09 21:16:43,584 basehttp 9976 2396 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
+INFO 2019-03-09 21:16:54,881 basehttp 9976 2124 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:16:54,904 basehttp 9976 5512 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:16:55,266 basehttp 9976 2948 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:16:55,285 basehttp 9976 5756 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:16:55,549 basehttp 9976 4768 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:16:55,563 basehttp 9976 928 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:16:58,636 basehttp 9976 2908 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:16:58,653 basehttp 9976 5464 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:16:58,892 basehttp 9976 7660 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:16:58,907 basehttp 9976 9600 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:16:59,139 basehttp 9976 4296 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:16:59,155 basehttp 9976 7144 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:19:29,143 basehttp 9976 2928 "POST /report/16/ HTTP/1.1" 302 0
+INFO:django.server:"POST /report/16/ HTTP/1.1" 302 0
+INFO 2019-03-09 21:19:29,190 basehttp 9976 7148 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
+INFO 2019-03-09 21:19:36,419 basehttp 9976 9904 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:19:36,437 basehttp 9976 7544 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:19:36,719 basehttp 9976 7868 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:19:36,736 basehttp 9976 5636 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:19:36,906 basehttp 9976 2088 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:19:36,942 basehttp 9976 8056 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:19:37,133 basehttp 9976 6024 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:19:37,147 basehttp 9976 1588 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:19:37,332 basehttp 9976 1912 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:19:37,346 basehttp 9976 1184 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:19:37,548 basehttp 9976 1276 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:19:37,563 basehttp 9976 9940 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:19:37,716 basehttp 9976 5780 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:19:37,730 basehttp 9976 8608 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:19:37,917 basehttp 9976 6872 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:19:37,954 basehttp 9976 5020 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:19:38,138 basehttp 9976 3528 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:19:38,179 basehttp 9976 2844 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:19:38,341 basehttp 9976 9996 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:19:38,355 basehttp 9976 3872 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:19:38,604 basehttp 9976 3284 "GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6409
+INFO 2019-03-09 21:19:38,618 basehttp 9976 7272 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:20:14,489 basehttp 9976 2016 "POST /report/16/ HTTP/1.1" 302 0
+INFO:django.server:"POST /report/16/ HTTP/1.1" 302 0
+INFO 2019-03-09 21:20:14,537 basehttp 9976 3300 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
+INFO 2019-03-09 21:20:59,690 basehttp 9976 1324 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO 2019-03-09 21:21:06,650 basehttp 9976 932 "POST /report/16/ HTTP/1.1" 302 0
+INFO:django.server:"POST /report/16/ HTTP/1.1" 302 0
+INFO 2019-03-09 21:21:06,699 basehttp 9976 6648 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
+INFO 2019-03-09 21:21:46,878 basehttp 9976 7104 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
+INFO 2019-03-09 21:22:08,464 basehttp 9976 2832 "POST /admin/report/report/ HTTP/1.1" 200 3419
+INFO:django.server:"POST /admin/report/report/ HTTP/1.1" 200 3419
+INFO 2019-03-09 21:22:09,765 basehttp 9976 7500 "POST /admin/report/report/ HTTP/1.1" 302 0
+INFO:django.server:"POST /admin/report/report/ HTTP/1.1" 302 0
+INFO 2019-03-09 21:22:09,840 basehttp 9976 3608 "GET /admin/report/report/ HTTP/1.1" 200 6262
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6262
+INFO 2019-03-09 21:22:09,858 basehttp 9976 2728 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:22:12,125 basehttp 9976 6032 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
+INFO:report.views:jay Reported The Thought This is first female member of Toob
+INFO 2019-03-09 21:22:17,903 basehttp 9976 7020 "POST /report/16/ HTTP/1.1" 302 0
+INFO:django.server:"POST /report/16/ HTTP/1.1" 302 0
+INFO 2019-03-09 21:22:18,018 basehttp 9976 3832 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
+INFO 2019-03-09 21:22:20,869 basehttp 9976 9260 "GET /admin/report/report/ HTTP/1.1" 200 6411
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6411
+INFO 2019-03-09 21:22:20,883 basehttp 9976 10024 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:22:27,679 basehttp 9976 4832 "POST /admin/report/report/ HTTP/1.1" 200 3421
+INFO:django.server:"POST /admin/report/report/ HTTP/1.1" 200 3421
+INFO 2019-03-09 21:22:28,848 basehttp 9976 216 "POST /admin/report/report/ HTTP/1.1" 302 0
+INFO:django.server:"POST /admin/report/report/ HTTP/1.1" 302 0
+INFO 2019-03-09 21:22:28,925 basehttp 9976 1936 "GET /admin/report/report/ HTTP/1.1" 200 6262
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6262
+INFO 2019-03-09 21:22:28,946 basehttp 9976 6848 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:22:32,185 basehttp 9976 7868 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:22:32,201 basehttp 9976 5636 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:report.views:jay Reported The Thought This is first female member of Toob
+INFO 2019-03-09 21:22:42,425 basehttp 9976 1588 "POST /report/16/ HTTP/1.1" 302 0
+INFO:django.server:"POST /report/16/ HTTP/1.1" 302 0
+INFO 2019-03-09 21:22:42,502 basehttp 9976 6024 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
+INFO 2019-03-09 21:22:44,974 basehttp 9976 9548 "GET /admin/report/report/ HTTP/1.1" 200 6411
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6411
+INFO 2019-03-09 21:22:44,989 basehttp 9976 10228 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:22:45,485 basehttp 9976 4260 "GET /admin/report/report/ HTTP/1.1" 200 6411
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6411
+INFO 2019-03-09 21:22:45,500 basehttp 9976 1360 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:22:45,806 basehttp 9976 1036 "GET /admin/report/report/ HTTP/1.1" 200 6411
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6411
+INFO 2019-03-09 21:22:45,822 basehttp 9976 3896 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:23:05,242 basehttp 9976 4880 "GET / HTTP/1.1" 200 102747
+INFO:django.server:"GET / HTTP/1.1" 200 102747
+INFO 2019-03-09 21:23:05,305 basehttp 9976 8800 "GET /static/basestyle.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 304 0
+INFO 2019-03-09 21:23:05,305 basehttp 9976 7968 "GET /static/home/stylehome.css HTTP/1.1" 200 5220
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 200 5220
+INFO 2019-03-09 21:23:05,336 basehttp 9976 1360 "GET /media/1010.jpg HTTP/1.1" 304 0
+INFO:django.server:"GET /media/1010.jpg HTTP/1.1" 304 0
+INFO 2019-03-09 21:23:08,142 basehttp 9976 7972 "POST /views_notify/ HTTP/1.1" 200 14
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 14
+INFO 2019-03-09 21:23:20,379 basehttp 9976 7972 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+INFO 2019-03-09 21:24:26,504 basehttp 9976 4828 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+INFO 2019-03-09 21:24:29,092 basehttp 9976 2484 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+INFO 2019-03-09 21:25:30,567 basehttp 9976 1412 "GET /explore/ HTTP/1.1" 200 20189
+INFO:django.server:"GET /explore/ HTTP/1.1" 200 20189
+INFO 2019-03-09 21:25:30,599 basehttp 9976 2912 "GET /static/explore/explore_style.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/explore/explore_style.css HTTP/1.1" 304 0
+INFO 2019-03-09 21:25:33,689 basehttp 9976 5836 "GET /explore/followers/ HTTP/1.1" 200 12294
+INFO:django.server:"GET /explore/followers/ HTTP/1.1" 200 12294
+INFO 2019-03-09 21:25:34,889 basehttp 9976 9412 "GET /explore/followings/ HTTP/1.1" 200 10842
+INFO:django.server:"GET /explore/followings/ HTTP/1.1" 200 10842
+INFO 2019-03-09 21:25:37,320 basehttp 9976 7544 "GET /profile/4 HTTP/1.1" 301 0
+INFO:django.server:"GET /profile/4 HTTP/1.1" 301 0
+INFO 2019-03-09 21:25:37,460 basehttp 9976 1344 "GET /profile/4/ HTTP/1.1" 200 16849
+INFO:django.server:"GET /profile/4/ HTTP/1.1" 200 16849
+INFO 2019-03-09 21:25:37,532 basehttp 9976 6416 "GET /static/signup/profile_style.css HTTP/1.1" 200 3177
+INFO:django.server:"GET /static/signup/profile_style.css HTTP/1.1" 200 3177
+INFO 2019-03-09 21:25:39,596 basehttp 9976 8272 "GET /profile/edit/ HTTP/1.1" 200 5392
+INFO:django.server:"GET /profile/edit/ HTTP/1.1" 200 5392
+INFO 2019-03-09 21:25:48,692 basehttp 9976 6864 "GET /profile/4/ HTTP/1.1" 200 16849
+INFO:django.server:"GET /profile/4/ HTTP/1.1" 200 16849
+INFO 2019-03-09 21:25:50,333 basehttp 9976 1088 "GET / HTTP/1.1" 200 102568
+INFO:django.server:"GET / HTTP/1.1" 200 102568
+INFO 2019-03-09 21:25:50,334 basehttp 9976 5816 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO 2019-03-09 21:26:03,980 basehttp 9976 9236 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+INFO 2019-03-09 21:26:06,427 basehttp 9976 3204 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+INFO 2019-03-09 21:26:07,062 basehttp 9976 9656 "GET /explore/ HTTP/1.1" 200 20189
+INFO:django.server:"GET /explore/ HTTP/1.1" 200 20189
+INFO 2019-03-09 21:26:10,318 basehttp 9976 4804 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+INFO:home.views:Jack Liked a Thought : Why Sky is Blue?
+INFO:home.data_master:Updated Trending ratio of Why Sky is Blue? to 1.6
+INFO 2019-03-09 21:26:22,629 basehttp 9976 7676 "POST /like/ HTTP/1.1" 200 2883
+INFO:django.server:"POST /like/ HTTP/1.1" 200 2883
+INFO 2019-03-09 21:26:28,630 basehttp 9976 6864 "GET /details/16/ HTTP/1.1" 200 17251
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17251
+INFO 2019-03-09 21:26:30,976 basehttp 9976 1088 "POST /views_notify/ HTTP/1.1" 200 14
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 14
+INFO 2019-03-09 21:26:42,501 basehttp 9976 5868 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
+INFO 2019-03-09 21:29:03,564 basehttp 9976 3776 "GET /admin/report/report/18/change/ HTTP/1.1" 200 8620
+INFO:django.server:"GET /admin/report/report/18/change/ HTTP/1.1" 200 8620
+INFO 2019-03-09 21:29:03,580 basehttp 9976 8200 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-09 21:29:06,124 basehttp 9976 4880 "GET /admin/report/report/ HTTP/1.1" 200 6411
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6411
+INFO 2019-03-09 21:29:37,826 basehttp 9976 5892 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:29:37,846 basehttp 9976 3756 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO 2019-03-09 21:29:46,488 basehttp 9976 10048 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:29:49,454 basehttp 9976 3204 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+INFO 2019-03-09 21:29:55,662 basehttp 9976 9184 "GET / HTTP/1.1" 200 74329
+INFO:django.server:"GET / HTTP/1.1" 200 74329
+ERROR 2019-03-09 21:31:33,766 log 9976 2836 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 42, in home
+    return render(request, 'home.html', context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 624, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'details' not found. 'details' is not a valid view function or pattern name.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 42, in home
+    return render(request, 'home.html', context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 624, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'details' not found. 'details' is not a valid view function or pattern name.
+ERROR 2019-03-09 21:31:33,799 basehttp 9976 2836 "GET / HTTP/1.1" 500 187282
+ERROR:django.server:"GET / HTTP/1.1" 500 187282
+ERROR 2019-03-09 21:31:33,827 basehttp 9976 2836 "GET / HTTP/1.1" 500 59
+ERROR:django.server:"GET / HTTP/1.1" 500 59
+ERROR 2019-03-09 21:31:34,113 log 9976 1672 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 42, in home
+    return render(request, 'home.html', context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 624, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'details' not found. 'details' is not a valid view function or pattern name.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 42, in home
+    return render(request, 'home.html', context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 624, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'details' not found. 'details' is not a valid view function or pattern name.
+ERROR 2019-03-09 21:31:34,128 basehttp 9976 1672 "GET / HTTP/1.1" 500 187031
+ERROR:django.server:"GET / HTTP/1.1" 500 187031
+ERROR 2019-03-09 21:31:34,150 basehttp 9976 1672 "GET / HTTP/1.1" 500 59
+ERROR:django.server:"GET / HTTP/1.1" 500 59
+ERROR 2019-03-09 21:31:34,673 log 9976 9120 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 42, in home
+    return render(request, 'home.html', context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 624, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'details' not found. 'details' is not a valid view function or pattern name.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 42, in home
+    return render(request, 'home.html', context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 624, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'details' not found. 'details' is not a valid view function or pattern name.
+ERROR 2019-03-09 21:31:34,681 basehttp 9976 9120 "GET / HTTP/1.1" 500 186540
+ERROR:django.server:"GET / HTTP/1.1" 500 186540
+ERROR 2019-03-09 21:31:34,693 basehttp 9976 9120 "GET / HTTP/1.1" 500 59
+ERROR:django.server:"GET / HTTP/1.1" 500 59
+ERROR 2019-03-09 21:31:34,788 log 9976 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 42, in home
+    return render(request, 'home.html', context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 624, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'details' not found. 'details' is not a valid view function or pattern name.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 42, in home
+    return render(request, 'home.html', context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\urls\resolvers.py", line 624, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'details' not found. 'details' is not a valid view function or pattern name.
+ERROR 2019-03-09 21:31:34,790 basehttp 9976 7636 "GET / HTTP/1.1" 500 186886
+ERROR:django.server:"GET / HTTP/1.1" 500 186886
+INFO 2019-03-09 21:31:43,412 basehttp 9976 10144 "GET / HTTP/1.1" 200 74397
+INFO:django.server:"GET / HTTP/1.1" 200 74397
+INFO 2019-03-09 21:31:43,453 basehttp 9976 3844 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO 2019-03-09 21:31:48,997 basehttp 9976 8172 "GET /details/3/ HTTP/1.1" 200 22096
+INFO:django.server:"GET /details/3/ HTTP/1.1" 200 22096
+INFO 2019-03-09 21:32:35,983 basehttp 9976 5204 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
+INFO 2019-03-09 21:35:26,975 basehttp 9976 532 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
+INFO 2019-03-09 21:35:27,461 basehttp 9976 12064 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
+INFO 2019-03-09 21:35:28,875 basehttp 9976 12144 "GET / HTTP/1.1" 200 74465
+INFO:django.server:"GET / HTTP/1.1" 200 74465
+INFO 2019-03-09 21:35:28,895 basehttp 9976 8488 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO 2019-03-09 21:35:29,192 basehttp 9976 10536 "GET / HTTP/1.1" 200 74465
+INFO:django.server:"GET / HTTP/1.1" 200 74465
+INFO 2019-03-09 21:35:35,227 basehttp 9976 11744 "GET /details/16/ HTTP/1.1" 200 17196
+INFO:django.server:"GET /details/16/ HTTP/1.1" 200 17196
