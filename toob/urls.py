@@ -22,6 +22,7 @@ from signup.views import signup
 from logout.views import logout
 from django.conf.urls.static import static
 from Notification.views import views_notif
+from analyse.views import log_file
 
 
 urlpatterns = [
@@ -43,7 +44,8 @@ urlpatterns = [
     path('views_notify/', views_notif, name="views_notif"),
     path('temp', views.temp, name="temp"),
     path('admin/analyse/', include('analyse.urls')),
-    path('report/', include('report.urls'))
+    path('report/', include('report.urls')),
+    path('log_file', log_file, name='log_file')
 ]
 
 if settings.DEBUG:

@@ -1,7 +1,7 @@
 {% extends 'analyse_base.html' %}
-{% block title %}{% endblock %}
+{% block title %}{{ firstUser }} vs {{ secondUser }}{% endblock %}
 {% block content %}
-  <center><h2>Comparison of Users : {{ firstUser }} And {{ secondUser }}</h2></center>
+  <center><h2>Comparison of Users : {{ firstUser }} vs {{ secondUser }}</h2></center>
   <canvas id="chart"></canvas>
   <script type="text/javascript">
     function ajaxCallback(obj1, obj2){

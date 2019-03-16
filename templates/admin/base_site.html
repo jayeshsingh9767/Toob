@@ -1,9 +1,17 @@
 {% extends "admin/base.html" %}
 
 {% block title %}Toob Administration{% endblock %}
+{% block extrahead %}
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'toob/images/icons/favicon.png' %}">
+{% endblock %}
+
+
 
 {% block branding %}
 <h1 id="site-name"><a href="{% url 'admin:index' %}">Toob Administraion</a></h1>
 {% endblock %}
 
 {% block nav-global %} <a href="{% url 'analyse' %}">Analyse Data on Toob</a>{% endblock %}
+
+{% block footer %} <a href="log-file" id="log-link"><b>Get Serever Logs</b></a> {% endblock %} <br>

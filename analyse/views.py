@@ -1,5 +1,8 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect, HttpResponse
 from signup.models import Profile
+from wsgiref.util import FileWrapper
+import os
+from django.conf import settings
 
 # Create your views here.
 
@@ -67,3 +70,13 @@ def tags(request):
         return render(request, 'tag_analysis.html', {})
     else:
         return HttpResponseRedirect('/admin/login/?next=/admin/')
+
+
+def log_file(request):
+    if request.user.is_superuser:
+        filename = os.path.join(settings.MEDIA_ROOT, path)
+        if os.path.exists(filename):
+            with open(filename, 'rb') as fh:
+                response = HttpResponse(fh.read(), content_type="text/plain")
+                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+                return response
