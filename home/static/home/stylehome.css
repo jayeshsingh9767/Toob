@@ -5,6 +5,7 @@
 }
 
 .top-bar{
+  font-family: 'Handlee', sans-serif;
   margin: 2vw auto 2vw auto;
   height: auto;
   background-color: rgb(62, 60, 62);
@@ -29,7 +30,7 @@
   position: absolute;
   top: 4.85vw;
   left: 58vw;
-  width: 9vw;
+  width: 10vw;
   background-color: rgb(204, 255, 121);
   border-radius: 4vw;
   font-size: 1.5vw;
@@ -42,12 +43,12 @@
 }
 
 .posts-container{
-
   flex: 3;
 }
 
 
 .posts{
+  font-family: 'Dosis', sans-serif;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2vw;

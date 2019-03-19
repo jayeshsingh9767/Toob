@@ -20797,3 +20797,91 @@ WARNING 2019-03-19 13:36:25,064 basehttp 9788 2120 "GET /favicon.ico HTTP/1.1" 4
 WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 4258
 INFO 2019-03-19 13:36:28,307 basehttp 9788 9684 "GET /admin/ HTTP/1.1" 200 9537
 INFO:django.server:"GET /admin/ HTTP/1.1" 200 9537
+INFO 2019-03-19 14:24:19,159 basehttp 9788 6204 "GET /admin/auth/user/ HTTP/1.1" 200 11279
+INFO:django.server:"GET /admin/auth/user/ HTTP/1.1" 200 11279
+INFO 2019-03-19 14:24:19,185 basehttp 9788 11480 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-19 14:24:21,261 basehttp 9788 5460 "GET /admin/auth/user/19/change/ HTTP/1.1" 200 16352
+INFO:django.server:"GET /admin/auth/user/19/change/ HTTP/1.1" 200 16352
+INFO 2019-03-19 14:24:21,277 basehttp 9788 12036 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-19 14:42:06,883 basehttp 9788 12264 "GET /admin/ HTTP/1.1" 200 9537
+INFO:django.server:"GET /admin/ HTTP/1.1" 200 9537
+INFO 2019-03-19 14:42:48,110 basehttp 9788 832 "GET /write_thought HTTP/1.1" 200 7252
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7252
+INFO 2019-03-19 18:18:31,960 basehttp 6272 1532 "GET /admin/ HTTP/1.1" 200 9537
+INFO:django.server:"GET /admin/ HTTP/1.1" 200 9537
+INFO 2019-03-19 18:19:42,576 basehttp 6272 8612 "GET /admin/auth/user/ HTTP/1.1" 200 11279
+INFO:django.server:"GET /admin/auth/user/ HTTP/1.1" 200 11279
+INFO 2019-03-19 18:19:42,600 basehttp 6272 4204 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-19 18:19:54,230 basehttp 6272 596 "GET /admin/auth/user/22/change/ HTTP/1.1" 200 16355
+INFO:django.server:"GET /admin/auth/user/22/change/ HTTP/1.1" 200 16355
+INFO 2019-03-19 18:19:54,247 basehttp 6272 3736 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-19 18:25:46,507 basehttp 6272 9180 "GET /admin/auth/user/ HTTP/1.1" 200 11279
+INFO:django.server:"GET /admin/auth/user/ HTTP/1.1" 200 11279
+INFO 2019-03-19 18:25:47,027 basehttp 6272 4752 "GET /admin/ HTTP/1.1" 200 9537
+INFO:django.server:"GET /admin/ HTTP/1.1" 200 9537
+INFO 2019-03-19 18:25:50,173 basehttp 6272 7128 "GET /admin/report/report/ HTTP/1.1" 200 6532
+INFO:django.server:"GET /admin/report/report/ HTTP/1.1" 200 6532
+INFO 2019-03-19 18:25:50,190 basehttp 6272 5280 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-19 18:25:52,510 basehttp 6272 4216 "GET /admin/ HTTP/1.1" 200 9537
+INFO:django.server:"GET /admin/ HTTP/1.1" 200 9537
+INFO 2019-03-19 18:25:58,968 basehttp 6272 3376 "GET /admin/details/comment/ HTTP/1.1" 200 25746
+INFO:django.server:"GET /admin/details/comment/ HTTP/1.1" 200 25746
+INFO 2019-03-19 18:25:58,987 basehttp 6272 9200 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-19 18:26:00,365 basehttp 6272 8132 "GET /admin/details/comment/86/change/ HTTP/1.1" 200 9025
+INFO:django.server:"GET /admin/details/comment/86/change/ HTTP/1.1" 200 9025
+INFO 2019-03-19 18:26:00,381 basehttp 6272 3668 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-03-19 18:26:48,035 basehttp 6272 5608 "GET /admin/details/comment/ HTTP/1.1" 200 25746
+INFO:django.server:"GET /admin/details/comment/ HTTP/1.1" 200 25746
+INFO 2019-03-19 18:28:26,099 basehttp 6272 7804 "GET /admin/details/comment/85/change/ HTTP/1.1" 200 9026
+INFO:django.server:"GET /admin/details/comment/85/change/ HTTP/1.1" 200 9026
+INFO 2019-03-19 18:28:26,120 basehttp 6272 1400 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+WARNING 2019-03-19 18:45:32,095 log 6272 3904 Not Found: /654
+WARNING:django.request:Not Found: /654
+WARNING 2019-03-19 18:45:32,096 basehttp 6272 3904 "GET /654 HTTP/1.1" 404 4234
+WARNING:django.server:"GET /654 HTTP/1.1" 404 4234
+WARNING 2019-03-19 18:45:32,177 log 6272 8780 Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING 2019-03-19 18:45:32,178 basehttp 6272 8780 "GET /favicon.ico HTTP/1.1" 404 4258
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 4258
+INFO 2019-03-19 18:53:05,608 basehttp 6272 5760 "GET / HTTP/1.1" 200 74634
+INFO:django.server:"GET / HTTP/1.1" 200 74634
+INFO 2019-03-19 18:53:05,645 basehttp 6272 9200 "GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/stylehome.css HTTP/1.1" 304 0
+INFO 2019-03-19 18:55:45,048 basehttp 6272 2400 "GET /details/3/ HTTP/1.1" 200 22797
+INFO:django.server:"GET /details/3/ HTTP/1.1" 200 22797
+INFO 2019-03-19 18:55:45,073 basehttp 6272 8108 "GET /static/details/details_post_style.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/details/details_post_style.css HTTP/1.1" 304 0
+WARNING 2019-03-19 18:58:42,554 log 6272 6572 Not Found: /details/3/54
+WARNING:django.request:Not Found: /details/3/54
+WARNING 2019-03-19 18:58:42,554 basehttp 6272 6572 "GET /details/3/54 HTTP/1.1" 404 4780
+WARNING:django.server:"GET /details/3/54 HTTP/1.1" 404 4780
+INFO 2019-03-19 19:04:57,816 basehttp 6272 6632 "GET / HTTP/1.1" 200 74634
+INFO:django.server:"GET / HTTP/1.1" 200 74634
+INFO 2019-03-19 19:05:03,464 basehttp 6272 972 "GET /details/3/ HTTP/1.1" 200 22797
+INFO:django.server:"GET /details/3/ HTTP/1.1" 200 22797
+INFO 2019-03-19 19:17:29,668 basehttp 6272 9120 "GET /profile/2/ HTTP/1.1" 200 36756
+INFO:django.server:"GET /profile/2/ HTTP/1.1" 200 36756
+INFO 2019-03-19 19:18:50,073 basehttp 6272 3924 "GET /profile/edit/ HTTP/1.1" 200 5984
+INFO:django.server:"GET /profile/edit/ HTTP/1.1" 200 5984
+INFO 2019-03-19 19:18:50,086 basehttp 6272 4432 "GET /static/signup/edit_profile_style.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/signup/edit_profile_style.css HTTP/1.1" 304 0
+INFO 2019-03-19 21:10:58,433 basehttp 8768 8128 "GET / HTTP/1.1" 200 74634
+INFO:django.server:"GET / HTTP/1.1" 200 74634
+INFO 2019-03-19 21:10:58,955 basehttp 8768 7204 "GET /static/toob/images/icons/favicon.png HTTP/1.1" 200 10504
+INFO:django.server:"GET /static/toob/images/icons/favicon.png HTTP/1.1" 200 10504
+INFO 2019-03-19 21:11:10,722 basehttp 8768 7652 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+INFO 2019-03-19 21:11:11,329 basehttp 8768 8760 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+INFO 2019-03-19 21:19:41,581 basehttp 8768 9116 "GET /explore/ HTTP/1.1" 200 21089
+INFO:django.server:"GET /explore/ HTTP/1.1" 200 21089
+INFO 2019-03-19 21:26:51,159 basehttp 8768 8352 "GET / HTTP/1.1" 200 74634
+INFO:django.server:"GET / HTTP/1.1" 200 74634
