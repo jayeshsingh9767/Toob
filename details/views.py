@@ -64,3 +64,14 @@ def comment_submit(request, post_id):
     else:
         logger.critical(" Unauthenticated user tries to access the secured URL")
         return HttpResponseRedirect(reverse('login'))
+
+
+def delete_post(request, post_id):
+    post = Posts.objects.get(id=post_id)
+    if request.user == post.user_profile.user:
+        print("You are authorized to Delete Post : ", post)
+        post.delete()
+        return HttpResponseRedirect(reverse('home'))
+    else:
+        print("You are not authorized for this Operation")
+        return HttpResponseRedirect(reverse('details_post', kwargs={'post_id': post_id}))

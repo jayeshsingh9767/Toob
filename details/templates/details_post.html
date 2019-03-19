@@ -15,6 +15,9 @@
         {% endif %}
       </a>
         <a href="/profile/{{ post.user_profile.id }}"><h3 class="user-name">{{ post.user_profile }}</h3></a><span class="level">{{ post.user_profile.level }}</span>
+        {% if user == post.user_profile.user %}
+        <a class="del_post" id="delete{{ post.id }}">Delete Post</a>
+        {% endif %}
         <span class="date">{{ post.creation_time }}</span>
       </div>
       {% for tag in tags %}
@@ -75,7 +78,6 @@
       </div>
       <div class="more-dropdown" id="more-drp{{ post.id }}">
         <a>Report</a>
-
       </div>
       <div class="report-box" id="report-box">
         <form action="{% url 'report_post' post.id %}" class="report-form except" method="POST">
@@ -89,6 +91,15 @@
           <label class="except" for="other" id="other_label">Specify Reason</label><input type="text" class="except" name="other" id="other"><br><br>
           <center><input type="submit" class="except" name="report" id="report-btn" value="Report"></center>
         </form>
+      </div>
+      <div class="alert" align="center" id="alert{{ post.id }}">
+        <div class="alert-box" id="alert-box{{ post.id }}">
+          <p>This Thought will be Deleted from TOOB permanently,<br>
+             You and your followings will not be able to access it anymore <br>
+             press <b>DELETE</b> to confirm Delete Process
+           </p>
+           <a href="{% url 'delete_post' post.id %}">DELETE</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="">Cancle</a>
+        </div>
       </div>
       <script type="text/javascript">
 
@@ -142,6 +153,14 @@
           $("#more-drp{{ post.id }}").toggle(function(){
             $("#more-drp{{ post.id }}")
           });
+        });
+
+        $('#delete{{ post.id }}').click(function(){
+          $('#alert{{ post.id }}').show();
+        })
+
+        $('#alert{{ post.id }}').click(function() {
+          $('#alert{{ post.id }}').hide();
         });
 
 

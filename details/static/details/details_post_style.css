@@ -63,6 +63,17 @@
   top : 2vw;
 }
 
+.del_post{
+  background-color: rgb(224, 6, 6);
+  color: #ffffff;
+  border-radius: 0.3vw;
+  padding: 0.2vw;
+  height: 1.5vw;
+  position: relative;
+  left: 42vw;
+  top: 0.7vw;
+}
+
 .date{
   margin-top: 4vw;
   margin-left: auto;
@@ -342,4 +353,39 @@ input[type="radio"]{
 
 .more-thought:hover{
   color: rgb(0, 0, 0);
+}
+
+
+.alert{
+  display: none;
+  background-color: rgba(47, 47, 47, 0.6);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0vw;
+  left: 0vw;
+}
+
+
+.alert-box{
+  background-color: rgb(255, 255, 255);
+  width: 40vw;
+  height: 8vw;
+  border-radius: 0.5vw;
+  padding: 1vw 2vw 3vw 2vw;
+  margin-top: 16vw;
+  font-size: 1.4vw;
+}
+
+.alert-box > a:nth-child(2){
+  background-color: rgb(254, 1, 1);
+  padding: 0.2vw;
+  color: #ffffff;
+}
+
+
+.alert-box > a:nth-child(3){
+  background-color: rgb(121, 219, 255);
+  padding: 0.2vw;
+  color: #ffffff;
 }

@@ -26,13 +26,14 @@
 .write{
   margin: 1vw;
   padding: 1.5vw;
-  position: relative;
-  bottom: 1.9vw;
+  position: absolute;
+  top: 4.85vw;
+  left: 58vw;
+  width: 9vw;
   background-color: rgb(204, 255, 121);
   border-radius: 4vw;
   font-size: 1.5vw;
   color: #000;
-  left: 11vw;
   display: none;
 }
 
@@ -196,7 +197,7 @@ input[name="comment"]{
   position: relative;
   margin: 0px;
   left: 50vw;
-  bottom: 13vw;
+  bottom: 13.4vw;
   margin-bottom: -9.4vw;
   /* margin-top: 60px; */
   width: 15vw;

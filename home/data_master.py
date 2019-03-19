@@ -106,7 +106,7 @@ def update_level_by_post(all_posts, user_profile, status):
             print("Increaseing level by 1")
             user_profile.level += 1
             logger.info("Increaseing Level of " + str(user_profile.user) + " by " + '1')
-            notify(None, user_profile, "Your Level is Updated By 1", 40, reverse('home'), reverse('home'))
+            notify(None, user_profile, "Your Level is Updated By 1", 40, reverse('home'))
         elif post_count == 5:
             print("Increaseing level by 5")
             user_profile.level += 5
