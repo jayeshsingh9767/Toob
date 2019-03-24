@@ -12,15 +12,19 @@
     {% load static %}
     <script type="text/javascript" src="{% static 'toob/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
     <!-- Load Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Arapey|Handlee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Arapey|Handlee|Euphoria+Script" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'basestyle.css'%}">
     <link rel="stylesheet" type="text/css" href="{% static 'toob/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
-    <link rel="shortcut icon" href="{% static 'toob/images/icons/favicon.png' %}">
+    <link rel="shortcut icon" href="{% static 'toob/images/icons/favicon.jpg' %}">
     {% block extrahead %}
     {% endblock %}
 </head>
 <body>
       <!-- Markup for Menu -->
+      <div class="icon">
+        <img src="{% static 'toob/images/icons/favicon.jpg' %}" alt="Image not found">
+        <span>toob.com</span>
+      </div>
       <header>
 
         <ul class="mainMenu" id="menu">

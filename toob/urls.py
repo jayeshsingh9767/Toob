@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls import url
 from django.urls import path, include, re_path
 from django.views.static import serve
 from toob import settings
@@ -23,6 +24,7 @@ from logout.views import logout
 from django.conf.urls.static import static
 from Notification.views import views_notif
 from analyse.views import log_file
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
@@ -45,7 +47,10 @@ urlpatterns = [
     path('temp', views.temp, name="temp"),
     path('admin/analyse/', include('analyse.urls')),
     path('report/', include('report.urls')),
-    path('log_file', log_file, name='log_file')
+    path('log_file', log_file, name='log_file'),
+    url(r'^password-reset/$', auth_views.PasswordResetView.as_view(), name='password_reset'),
+    url(r'^password-reset/done/$', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
+
 ]
 
 if settings.DEBUG:

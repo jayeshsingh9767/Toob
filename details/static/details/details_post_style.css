@@ -73,6 +73,7 @@
   position: relative;
   left: 42vw;
   top: 0.7vw;
+  cursor: no-drop;
 }
 
 .date{
@@ -380,6 +381,7 @@ input[type="radio"]{
 
 .alert-box > a:nth-child(2){
   background-color: rgb(254, 1, 1);
+  cursor: no-drop;
   padding: 0.2vw;
   color: #ffffff;
 }

@@ -5,6 +5,53 @@ body{
   font-family: 'Arapey', sans-serif;
 }
 
+.icon{
+  position: absolute;
+  top: 0vw;
+  left: 0vw;
+}
+
+.icon > img{
+  padding: 0.1vw;
+  /* padding-left: 0.1vw; */
+  width: 2.8vw;
+  height: 2.8vw;
+}
+
+.icon > span{
+  font-size: 3vw;
+  font-family:'Euphoria Script', cursive;
+  margin: 0vw;
+  padding: 0vw;
+  position: relative;
+  bottom: 0.7vw;
+  animation-name: MultiColor;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes MultiColor {
+  0%{
+    color: #fff;
+  }
+  20%{
+    color: rgb(203, 255, 80);
+  }
+  40%{
+    color: rgb(43, 132, 244);
+  }
+  60%{
+    color: rgb(231, 250, 76);
+  }
+  80%{
+    color: rgb(42, 255, 51);
+  }
+  100%{
+    color: rgb(239, 62, 249);
+  }
+}
+
 header{
   height: auto;
   background-color: #000000;
