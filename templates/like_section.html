@@ -2,7 +2,7 @@
 <form id="like-form{{ post.id }}">
   {% csrf_token %}
   {% if user.is_authenticated %}
-  <button type="submit" id="{{ post.id }}btn" name="like" value="{{ post.id }}" class="btn upvote">Like</button>
+  <button type="submit" id="{{ post.id }}btn" name="like" value="{{ post.id }}" class="btn upvote">{{ post.likes.count }}&nbsp;<i class="fa fa-thumbs-up"></i></button>
   <script type="text/javascript">
     function likingPost(id){
       var liked = document.getElementById(id);
@@ -52,6 +52,6 @@
 
   </script>
   {% else %}
-    <button type="button" id="{{ post.id }}btn" onclick="location.href='{% url 'login' %}';" name="like" class="btn upvote">Like</button>
+    <button type="button" id="{{ post.id }}btn" onclick="location.href='{% url 'login' %}';" name="like" class="btn upvote">{{ post.likes.count }}&nbsp;<i class="fa fa-thumbs-up"></i></button>
   {% endif %}
 </form>

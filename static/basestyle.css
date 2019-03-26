@@ -2,6 +2,8 @@ body{
   margin: 0px;
   padding: 0px;
   background: linear-gradient(-135deg, #c850c0, #4158d0);
+  /* background: url('toob/images/back2.jpg');
+  background-repeat: round; */
   font-family: 'Arapey', sans-serif;
 }
 

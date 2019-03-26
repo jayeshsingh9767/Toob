@@ -1,7 +1,7 @@
 <form id="dis_like-form{{ post.id }}">
   {% csrf_token %}
   {% if user.is_authenticated %}
-  <button type="submit" id="{{ post.id }}btn2" name="like" value="{{ post.id }}" class="btn upvote">Dis Like</button>
+  <button type="submit" id="{{ post.id }}btn2" name="like" value="{{ post.id }}" class="btn upvote">{{ post.dis_likes.count }}&nbsp;<i class="fa fa-thumbs-down"></i></button>
   <script type="text/javascript">
     {% for dis_like in post.dis_likes.all %}
       {% if dis_like != user %}
@@ -40,6 +40,6 @@
 
   </script>
   {% else %}
-    <button type="button" id="{{ post.id }}btn2" onclick="location.href='{% url 'login' %}';" name="like" class="btn upvote">Dis Like</button>
+    <button type="button" id="{{ post.id }}btn2" onclick="location.href='{% url 'login' %}';" name="like" class="btn upvote">{{ post.dis_likes.count }}&nbsp;<i class="fa fa-thumbs-down"></i></button>
   {% endif %}
 </form>
