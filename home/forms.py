@@ -32,7 +32,7 @@ class WriteThought(forms.Form):
     image = forms.ImageField(required=False)
     type = forms.ChoiceField(
         widget=forms.RadioSelect({'attr': 'type', 'id': 'type'}),
-        choices=choice
+        choices=choice,
     )
     tags = forms.CharField(
         max_length=250,

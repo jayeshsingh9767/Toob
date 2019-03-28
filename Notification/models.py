@@ -12,7 +12,7 @@ class Notifications(models.Model):
         ('20', 'Updates'),
         ('10', 'Other')
     )
-    sender = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="sender")
+    sender = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="sender", blank=True)
     receiver = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="receiver")
     message = models.CharField(max_length=500, blank=False)
     type = models.CharField(max_length=50, choices=choice_type)

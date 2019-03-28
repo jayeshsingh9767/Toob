@@ -39,6 +39,10 @@ input[type="radio"]{
   display: none;
 }
 
+label[for="type_4"]{
+  background-color: rgb(137, 249, 222);
+}
+
 #title-box{
   font-size: 1.9vw;
   height: auto;

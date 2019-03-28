@@ -52,45 +52,45 @@ def update_level_by_like(post, status):
         if likes.get('total_likes') == 1:
             print("Increaseing level by 2")
             user_profile.level += 2
-            logger.info("Increaseing Level of " + str(user_profile.user) + " by ", '2')
-            notify(None, user_profile, "Your Level is Updated By 2", 40, reverse('home'))
+            logger.info("Increaseing Level of " + str(user_profile.user) + " by 2")
+            notify(user_profile, user_profile, "Your Level is Updated By 2", 40, reverse('home'))
         elif likes.get('total_likes') == 10:
             print("Increaseing level by 5")
             user_profile.level += 5
-            logger.info("Increaseing Level of " + str(user_profile.user) + " by ", '5')
-            notify(None, user_profile, "Your Level is Updated By 5", 40, reverse('home'))
+            logger.info("Increaseing Level of " + str(user_profile.user) + " by 5")
+            notify(user_profile, user_profile, "Your Level is Updated By 5", 40, reverse('home'))
         elif likes.get('total_likes') == 25:
             print("Increaseing level by 10")
             user_profile.level += 10
-            logger.info("Increaseing Level of " + str(user_profile.user) + " by ", '10')
-            notify(None, user_profile, "Your Level is Updated By 10", 40, reverse('home'))
+            logger.info("Increaseing Level of " + str(user_profile.user) + " by 10")
+            notify(user_profile, user_profile, "Your Level is Updated By 10", 40, reverse('home'))
         elif likes.get('total_likes') % 10 == 0:
             print("Increaseing level by 1")
             user_profile.level += 1
-            logger.info("Increaseing Level of " + str(user_profile.user) + " by " + '1')
-            notify(None, user_profile, "Your Level is Updated By 1", 40, reverse('home'))
+            logger.info("Increaseing Level of " + str(user_profile.user) + " by 1")
+            notify(user_profile, user_profile, "Your Level is Updated By 1", 40, reverse('home'))
         user_profile.save()
     elif status == "decrease":
         if likes.get('total_likes') == 0:
             print("Decreaseing level by 2")
             user_profile.level -= 2
-            logger.info("Decreaseing Level of " + str(user_profile.user) + " by " + '2')
-            remove_notify(None, user_profile, "Your Level is Updated By 2", 40, reverse('home'))
+            logger.info("Decreaseing Level of " + str(user_profile.user) + " by 2")
+            remove_notify(user_profile, user_profile, "Your Level is Updated By 2", 40, reverse('home'))
         elif likes.get('total_likes') == 9:
             print("Decreaseing level by 5")
             user_profile.level -= 5
-            logger.info("Decreaseing Level of " + str(user_profile.user) + " by " + '5')
-            remove_notify(None, user_profile, "Your Level is Updated By 5", 40, reverse('home'))
+            logger.info("Decreaseing Level of " + str(user_profile.user) + " by 5")
+            remove_notify(user_profile, user_profile, "Your Level is Updated By 5", 40, reverse('home'))
         elif likes.get('total_likes') == 24:
             print("Decreaseing level by 10")
             user_profile.level -= 10
-            logger.info("Decreaseing Level of " + str(user_profile.user) + " by " + '10')
-            remove_notify(None, user_profile, "Your Level is Updated By 10", 40, reverse('home'))
+            logger.info("Decreaseing Level of " + str(user_profile.user) + " by 10")
+            remove_notify(user_profile, user_profile, "Your Level is Updated By 10", 40, reverse('home'))
         elif likes.get('total_likes') % 9 == 0:
             print("Decreaseing level by 1")
             user_profile.level -= 1
-            logger.info("Decreaseing Level of " + str(user_profile.user) + " by " + '1')
-            remove_notify(None, user_profile, "Your Level is Updated By 1", 40, reverse('home'))
+            logger.info("Decreaseing Level of " + str(user_profile.user) + " by 1")
+            remove_notify(user_profile, user_profile, "Your Level is Updated By 1", 40, reverse('home'))
         user_profile.save()
 
 
@@ -105,32 +105,32 @@ def update_level_by_post(all_posts, user_profile, status):
         if post_count == 1:
             print("Increaseing level by 1")
             user_profile.level += 1
-            logger.info("Increaseing Level of " + str(user_profile.user) + " by " + '1')
-            notify(None, user_profile, "Your Level is Updated By 1", 40, reverse('home'))
+            logger.info("Increaseing Level of " + str(user_profile.user) + " by 1")
+            notify(user_profile, user_profile, "Your Level is Updated By 1", 40, reverse('home'))
         elif post_count == 5:
             print("Increaseing level by 5")
             user_profile.level += 5
-            logger.info("Increaseing Level of " + str(user_profile.user) + " by " + '5')
-            notify(None, user_profile, "Your Level is Updated By 5", 40, reverse('home'))
+            logger.info("Increaseing Level of " + str(user_profile.user) + " by 5")
+            notify(user_profile, user_profile, "Your Level is Updated By 5", 40, reverse('home'))
         elif post_count == 20:
             print("Increaseing level by 10")
             user_profile.level += 10
-            logger.info("Increaseing Level of " + str(user_profile.user) + " by " + '10')
-            notify(None, user_profile, "Your Level is Updated By 10", 40, reverse('home'))
+            logger.info("Increaseing Level of " + str(user_profile.user) + " by 10")
+            notify(user_profile, user_profile, "Your Level is Updated By 10", 40, reverse('home'))
         user_profile.save()
     elif status == "decrease":
         if post_count == 0:
             print("Decreaseing level by 1")
             user_profile.level -= 1
-            logger.info("Decreaseing Level of " + str(user_profile.user) + " by " + '1')
+            logger.info("Decreaseing Level of " + str(user_profile.user) + " by 1")
         elif post_count == 4:
             print("Decreaseing level by 5")
-            logger.info("Decreaseing Level of " + str(user_profile.user) + " by " + '2')
+            logger.info("Decreaseing Level of " + str(user_profile.user) + " by 2")
             user_profile.level -= 5
         elif post_count == 19:
             print("Decreaseing level by 10")
             user_profile.level -= 10
-            logger.info("Decreaseing Level of " + str(user_profile.user) + " by " + '10')
+            logger.info("Decreaseing Level of " + str(user_profile.user) + " by 10")
         user_profile.save()
 
 
