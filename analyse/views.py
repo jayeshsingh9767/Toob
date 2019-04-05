@@ -74,9 +74,9 @@ def tags(request):
 
 def log_file(request):
     if request.user.is_superuser:
-        filename = os.path.join(settings.MEDIA_ROOT, path)
+        filename = os.path.join(settings.BASE_DIR, 'log_file.log')
         if os.path.exists(filename):
             with open(filename, 'rb') as fh:
                 response = HttpResponse(fh.read(), content_type="text/plain")
-                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(filename)
                 return response

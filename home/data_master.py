@@ -117,21 +117,21 @@ def update_level_by_post(all_posts, user_profile, status):
             user_profile.level += 10
             logger.info("Increaseing Level of " + str(user_profile.user) + " by 10")
             notify(user_profile, user_profile, "Your Level is Updated By 10", 40, reverse('home'))
-        user_profile.save()
     elif status == "decrease":
-        if post_count == 0:
-            print("Decreaseing level by 1")
-            user_profile.level -= 1
-            logger.info("Decreaseing Level of " + str(user_profile.user) + " by 1")
-        elif post_count == 4:
-            print("Decreaseing level by 5")
-            logger.info("Decreaseing Level of " + str(user_profile.user) + " by 2")
-            user_profile.level -= 5
-        elif post_count == 19:
-            print("Decreaseing level by 10")
-            user_profile.level -= 10
-            logger.info("Decreaseing Level of " + str(user_profile.user) + " by 10")
-        user_profile.save()
+        if user_profile.level > 2:
+            if post_count == 0:
+                print("Decreaseing level by 1")
+                user_profile.level -= 1
+                logger.info("Decreaseing Level of " + str(user_profile.user) + " by 1")
+            elif post_count == 4:
+                print("Decreaseing level by 5")
+                logger.info("Decreaseing Level of " + str(user_profile.user) + " by 2")
+                user_profile.level -= 5
+            elif post_count == 19:
+                print("Decreaseing level by 10")
+                user_profile.level -= 10
+                logger.infso("Decreaseing Level of " + str(user_profile.user) + " by 10")
+    user_profile.save()
 
 
 def update_level_by_time(user_profile):
