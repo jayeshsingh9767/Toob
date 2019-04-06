@@ -80,3 +80,6 @@ def log_file(request):
                 response = HttpResponse(fh.read(), content_type="text/plain")
                 response['Content-Disposition'] = 'inline; filename=' + os.path.basename(filename)
                 return response
+    else:
+        return HttpResponseRedirect('/admin/login/?next=/admin/')
+    

@@ -36559,3 +36559,998 @@ INFO 2019-04-05 17:47:46,704 basehttp 12152 8044 "GET /explore/followings/ HTTP/
 INFO:django.server:"GET /explore/followings/ HTTP/1.1" 200 17416
 INFO 2019-04-05 17:47:47,850 basehttp 12152 9860 "GET /explore/followers/ HTTP/1.1" 200 19062
 INFO:django.server:"GET /explore/followers/ HTTP/1.1" 200 19062
+INFO 2019-04-05 17:51:14,925 basehttp 104 14200 "GET /admin/ HTTP/1.1" 200 9585
+INFO:django.server:"GET /admin/ HTTP/1.1" 200 9585
+INFO 2019-04-05 17:51:18,655 basehttp 104 236 "GET /log_file HTTP/1.1" 200 3274328
+INFO:django.server:"GET /log_file HTTP/1.1" 200 3274328
+WARNING 2019-04-05 17:51:21,649 log 104 2604 Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING 2019-04-05 17:51:21,649 basehttp 104 2604 "GET /favicon.ico HTTP/1.1" 404 4548
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 4548
+INFO 2019-04-05 18:07:15,223 basehttp 9088 32 "GET /admin/ HTTP/1.1" 200 9585
+INFO:django.server:"GET /admin/ HTTP/1.1" 200 9585
+INFO 2019-04-05 18:07:15,355 basehttp 9088 4256 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 18:07:19,168 basehttp 9088 3688 "GET /admin/home/posts/ HTTP/1.1" 200 9461
+INFO:django.server:"GET /admin/home/posts/ HTTP/1.1" 200 9461
+INFO 2019-04-05 18:07:19,196 basehttp 9088 10824 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-04-05 18:07:43,332 basehttp 9088 14244 "POST /admin/home/posts/ HTTP/1.1" 200 4855
+INFO:django.server:"POST /admin/home/posts/ HTTP/1.1" 200 4855
+INFO 2019-04-05 18:07:43,365 basehttp 9088 72 "GET /static/admin/js/cancel.js HTTP/1.1" 200 410
+INFO:django.server:"GET /static/admin/js/cancel.js HTTP/1.1" 200 410
+INFO 2019-04-05 18:07:46,686 basehttp 9088 5608 "POST /admin/home/posts/ HTTP/1.1" 302 0
+INFO:django.server:"POST /admin/home/posts/ HTTP/1.1" 302 0
+INFO 2019-04-05 18:07:46,773 basehttp 9088 11116 "GET /admin/home/posts/ HTTP/1.1" 200 7971
+INFO:django.server:"GET /admin/home/posts/ HTTP/1.1" 200 7971
+INFO 2019-04-05 18:07:46,819 basehttp 9088 14276 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-04-05 18:08:31,234 basehttp 8492 13700 "GET /admin/home/posts/ HTTP/1.1" 200 7849
+INFO:django.server:"GET /admin/home/posts/ HTTP/1.1" 200 7849
+INFO 2019-04-05 18:08:31,260 basehttp 8492 8788 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-04-05 18:08:31,416 basehttp 8492 9608 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 18:08:37,883 basehttp 8492 804 "POST /admin/home/posts/ HTTP/1.1" 200 4283
+INFO:django.server:"POST /admin/home/posts/ HTTP/1.1" 200 4283
+INFO 2019-04-05 18:08:40,059 basehttp 8492 9480 "POST /admin/home/posts/ HTTP/1.1" 302 0
+INFO:django.server:"POST /admin/home/posts/ HTTP/1.1" 302 0
+INFO 2019-04-05 18:08:40,142 basehttp 8492 5084 "GET /admin/home/posts/ HTTP/1.1" 200 7754
+INFO:django.server:"GET /admin/home/posts/ HTTP/1.1" 200 7754
+INFO 2019-04-05 18:08:40,184 basehttp 8492 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-04-05 18:09:07,627 basehttp 8064 4252 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-05 18:09:16,326 basehttp 8064 9264 "GET /write_thought HTTP/1.1" 200 7734
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7734
+INFO 2019-04-05 18:09:16,342 basehttp 8064 8088 "GET /static/home/write_thought_style.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/write_thought_style.css HTTP/1.1" 304 0
+ERROR 2019-04-05 18:09:40,253 log 8064 13136 Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: home_posts.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 78, in post_thought
+    user_profile=user_profile
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 717, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 868, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: home_posts.title
+ERROR:django.request:Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: home_posts.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 78, in post_thought
+    user_profile=user_profile
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 717, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 868, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: home_posts.title
+ERROR 2019-04-05 18:09:40,257 basehttp 8064 13136 "POST /post_thought HTTP/1.1" 500 160117
+ERROR:django.server:"POST /post_thought HTTP/1.1" 500 160117
+INFO 2019-04-05 18:48:57,031 basehttp 2108 10656 "GET /write_thought HTTP/1.1" 200 7735
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7735
+INFO 2019-04-05 18:48:57,180 basehttp 2108 8148 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+ERROR 2019-04-05 18:49:05,277 log 2108 10724 Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: home_posts.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 78, in post_thought
+    user_profile=user_profile
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 717, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 868, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: home_posts.title
+ERROR:django.request:Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: home_posts.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 78, in post_thought
+    user_profile=user_profile
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 717, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 868, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: home_posts.title
+ERROR 2019-04-05 18:49:05,282 basehttp 2108 10724 "POST /post_thought HTTP/1.1" 500 159655
+ERROR:django.server:"POST /post_thought HTTP/1.1" 500 159655
+ERROR 2019-04-05 18:50:42,524 log 8324 10640 Internal Server Error: /write_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 137, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view home.views.write_thought didn't return an HttpResponse object. It returned None instead.
+ERROR:django.request:Internal Server Error: /write_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 137, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view home.views.write_thought didn't return an HttpResponse object. It returned None instead.
+ERROR 2019-04-05 18:50:42,525 basehttp 8324 10640 "GET /write_thought HTTP/1.1" 500 58976
+ERROR:django.server:"GET /write_thought HTTP/1.1" 500 58976
+ERROR 2019-04-05 18:51:16,012 log 5604 7612 Internal Server Error: /write_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 137, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view home.views.write_thought didn't return an HttpResponse object. It returned None instead.
+ERROR:django.request:Internal Server Error: /write_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 137, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view home.views.write_thought didn't return an HttpResponse object. It returned None instead.
+ERROR 2019-04-05 18:51:16,014 basehttp 5604 7612 "GET /write_thought HTTP/1.1" 500 58983
+ERROR:django.server:"GET /write_thought HTTP/1.1" 500 58983
+INFO 2019-04-05 18:51:30,520 basehttp 12368 11480 "GET /write_thought HTTP/1.1" 200 7735
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7735
+INFO 2019-04-05 18:56:27,828 basehttp 9568 5396 "GET /write_thought HTTP/1.1" 200 7727
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7727
+INFO 2019-04-05 18:56:27,923 basehttp 9568 7020 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 18:56:28,499 basehttp 9568 5664 "GET /write_thought HTTP/1.1" 200 7727
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7727
+INFO 2019-04-05 18:56:28,557 basehttp 9568 6912 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 18:57:23,917 basehttp 1404 14060 "GET /write_thought HTTP/1.1" 200 7727
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7727
+INFO 2019-04-05 18:57:23,976 basehttp 1404 8060 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 18:57:24,498 basehttp 1404 10032 "GET /write_thought HTTP/1.1" 200 7727
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7727
+INFO 2019-04-05 18:57:24,556 basehttp 1404 14276 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 18:57:24,815 basehttp 1404 4164 "GET /write_thought HTTP/1.1" 200 7727
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7727
+INFO 2019-04-05 18:57:24,893 basehttp 1404 6688 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 18:58:04,225 basehttp 1404 3972 "GET /profile/2/ HTTP/1.1" 200 25623
+INFO:django.server:"GET /profile/2/ HTTP/1.1" 200 25623
+INFO 2019-04-05 18:58:07,425 basehttp 1404 13252 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-05 18:58:15,484 basehttp 1404 10792 "GET /write_thought HTTP/1.1" 200 7727
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7727
+INFO 2019-04-05 18:58:41,117 basehttp 1404 2568 "GET /write_thought HTTP/1.1" 200 7727
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7727
+INFO 2019-04-05 18:58:41,181 basehttp 1404 1640 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 19:00:07,333 basehttp 11584 12204 "GET /profile/2/ HTTP/1.1" 200 25623
+INFO:django.server:"GET /profile/2/ HTTP/1.1" 200 25623
+INFO 2019-04-05 19:00:08,404 basehttp 11584 8736 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-05 19:00:15,045 basehttp 11584 5540 "GET /write_thought HTTP/1.1" 200 7727
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7727
+INFO 2019-04-05 19:00:15,104 basehttp 11584 4256 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 19:00:23,939 basehttp 11584 9828 "GET /profile/2/ HTTP/1.1" 200 25623
+INFO:django.server:"GET /profile/2/ HTTP/1.1" 200 25623
+INFO 2019-04-05 19:00:49,603 basehttp 11584 10704 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-05 19:01:15,932 basehttp 11584 7720 "GET /write_thought HTTP/1.1" 200 7727
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7727
+INFO:home.views:jay Writes a Thought : hgmn gh
+INFO 2019-04-05 19:01:23,463 basehttp 11584 11884 "POST /post_thought HTTP/1.1" 302 0
+INFO:django.server:"POST /post_thought HTTP/1.1" 302 0
+INFO 2019-04-05 19:01:23,606 basehttp 11584 3252 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-05 19:01:27,272 basehttp 11584 9596 "GET /profile/2/ HTTP/1.1" 200 30337
+INFO:django.server:"GET /profile/2/ HTTP/1.1" 200 30337
+INFO 2019-04-05 19:01:56,925 basehttp 11584 6660 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-05 19:02:06,493 basehttp 11584 10544 "GET /write_thought HTTP/1.1" 200 7786
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7786
+INFO 2019-04-05 19:02:20,058 basehttp 11584 7756 "GET /write_thought HTTP/1.1" 200 7786
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7786
+INFO 2019-04-05 19:02:20,118 basehttp 11584 10056 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 19:02:43,796 basehttp 11584 10556 "GET /profile/2/ HTTP/1.1" 200 30337
+INFO:django.server:"GET /profile/2/ HTTP/1.1" 200 30337
+INFO 2019-04-05 19:03:20,442 basehttp 13268 1308 "GET /write_thought HTTP/1.1" 200 7786
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7786
+INFO 2019-04-05 19:03:20,510 basehttp 13268 13724 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 19:03:44,131 basehttp 3168 11768 "GET /write_thought HTTP/1.1" 200 7786
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7786
+INFO 2019-04-05 19:03:44,195 basehttp 3168 7180 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 19:05:32,567 basehttp 10916 8844 "GET /write_thought HTTP/1.1" 200 7786
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7786
+INFO 2019-04-05 19:05:32,636 basehttp 10916 13200 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 19:05:48,840 basehttp 10916 7144 "GET /write_thought HTTP/1.1" 200 7786
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7786
+INFO 2019-04-05 19:05:48,903 basehttp 10916 6240 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 19:06:13,463 basehttp 14260 9828 "GET /write_thought HTTP/1.1" 200 7735
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7735
+INFO 2019-04-05 19:06:13,517 basehttp 14260 3732 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:home.views:jay Writes a Thought : vfav
+INFO:home.data_master:Increaseing Level of jay by 10
+INFO 2019-04-05 19:06:18,792 basehttp 14260 10628 "POST /post_thought HTTP/1.1" 302 0
+INFO:django.server:"POST /post_thought HTTP/1.1" 302 0
+ERROR 2019-04-05 19:06:18,995 log 14260 2468 Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: home_posts.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 81, in post_thought
+    user_profile=user_profile
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 717, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 868, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: home_posts.title
+ERROR:django.request:Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: home_posts.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 81, in post_thought
+    user_profile=user_profile
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 717, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 868, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: home_posts.title
+ERROR 2019-04-05 19:06:19,029 basehttp 14260 2468 "POST /post_thought HTTP/1.1" 500 159811
+ERROR:django.server:"POST /post_thought HTTP/1.1" 500 159811
+INFO 2019-04-05 19:06:19,099 basehttp 14260 1736 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+ERROR 2019-04-05 19:06:19,132 basehttp 14260 1736 "GET / HTTP/1.1" 500 59
+ERROR:django.server:"GET / HTTP/1.1" 500 59
+INFO:home.views:jay Writes a Thought : vfavgv
+INFO 2019-04-05 19:06:24,298 basehttp 14260 7044 "POST /post_thought HTTP/1.1" 302 0
+INFO:django.server:"POST /post_thought HTTP/1.1" 302 0
+INFO 2019-04-05 19:06:24,452 basehttp 14260 7144 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-05 19:06:27,163 basehttp 14260 10820 "GET /profile/2/ HTTP/1.1" 200 39767
+INFO:django.server:"GET /profile/2/ HTTP/1.1" 200 39767
+INFO 2019-04-05 19:07:07,620 basehttp 11156 11396 "GET /profile/2/ HTTP/1.1" 200 39767
+INFO:django.server:"GET /profile/2/ HTTP/1.1" 200 39767
+INFO 2019-04-05 19:07:07,731 basehttp 11156 8336 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-05 19:07:08,552 basehttp 11156 8736 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-05 19:07:17,302 basehttp 11156 9596 "GET /write_thought HTTP/1.1" 200 7735
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7735
+INFO:home.views:jay Writes a Thought : rgfvf sgr 
+INFO 2019-04-05 19:07:44,264 basehttp 11156 9068 "POST /post_thought HTTP/1.1" 302 0
+INFO:django.server:"POST /post_thought HTTP/1.1" 302 0
+INFO 2019-04-05 19:07:44,401 basehttp 11156 7288 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-05 19:07:46,610 basehttp 11156 14216 "GET /profile/2/ HTTP/1.1" 200 45801
+INFO:django.server:"GET /profile/2/ HTTP/1.1" 200 45801
+INFO 2019-04-05 19:08:27,930 basehttp 11156 9152 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-05 19:08:36,734 basehttp 11156 11960 "GET /write_thought HTTP/1.1" 200 7735
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7735
+ERROR 2019-04-05 19:08:43,164 log 11156 7044 Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: home_posts.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 78, in post_thought
+    user_profile=user_profile
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 717, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 868, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: home_posts.title
+ERROR:django.request:Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: home_posts.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 78, in post_thought
+    user_profile=user_profile
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 717, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 868, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: home_posts.title
+ERROR 2019-04-05 19:08:43,168 basehttp 11156 7044 "POST /post_thought HTTP/1.1" 500 159939
+ERROR:django.server:"POST /post_thought HTTP/1.1" 500 159939
+INFO 2019-04-06 19:42:06,664 basehttp 10248 4548 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-06 19:42:06,757 basehttp 10248 9704 "GET /static/basestyle.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/basestyle.css HTTP/1.1" 304 0
+INFO 2019-04-06 19:42:20,947 basehttp 10248 9376 "GET /admin/ HTTP/1.1" 200 9292
+INFO:django.server:"GET /admin/ HTTP/1.1" 200 9292
+INFO 2019-04-06 19:42:23,494 basehttp 10248 10508 "GET /admin/home/posts/ HTTP/1.1" 200 8508
+INFO:django.server:"GET /admin/home/posts/ HTTP/1.1" 200 8508
+INFO 2019-04-06 19:42:23,522 basehttp 10248 10996 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-04-06 19:42:25,539 basehttp 10248 5800 "GET /admin/home/posts/36/change/ HTTP/1.1" 200 12613
+INFO:django.server:"GET /admin/home/posts/36/change/ HTTP/1.1" 200 12613
+INFO 2019-04-06 19:42:25,559 basehttp 10248 176 "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO:django.server:"GET /admin/jsi18n/ HTTP/1.1" 200 3185
+INFO 2019-04-06 19:42:27,028 basehttp 10248 1712 "GET /admin/home/posts/ HTTP/1.1" 200 8508
+INFO:django.server:"GET /admin/home/posts/ HTTP/1.1" 200 8508
+INFO 2019-04-06 19:42:30,333 basehttp 10248 14068 "GET /write_thought HTTP/1.1" 200 7735
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7735
+INFO 2019-04-06 19:42:30,351 basehttp 10248 8504 "GET /static/home/write_thought_style.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/home/write_thought_style.css HTTP/1.1" 304 0
+INFO 2019-04-06 19:43:36,724 basehttp 10248 3288 "GET /write_thought HTTP/1.1" 200 7735
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7735
+INFO 2019-04-06 19:44:41,573 basehttp 10248 1796 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+INFO 2019-04-06 19:44:50,241 basehttp 10248 13208 "GET /write_thought HTTP/1.1" 200 7735
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7735
+INFO 2019-04-06 19:44:50,317 basehttp 10248 11836 "GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO:django.server:"GET /static/toob/images/icons/favicon.jpg HTTP/1.1" 200 15029
+INFO 2019-04-06 19:44:51,332 basehttp 10248 6448 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+INFO 2019-04-06 19:44:55,743 basehttp 10248 6316 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-06 19:44:56,463 basehttp 10248 8548 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+INFO 2019-04-06 19:44:57,341 basehttp 10248 984 "POST /views_notify/ HTTP/1.1" 200 2
+INFO:django.server:"POST /views_notify/ HTTP/1.1" 200 2
+INFO 2019-04-06 19:44:58,834 basehttp 10248 3168 "GET /explore/ HTTP/1.1" 200 22330
+INFO:django.server:"GET /explore/ HTTP/1.1" 200 22330
+INFO 2019-04-06 19:45:00,453 basehttp 10248 10628 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-06 19:45:10,843 basehttp 10248 14212 "GET /profile/12/ HTTP/1.1" 200 7547
+INFO:django.server:"GET /profile/12/ HTTP/1.1" 200 7547
+INFO 2019-04-06 19:45:10,858 basehttp 10248 2324 "GET /static/signup/profile_style.css HTTP/1.1" 304 0
+INFO:django.server:"GET /static/signup/profile_style.css HTTP/1.1" 304 0
+INFO 2019-04-06 19:47:00,366 basehttp 10248 820 "GET /admin/password_change/ HTTP/1.1" 200 2962
+INFO:django.server:"GET /admin/password_change/ HTTP/1.1" 200 2962
+INFO 2019-04-06 19:47:13,466 basehttp 10248 9616 "GET /admin/home/posts/ HTTP/1.1" 200 8508
+INFO:django.server:"GET /admin/home/posts/ HTTP/1.1" 200 8508
+INFO 2019-04-06 19:47:16,071 basehttp 10248 13836 "GET /log_file HTTP/1.1" 200 3334078
+INFO:django.server:"GET /log_file HTTP/1.1" 200 3334078
+WARNING 2019-04-06 19:47:17,956 log 10248 11280 Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING 2019-04-06 19:47:17,956 basehttp 10248 11280 "GET /favicon.ico HTTP/1.1" 404 4548
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 4548
+INFO:home.data_master:Updated Trending ratio of Slash to 0.6666666666666666
+INFO 2019-04-06 19:48:25,057 basehttp 10248 5652 "GET /details/33/ HTTP/1.1" 200 16390
+INFO:django.server:"GET /details/33/ HTTP/1.1" 200 16390
+INFO 2019-04-06 19:48:45,251 basehttp 10248 7908 "GET /profile/2/ HTTP/1.1" 200 45801
+INFO:django.server:"GET /profile/2/ HTTP/1.1" 200 45801
+INFO 2019-04-06 19:48:47,014 basehttp 10248 10400 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-06 19:49:08,854 basehttp 10248 12792 "GET /write_thought HTTP/1.1" 200 7735
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7735
+ERROR 2019-04-06 19:49:19,310 log 10248 7372 Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: home_posts.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 78, in post_thought
+    user_profile=user_profile
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 717, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 868, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: home_posts.title
+ERROR:django.request:Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: home_posts.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 78, in post_thought
+    user_profile=user_profile
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 413, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 717, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 747, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 830, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\base.py", line 868, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 1133, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\sql\compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\backends\sqlite3\base.py", line 296, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: home_posts.title
+ERROR 2019-04-06 19:49:19,314 basehttp 10248 7372 "POST /post_thought HTTP/1.1" 500 159642
+ERROR:django.server:"POST /post_thought HTTP/1.1" 500 159642
+ERROR 2019-04-06 19:53:28,532 log 10092 3804 Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 75, in post_thought
+    return render(request, "<h1>Post already Exixts</h1>", {})
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loaders\base.py", line 24, in get_template
+    contents = self.get_contents(origin)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loaders\filesystem.py", line 23, in get_contents
+    with open(origin.name, encoding=self.engine.file_charset) as fp:
+OSError: [Errno 22] Invalid argument: 'D:\\College Project\\toob\\templates\\<h1>Post already Exixts<\\h1>'
+ERROR:django.request:Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 75, in post_thought
+    return render(request, "<h1>Post already Exixts</h1>", {})
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loaders\base.py", line 24, in get_template
+    contents = self.get_contents(origin)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\template\loaders\filesystem.py", line 23, in get_contents
+    with open(origin.name, encoding=self.engine.file_charset) as fp:
+OSError: [Errno 22] Invalid argument: 'D:\\College Project\\toob\\templates\\<h1>Post already Exixts<\\h1>'
+ERROR 2019-04-06 19:53:28,535 basehttp 10092 3804 "POST /post_thought HTTP/1.1" 500 103107
+ERROR:django.server:"POST /post_thought HTTP/1.1" 500 103107
+INFO 2019-04-06 19:54:40,045 basehttp 12596 8688 "POST /post_thought HTTP/1.1" 200 28
+INFO:django.server:"POST /post_thought HTTP/1.1" 200 28
+INFO 2019-04-06 19:55:00,278 basehttp 9520 7012 "POST /post_thought HTTP/1.1" 200 28
+INFO:django.server:"POST /post_thought HTTP/1.1" 200 28
+INFO 2019-04-06 19:55:18,067 basehttp 9016 11484 "POST /post_thought HTTP/1.1" 200 45
+INFO:django.server:"POST /post_thought HTTP/1.1" 200 45
+ERROR 2019-04-06 19:56:54,902 log 7472 7332 Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\http\response.py", line 51, in __init__
+    self.status_code = int(status)
+ValueError: invalid literal for int() with base 10: ' already Exixts</h3><br><Try another Title></center>'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 77, in post_thought
+    "<center><h3>Post with title", title, " already Exixts</h3><br><Try another Title></center>"
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\http\response.py", line 289, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\http\response.py", line 53, in __init__
+    raise TypeError('HTTP status code must be an integer.')
+TypeError: HTTP status code must be an integer.
+ERROR:django.request:Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\http\response.py", line 51, in __init__
+    self.status_code = int(status)
+ValueError: invalid literal for int() with base 10: ' already Exixts</h3><br><Try another Title></center>'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 77, in post_thought
+    "<center><h3>Post with title", title, " already Exixts</h3><br><Try another Title></center>"
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\http\response.py", line 289, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\http\response.py", line 53, in __init__
+    raise TypeError('HTTP status code must be an integer.')
+TypeError: HTTP status code must be an integer.
+ERROR 2019-04-06 19:56:54,903 basehttp 7472 7332 "POST /post_thought HTTP/1.1" 500 83522
+ERROR:django.server:"POST /post_thought HTTP/1.1" 500 83522
+INFO 2019-04-06 19:57:26,667 basehttp 12576 10008 "POST /post_thought HTTP/1.1" 200 84
+INFO:django.server:"POST /post_thought HTTP/1.1" 200 84
+INFO 2019-04-06 19:57:35,108 basehttp 10200 7676 "POST /post_thought HTTP/1.1" 200 85
+INFO:django.server:"POST /post_thought HTTP/1.1" 200 85
+INFO 2019-04-06 19:57:53,546 basehttp 8712 6068 "POST /post_thought HTTP/1.1" 200 88
+INFO:django.server:"POST /post_thought HTTP/1.1" 200 88
+INFO 2019-04-06 19:58:08,359 basehttp 8712 10352 "POST /post_thought HTTP/1.1" 200 88
+INFO:django.server:"POST /post_thought HTTP/1.1" 200 88
+INFO 2019-04-06 19:58:23,099 basehttp 9960 9792 "POST /post_thought HTTP/1.1" 200 87
+INFO:django.server:"POST /post_thought HTTP/1.1" 200 87
+INFO 2019-04-06 19:58:59,452 basehttp 11580 13872 "POST /post_thought HTTP/1.1" 200 115
+INFO:django.server:"POST /post_thought HTTP/1.1" 200 115
+INFO 2019-04-06 19:59:29,844 basehttp 10772 9944 "POST /post_thought HTTP/1.1" 200 86
+INFO:django.server:"POST /post_thought HTTP/1.1" 200 86
+INFO 2019-04-06 19:59:37,675 basehttp 13556 7348 "POST /post_thought HTTP/1.1" 200 87
+INFO:django.server:"POST /post_thought HTTP/1.1" 200 87
+ERROR 2019-04-06 19:59:53,933 log 13556 10412 Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 73, in post_thought
+    pos = Posts.objects.get(title=title)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 399, in get
+    self.model._meta.object_name
+home.models.Posts.DoesNotExist: Posts matching query does not exist.
+ERROR:django.request:Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 73, in post_thought
+    pos = Posts.objects.get(title=title)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 399, in get
+    self.model._meta.object_name
+home.models.Posts.DoesNotExist: Posts matching query does not exist.
+ERROR 2019-04-06 19:59:53,935 basehttp 13556 10412 "POST /post_thought HTTP/1.1" 500 78678
+ERROR:django.server:"POST /post_thought HTTP/1.1" 500 78678
+ERROR 2019-04-06 20:01:16,017 log 11884 708 Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 73, in post_thought
+    if Posts.objects.get(title=title):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 399, in get
+    self.model._meta.object_name
+home.models.Posts.DoesNotExist: Posts matching query does not exist.
+ERROR:django.request:Internal Server Error: /post_thought
+Traceback (most recent call last):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College Project\toob\home\views.py", line 73, in post_thought
+    if Posts.objects.get(title=title):
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\abx\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django-2.1b1-py3.6.egg\django\db\models\query.py", line 399, in get
+    self.model._meta.object_name
+home.models.Posts.DoesNotExist: Posts matching query does not exist.
+ERROR 2019-04-06 20:01:16,019 basehttp 11884 708 "POST /post_thought HTTP/1.1" 500 78683
+ERROR:django.server:"POST /post_thought HTTP/1.1" 500 78683
+INFO:home.views:jay Writes a Thought : Slash1
+INFO 2019-04-06 20:09:20,771 basehttp 3800 10080 "POST /post_thought HTTP/1.1" 302 0
+INFO:django.server:"POST /post_thought HTTP/1.1" 302 0
+INFO 2019-04-06 20:09:21,031 basehttp 3800 864 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-06 20:09:24,717 basehttp 3800 12944 "GET /profile/2/ HTTP/1.1" 200 50518
+INFO:django.server:"GET /profile/2/ HTTP/1.1" 200 50518
+INFO 2019-04-06 20:09:49,460 basehttp 3800 5488 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126
+INFO 2019-04-06 20:09:57,543 basehttp 3800 8844 "GET /write_thought HTTP/1.1" 200 7735
+INFO:django.server:"GET /write_thought HTTP/1.1" 200 7735
+INFO 2019-04-06 20:10:07,368 basehttp 3800 12544 "POST /post_thought HTTP/1.1" 200 87
+INFO:django.server:"POST /post_thought HTTP/1.1" 200 87
+INFO 2019-04-06 21:58:10,710 basehttp 8928 5116 "GET / HTTP/1.1" 200 106126
+INFO:django.server:"GET / HTTP/1.1" 200 106126

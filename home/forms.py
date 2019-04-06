@@ -1,4 +1,6 @@
 from django import forms
+from django.core.exceptions import ValidationError
+from .models import Posts
 
 
 choice = (
@@ -38,3 +40,10 @@ class WriteThought(forms.Form):
         max_length=250,
         help_text="Use Space for seperating tags",
     )
+
+    def clean_title(self, *args, **kwargs):
+        post = Posts.objects.get(title=self.title)
+        if post:
+            raise ValidationError("The title Exixts, Try other relevent Title")
+        else:
+            return self.title

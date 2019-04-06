@@ -3,7 +3,8 @@ from django.shortcuts import (
     get_object_or_404,
     render,
     HttpResponseRedirect,
-    reverse
+    reverse,
+    HttpResponse
 )
 import logging
 import os
@@ -69,6 +70,12 @@ def post_thought(request):
             img = request.FILES.get("image")
             tags = request.POST.get("tags")
             print("Image data is : ", img)
+            pos = Posts.objects.filter(title=title)
+            if pos:
+                print("Post already Exixts")
+                return HttpResponse(
+                    "<center><h3>Post with title '" + title + "' already Exixts</h3><br><Try another Title></center>"
+                )
             Posts.objects.create(
                 title=title,
                 content=content,

@@ -11,7 +11,7 @@ class Posts(models.Model):
         ("4", ("Nightmare")),
         ("5", ("Thought"))
     )
-    title = models.CharField(max_length=250, blank=False)
+    title = models.CharField(max_length=250, blank=False, unique=True)
     content = models.TextField(max_length=15000,
                                help_text="Write Your thought here...")
     creation_time = models.DateTimeField(auto_now_add=True, editable=False)
