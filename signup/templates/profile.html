@@ -66,38 +66,48 @@
           {% include 'dis_like_section.html' %}
           <form action="{% url 'comment_submit' post.id  %}" class="comment-form" method="POST">
             {% csrf_token %}
-            <input type="text" id="comment" name="comment" placeholder="Comment">
+            <input type="text" id="comment{{ post.id }}" name="comment" placeholder="Comment">
             <button type="submit" class="btn comment-submit">
               <i class="fa fa-arrow-circle-right fa-lg"></i>
             </button>
+
+            <!-- Spreading Comment input -->
             <script type="text/javascript">
-            var like = document.getElementById("btn1");
-            var dis_like = document.getElementById("btn2");
-            $('#comment').focus(function()
-              {
-                $('#like-form{{ post.id }}').css({'display': 'none'})
-                $('#dis_like-form{{ post.id }}').css({'display': 'none'})
-              $(this).animate({
-                  width: '54vw',
+              var like = document.getElementById("like-form{{ post.id }}");
+              var dis_like = document.getElementById("dis_like-form{{ post.id }}");
+              $('#comment{{ post.id }}').focus(function()
+                {
+                  $('#like-form{{ post.id }}').css({
+                    'display' : 'none'
+                  });
+                  $('#dis_like-form{{ post.id }}').css({
+                    'display' : 'none'
+                  });
+                $(this).animate({
+                    width: '54vw',
 
-                }, 500, function() {
-                  // Animation complete.
+                  }, 500, function() {
+                    // Animation complete.
 
+                  });
                 });
-              });
 
 
-              $('#comment').blur(function()
-              {
-              $(this).animate({
-                   width: '28vw'
-                 }, 500, function() {
-                   // Animation complete.
-                   $('#like-form{{ post.id }}').css({'display': 'inline'})
-                   $('#dis_like-form{{ post.id }}').css({'display': 'inline'})
+                $('#comment{{ post.id }}').blur(function()
+                {
+                $(this).animate({
+                     width: '28vw'
+                   }, 500, function() {
+                     // Animation complete.
+                     $('#like-form{{ post.id }}').css({
+                       'display' : 'inline'
+                     });
+                     $('#dis_like-form{{ post.id }}').css({
+                       'display' : 'inline'
+                     });
+                   });
                  });
-               });
-            </script>
+              </script>
 
           </form>
         </div>
