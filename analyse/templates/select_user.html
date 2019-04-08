@@ -35,14 +35,6 @@
   </style>
 {% endblock %}
 {% block content %}
-<h2><center>Select user for Analysing</center></h2>
-  <ol>
-    {% for profile in user_list %}
-    <a href="{% url 'analyse_user' profile.id %}">
-      <li>{{ profile.user.first_name }}</li>
-    </a>
-    {% endfor %}
-  </ol>
 <h2><center>Select users for Comparison</center></h2>
 <form class="user" action="{% url 'compare_user' %}" method="post" align="center">
   {% csrf_token %}
