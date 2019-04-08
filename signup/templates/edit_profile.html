@@ -6,12 +6,12 @@
   <form class="edit-profile-form" action="{% url 'edit_submit' %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {% if user_profile.profile_pic %}
-      <img src="{{ user_profile.profile_pic.url }}" class="edit-profile-img" alt="Image not found">
+      <img src="{{ user_profile.profile_pic.url }}" class="edit-profile-img" id="profile_pic" alt="Image not found">
     {% else %}
-      <img src="{% static 'toob/images/default-profile.png' %}" class="edit-profile-img" alt="Image not found">
+      <img src="{% static 'toob/images/default-profile.png' %}" class="edit-profile-img" id="profile_pic" alt="Image not found">
     {% endif %}
 
-    <input type="file" name="profile_pic" class="change_user_img">
+    <input type="file" name="profile_pic" accept="image/gif, image/jpeg, image/png, image/jpg" onchange="readURL(this);" class="change_user_img">
     <label for="username">User name</label><br>
     <input type="text" name="username" value="{{ user_profile.user.username }}"><br>
     <label for="firstname">First name</label><br>
@@ -27,8 +27,23 @@
     <label for="dob">Date of birth</label><br>
     <input type="date" name="dob" value="{{ user_profile.date_of_birth|date:'Y' }}-{{ user_profile.date_of_birth|date:'m' }}-{{ user_profile.date_of_birth|date:'d' }}"><br>
     <label for="gender">Gender : </label>
-    <input type="radio" name="gender" value="male" required><label for="gender">Male</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="female" required><label for="gender">Female</label>
+    <input type="radio" name="gender" value="male" {% if user_profile.gender == "male" %} checked {% endif %} required><label for="gender">Male</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="female" {% if user_profile.gender == "female" %} checked {% endif %} required><label for="gender">Female</label>
     <input type="submit" name="submit" value="Save Edits">
   </form>
+  <script>
+  function readURL(input) {
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+              $('#profile_pic')
+                  .attr('src', e.target.result);
+
+          };
+
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
+  </script>
 {% endblock %}
